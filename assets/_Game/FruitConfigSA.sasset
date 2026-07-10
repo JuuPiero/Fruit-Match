@@ -1,0 +1,77 @@
+{
+  "__type__": "d9352GNyQRMYIlRG9Mv0Zf7",
+  "_name": "FruitConfigSA",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "fruits": [
+    {
+      "__uuid__": "a1e70c9d-617c-45bb-917d-b67e670baf8f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "d5444357-f9f6-499e-af96-8cb7598213eb@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "c3828c60-c59c-4422-8356-bb4f440d70a5@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "1ca4859c-f40c-4eae-a073-66149aeb1683@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "4632eaca-4873-42df-b0a9-2e125fbc29cd@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "fdefaa90-ddec-4d43-b88b-5b469f62c69b@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "ded49d75-a090-4d65-a4f5-b027b0a108e9@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "69db5dd0-ecef-4bee-b647-99c418204aa9@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "200366c6-f6e4-466e-9604-ca7249372c30@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "70b3b18c-177b-49d3-8014-4489792468fd@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "1c72f59b-b54f-4e78-b252-0753662d6db9@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "1bbb6492-2cc9-45b1-bd9f-2a1f5a792eea@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "581cf19d-90b6-423d-982f-4a965ce66eb1@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "e68dfba8-fb97-455c-a7c3-8a437913a90b@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "73cefa14-d12c-41b8-980a-d87810264f25@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "d623fc71-2ee8-4522-adc4-dc99fe3a4011@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "d1e4e5cf-2d45-45b7-8d9c-b93726aa6935@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ]
+}
