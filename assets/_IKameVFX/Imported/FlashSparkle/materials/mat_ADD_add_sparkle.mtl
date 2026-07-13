@@ -1,0 +1,56 @@
+{
+  "__type__": "cc.Material",
+  "_name": "mat_ADD_add_sparkle",
+  "_effectAsset": {
+    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {}
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "5ad851bd-a5dd-401e-88ec-1d0a25961b21@6c48a"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "mainTiling_Offset": {
+        "__type__": "cc.Vec4",
+        "x": 1,
+        "y": 1,
+        "z": 0,
+        "w": 0
+      },
+      "emissionScale": {
+        "__type__": "cc.Vec4",
+        "x": 1,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      },
+      "speedMainTexUVNoiseZW": {
+        "__type__": "cc.Vec4",
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      },
+      "distortSpeedXYPowerZW": {
+        "__type__": "cc.Vec4",
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      }
+    }
+  ]
+}

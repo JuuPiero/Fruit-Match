@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "08dbdc4e-79c1-447d-a2b5-ba88d212b620",
+  "files": [],
+  "subMetas": {
+    "205b5": {
+      "importer": "gltf-mesh",
+      "uuid": "08dbdc4e-79c1-447d-a2b5-ba88d212b620@205b5",
+      "displayName": "",
+      "id": "205b5",
+      "name": "FX_MS_BasicCylinder_FlippedNormals.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 64
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4bda3": {
+      "importer": "gltf-scene",
+      "uuid": "08dbdc4e-79c1-447d-a2b5-ba88d212b620@4bda3",
+      "displayName": "",
+      "id": "4bda3",
+      "name": "FX_MS_BasicCylinder_FlippedNormals.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "08dbdc4e-79c1-447d-a2b5-ba88d212b620@205b5"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "08dbdc4e-79c1-447d-a2b5-ba88d212b620@4bda3"
+      ]
+    }
+  }
+}

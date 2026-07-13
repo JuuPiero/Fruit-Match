@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.Material",
+  "_name": "mat_AB_symbol_hexagon_thick",
+  "_effectAsset": {
+    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812"
+  },
+  "_techIdx": 1,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {}
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "8c848825-c106-42ac-9a98-7f0c1926f844@6c48a"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      }
+    }
+  ]
+}

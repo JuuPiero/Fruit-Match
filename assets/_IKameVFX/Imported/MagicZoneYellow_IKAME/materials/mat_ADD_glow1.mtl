@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.Material",
+  "_name": "mat_ADD_glow1",
+  "_effectAsset": {
+    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {}
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "75245001-37df-4c1a-88a1-4af3fec48df2@6c48a"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      }
+    }
+  ]
+}

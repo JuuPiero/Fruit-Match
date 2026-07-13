@@ -1,0 +1,17 @@
+{
+  "__type__": "d77adls6LVADKf5cBeiD2sG",
+  "_name": "GameConfigSA",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "fruitPrefab": {
+    "__uuid__": "124e8e81-65ee-483a-85da-39247a95bd6b",
+    "__expectedType__": "cc.Prefab"
+  },
+  "trees": [
+    {
+      "__uuid__": "49a04ba0-cdb1-4729-9c3e-cc3850aa7102@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ]
+}

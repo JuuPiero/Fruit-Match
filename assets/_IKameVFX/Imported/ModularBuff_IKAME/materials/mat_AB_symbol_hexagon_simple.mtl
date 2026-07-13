@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.Material",
+  "_name": "mat_AB_symbol_hexagon_simple",
+  "_effectAsset": {
+    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812"
+  },
+  "_techIdx": 1,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {}
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "e36b6c82-ee60-4130-9419-f5e2f2b8006b@6c48a"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      }
+    }
+  ]
+}

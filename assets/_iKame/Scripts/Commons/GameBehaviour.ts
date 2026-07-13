@@ -2,7 +2,7 @@ import { _decorator, Component, Constructor, director, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameBehaviour')
-export class GameBehaviour extends Component {
+export abstract class GameBehaviour extends Component {
     public findFirstObjectByType<T extends Component>(typeOrMarker: new (...args: any[]) => T): T | null {
         const components = director.getScene()?.getComponentsInChildren(typeOrMarker as any) || [];
         return components?.length > 0 ? components[0].getComponent(typeOrMarker) : null;
@@ -134,6 +134,14 @@ export class GameBehaviour extends Component {
 
     protected onDestroy(): void {
         this.cancelAllInvokes();
+    }
+
+
+    public clearChildren() {
+        for (const child of this.node.children.slice()) {
+            child.removeFromParent()
+            child.destroy()
+        }
     }
 
     /*

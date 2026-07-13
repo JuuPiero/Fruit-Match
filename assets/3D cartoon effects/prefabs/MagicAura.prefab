@@ -176,7 +176,7 @@
       "__id__": 14
     },
     "duration": 1,
-    "loop": true,
+    "loop": false,
     "simulationSpeed": 1,
     "playOnAwake": true,
     "gravityModifier": {
@@ -948,7 +948,7 @@
       "__id__": 76
     },
     "duration": 1,
-    "loop": true,
+    "loop": false,
     "simulationSpeed": 0.5,
     "playOnAwake": true,
     "gravityModifier": {
@@ -1897,7 +1897,7 @@
       "__id__": 147
     },
     "duration": 1,
-    "loop": true,
+    "loop": false,
     "simulationSpeed": 1,
     "playOnAwake": true,
     "gravityModifier": {
@@ -2677,7 +2677,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 198
@@ -2775,7 +2775,7 @@
       "__id__": 209
     },
     "duration": 1,
-    "loop": true,
+    "loop": false,
     "simulationSpeed": 1,
     "playOnAwake": true,
     "gravityModifier": {
@@ -3490,7 +3490,7 @@
       "__id__": 269
     },
     "duration": 1,
-    "loop": true,
+    "loop": false,
     "simulationSpeed": 1,
     "playOnAwake": true,
     "gravityModifier": {
@@ -4140,6 +4140,7 @@
       "__id__": 0
     },
     "fileId": "f5b/p/0f1DaYvi9kAjZb+5",
+    "instance": null,
     "targetOverrides": []
   }
 ]

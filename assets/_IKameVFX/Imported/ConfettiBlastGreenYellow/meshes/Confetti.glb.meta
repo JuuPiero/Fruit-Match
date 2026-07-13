@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "8688928e-756f-499c-b96e-2228318a57fe",
+  "files": [],
+  "subMetas": {
+    "30bb0": {
+      "importer": "gltf-mesh",
+      "uuid": "8688928e-756f-499c-b96e-2228318a57fe@30bb0",
+      "displayName": "",
+      "id": "30bb0",
+      "name": "Confetti.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 6
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8de21": {
+      "importer": "gltf-scene",
+      "uuid": "8688928e-756f-499c-b96e-2228318a57fe@8de21",
+      "displayName": "",
+      "id": "8de21",
+      "name": "Confetti.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "8688928e-756f-499c-b96e-2228318a57fe@30bb0"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "8688928e-756f-499c-b96e-2228318a57fe@8de21"
+      ]
+    }
+  }
+}

@@ -1,14 +1,13 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, Prefab, SpriteFrame } from 'cc';
+import { bh } from 'db://scriptable-asset/scriptable_runtime';
 const { ccclass, property } = _decorator;
 
-@ccclass('GameConfigSA')
-export class GameConfigSA extends Component {
-    start() {
 
-    }
+@bh.createAssetMenu('GameConfigSA', 'Config/GameConfigSA')
+@bh.scriptable('GameConfigSA')
+export class GameConfigSA extends bh.ScriptableAsset {
+    @property(Prefab) fruitPrefab: Prefab = null;
 
-    update(deltaTime: number) {
-        
-    }
+    @property(SpriteFrame) trees: SpriteFrame[] = []
+
 }
-

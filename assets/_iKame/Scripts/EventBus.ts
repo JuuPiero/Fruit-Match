@@ -18,11 +18,11 @@ export class EventBus {
         if (index !== -1) arr.splice(index, 1);
     }
 
-    static emit(event: string, ...args: any) {
+    static emit(event: string, ...args: any[]) {
         const arr = this.events.get(event);
         if (!arr) return;
 
-        arr.forEach(cb => cb.apply(args));
+        arr.slice().forEach(cb => cb(...args));
         console.log("Raise event: " + event);
     }
 }
