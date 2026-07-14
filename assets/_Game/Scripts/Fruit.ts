@@ -121,7 +121,7 @@ export class Fruit extends Component {
             .call(() => {
                 this.moving = false;
                 AudioManager.instance.playOneShot('Pop')
-                // VFXManager.Instance.play('ModularBuff', this.node)
+                VFXManager.Instance.play('LightGlowHalf', this.node)
                 // VFXManager.Instance.play('MagicAura', this.node)
 
                 onArrived?.();
