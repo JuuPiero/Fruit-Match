@@ -856,10 +856,7 @@
     "_velocityScale": 1,
     "_lengthScale": 1,
     "_mesh": null,
-    "_cpuMaterial": {
-      "__uuid__": "349afc2d-392f-489e-9159-a23030bc557f",
-      "__expectedType__": "cc.Material"
-    },
+    "_cpuMaterial": null,
     "_gpuMaterial": null,
     "_mainTexture": {
       "__uuid__": "3e01a926-a195-4d6c-867c-98cb68ef2630@6c48a",
@@ -877,6 +874,8 @@
       "__id__": 0
     },
     "fileId": "ddpRd/Z7VMlanqEZWOJ33l",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {

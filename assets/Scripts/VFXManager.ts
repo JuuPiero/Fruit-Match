@@ -114,12 +114,12 @@ export class VFXManager extends Component {
         }
     }
 
-    play(name: string, target: Node) {
-        this.playAt(name, target.worldPosition)
+    play(name: string, target: Node, duration: number) {
+        this.playAt(name, target.worldPosition, duration)
     }
 
 
-    playAt(name: string, pos: Vec3) {
+    playAt(name: string, pos: Vec3, duration: number) {
 
         // UI World -> Screen
         const screenPos = new Vec3();
@@ -143,5 +143,10 @@ export class VFXManager extends Component {
 
         fx.parent = this.vfxRoot;
         fx.setWorldPosition(worldPos);
+
+
+        this.scheduleOnce(() => {
+            fx.destroy()
+        }, duration)
     }
 }

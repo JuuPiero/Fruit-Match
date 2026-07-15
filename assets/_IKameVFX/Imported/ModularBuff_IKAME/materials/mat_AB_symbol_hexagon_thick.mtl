@@ -1,27 +1,33 @@
 {
   "__type__": "cc.Material",
-  "_name": "mat_AB_symbol_hexagon_thick",
+  "_name": "",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
   "_effectAsset": {
-    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812"
+    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812",
+    "__expectedType__": "cc.EffectAsset"
   },
   "_techIdx": 1,
   "_defines": [
     {}
   ],
   "_states": [
-    {}
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
   ],
   "_props": [
     {
       "mainTexture": {
-        "__uuid__": "8c848825-c106-42ac-9a98-7f0c1926f844@6c48a"
-      },
-      "tintColor": {
-        "__type__": "cc.Color",
-        "r": 255,
-        "g": 255,
-        "b": 255,
-        "a": 255
+        "__uuid__": "a5d80694-fc16-4d8f-b548-16026b2e495e@6c48a",
+        "__expectedType__": "cc.Texture2D"
       }
     }
   ]

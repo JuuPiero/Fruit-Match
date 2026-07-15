@@ -58,9 +58,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1.5,
-      "y": 1.5,
-      "z": 1.5
+      "x": 2,
+      "y": 2,
+      "z": 2
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -81,7 +81,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 3
@@ -822,7 +822,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 61
@@ -834,8 +834,8 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
-      "z": 0
+      "y": -0.031,
+      "z": 0.538
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -1005,7 +1005,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 3.5999999,
+    "constant": 6,
     "multiplier": 1
   },
   {
@@ -1055,8 +1055,8 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 3,
-    "constantMin": 0.600000024,
-    "constantMax": 0.699999988,
+    "constantMin": 0.5,
+    "constantMax": 0.599999988,
     "multiplier": 1
   },
   {
@@ -1574,7 +1574,7 @@
     },
     "_gpuMaterial": null,
     "_mainTexture": {
-      "__uuid__": "8c848825-c106-42ac-9a98-7f0c1926f844@6c48a",
+      "__uuid__": "a5d80694-fc16-4d8f-b548-16026b2e495e@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_useGPU": false,
@@ -1602,7 +1602,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 123
@@ -1615,7 +1615,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -0.180000007
+      "z": -0.18
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -2333,7 +2333,7 @@
     },
     "_gpuMaterial": null,
     "_mainTexture": {
-      "__uuid__": "665f337d-49f9-4069-996c-668381f5ca90@6c48a",
+      "__uuid__": "dba40db6-7066-4913-ac3e-8e17901b3432@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_useGPU": false,
@@ -2374,7 +2374,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -0.100000039
+      "z": 1
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -2385,9 +2385,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1.5,
-      "y": 1.5,
-      "z": 1.5
+      "x": 1.8,
+      "y": 1.8,
+      "z": 1.8
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -3110,7 +3110,7 @@
     },
     "_gpuMaterial": null,
     "_mainTexture": {
-      "__uuid__": "665f337d-49f9-4069-996c-668381f5ca90@6c48a",
+      "__uuid__": "dba40db6-7066-4913-ac3e-8e17901b3432@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_useGPU": false,
@@ -3138,7 +3138,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 238
@@ -3917,7 +3917,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
       "__id__": 297
     },
@@ -4048,7 +4048,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 10,
+    "constant": 15,
     "multiplier": 1
   },
   {

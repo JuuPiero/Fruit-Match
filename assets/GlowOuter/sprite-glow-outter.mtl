@@ -30,12 +30,13 @@
     {
       "glowColor": {
         "__type__": "cc.Color",
-        "r": 255,
-        "g": 255,
-        "b": 255,
+        "r": 253,
+        "g": 247,
+        "b": 98,
         "a": 255
       },
-      "glowColorSize": 0.1
+      "glowColorSize": 0.05,
+      "glowIntensity": 1.8
     }
   ]
 }

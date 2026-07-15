@@ -41,12 +41,15 @@ export class GameManager extends Component {
     protected onEnable(): void {
         EventBus.on(GameEvents.NEW_LEVEL, this.onNewGame)
         EventBus.on(GameEvents.WIN, this.onWinGame)
+        EventBus.on(GameEvents.LOSE, this.onLoseGame)
+
 
     }
 
     protected onDisable(): void {
         EventBus.off(GameEvents.NEW_LEVEL, this.onNewGame)
         EventBus.off(GameEvents.WIN, this.onWinGame)
+        EventBus.off(GameEvents.LOSE, this.onLoseGame)
 
     }
 
@@ -61,10 +64,15 @@ export class GameManager extends Component {
 
 
     onWinGame = () => {
-
+        PlayableAdsManager.OpenStore()
         this.confettiNode.active = true;
-        // ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
+      
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
 
+    }
+    onLoseGame = () => {
+        PlayableAdsManager.OpenStore()
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
     }
 }
 

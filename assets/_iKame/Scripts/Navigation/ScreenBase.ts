@@ -18,8 +18,7 @@ export class ScreenBase extends Component {
     @property({ type: Enum(ETransactionType) })
     public transactionType: ETransactionType = ETransactionType.None;
 
-    @property({ type: CCString })
-    public screenName: string = '';
+    @property public screenName: string = '';
 
     protected _originalPos: Vec3 = new Vec3();
     protected _uiOpacity: UIOpacity = null!;
@@ -74,7 +73,7 @@ export class ScreenBase extends Component {
     }
 
     private executeTransition(isEntering: boolean, onComplete: Function) {
-        const duration = 0.4;
+        const duration = 0.7;
         const easingEnter = 'quintOut';
         const easingExit = 'quintIn';
         const currentEasing = isEntering ? easingEnter : easingExit;

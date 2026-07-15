@@ -1,4 +1,4 @@
-import { _decorator, Button, CCInteger, Component, EventMouse, Node, Sprite, tween, Tween, Vec3 } from 'cc';
+import { _decorator, Button, CCInteger, Component, EventMouse, Material, Node, Sprite, tween, Tween, Vec3 } from 'cc';
 import { FruitData } from './Data/LevelData';
 import { VFXManager } from '../../Scripts/VFXManager';
 import { ServiceLocator } from '../../_iKame/Scripts/ServiceLocator';
@@ -19,6 +19,9 @@ const SWAY_ANGLE = 6;
 const SWAY_DURATION = 0.8;
 
 const LAND_PUNCH_DURATION = 0.32;
+const SPAWN_SCALE_IN_DURATION = 0.28;
+const SPAWN_RISE_DURATION = 0.24;
+const SPAWN_BOUNCE_HEIGHT = 10;
 
 @ccclass('Fruit')
 export class Fruit extends Component {
@@ -39,13 +42,15 @@ export class Fruit extends Component {
     /** Đang bay/di chuyển tới slot, chưa được phép match */
     moving: boolean = false;
 
+    @property(Material) outlineMaterial: Material = null;
+
+    @property({ tooltip: 'Scale mặc định của fruit khi spawn và khi trở về trạng thái bình thường' })
+    originScale: Vec3 = new Vec3(1, 1, 1);
+
 
     protected onLoad(): void {
         this._sprite = this.getComponent(Sprite)
         this._button = this.getComponent(Button)
-
-
-
     }
 
     protected onEnable(): void {
@@ -69,15 +74,15 @@ export class Fruit extends Component {
 
 
     onMouseEnter(event: EventMouse) {
-        if(this.picked) return
+        if (this.picked) return
         // console.log('Mouse hovered over the node!');
-        this.node.setWorldScale(1.1, 1.1, 1.1)
+        this.node.setWorldScale(this.originScale.clone().add3f(0.1, 0.1, 0.1))
     }
 
     onMouseLeave(event: EventMouse) {
-        if(this.picked) return
+        if (this.picked) return
         // console.log('Mouse left the node!');
-        this.node.setWorldScale(1, 1, 1)
+        this.node.setWorldScale(this.originScale)
     }
 
 
@@ -92,13 +97,16 @@ export class Fruit extends Component {
 
         this._sprite.spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[fruitId]
 
-        this.swaying()
+        this.playSpawnAnimation()
     }
 
 
     moveToTray(slot: Node, onArrived?: () => void) {
         this.picked = true;
         this.moving = true;
+        VFXManager.Instance.play('ModularBuff', this.node, 0.1)
+
+        this._sprite.customMaterial = this.outlineMaterial
 
         // Đổi parent sang slot nhưng giữ nguyên vị trí world, rồi tween về tâm slot
         const worldPos = this.node.worldPosition.clone()
@@ -108,7 +116,7 @@ export class Fruit extends Component {
         // Dừng đung đưa, trả quả về thẳng đứng và scale gốc trước khi bay
         Tween.stopAllByTarget(this.node)
         this.node.angle = 0
-        this.node.setScale(1, 1, 1)
+        this.node.setScale(this.originScale)
 
         // Phồng nhẹ lúc bay để tạo đà (chạy song song với tween bay)
         tween(this.node)
@@ -121,16 +129,20 @@ export class Fruit extends Component {
             .call(() => {
                 this.moving = false;
                 AudioManager.instance.playOneShot('Pop')
-                VFXManager.Instance.play('LightGlowHalf', this.node)
-                // VFXManager.Instance.play('MagicAura', this.node)
-
+                // VFXManager.Instance.play('LightGlowHalf', this.node)
+                VFXManager.Instance.play('ModularBuff', this.node, 1)
+                this._sprite.customMaterial = null
                 onArrived?.();
+
             })
             // Punch 3 nhịp: bẹp mạnh -> vồng ngược lên -> lún về scale gốc
             .to(LAND_PUNCH_DURATION * 0.3, { scale: new Vec3(1.3, 0.7, 1) }, { easing: 'quadOut' })
             .to(LAND_PUNCH_DURATION * 0.35, { scale: new Vec3(0.9, 1.12, 1) }, { easing: 'quadInOut' })
             .to(LAND_PUNCH_DURATION * 0.35, { scale: new Vec3(1, 1, 1) }, { easing: 'quadOut' })
-            .start()
+            .start().call(() => {
+                // this._sprite.customMaterial = null
+
+            })
     }
 
     matchDestroy() {
@@ -143,13 +155,36 @@ export class Fruit extends Component {
         tween(this.node)
             .to(MATCH_FLY_UP_DURATION, { worldPosition: upPos }, { easing: 'quadOut' })
             .call(() => {
-                VFXManager.Instance.playAt("FlashSparkle", upPos)
+                VFXManager.Instance.playAt("FlashSparkle", upPos, 1)
 
             })
             .to(MATCH_VANISH_DURATION, { scale: new Vec3(0, 0, 0) }, { easing: 'backIn' })
             .call(() => {
                 this.node.destroy()
             })
+            .start()
+    }
+
+    private playSpawnAnimation() {
+        Tween.stopAllByTarget(this.node)
+
+        const startPos = this.node.position.clone()
+        const peakPos = new Vec3(startPos.x, startPos.y + SPAWN_BOUNCE_HEIGHT, startPos.z)
+
+        this.node.setScale(0.2, 0.2, 1)
+        this.node.setPosition(startPos)
+
+        const targetScale = new Vec3(
+            this.originScale.x * 1.05,
+            this.originScale.y * 1.05,
+            this.originScale.z
+        )
+
+        tween(this.node)
+            .to(SPAWN_SCALE_IN_DURATION, { scale: targetScale }, { easing: 'smooth' })
+            .to(SPAWN_RISE_DURATION, { position: peakPos }, { easing: 'smooth' })
+            .to(SPAWN_RISE_DURATION, { position: startPos, scale: this.originScale }, { easing: 'smooth' })
+            .call(() => this.swaying())
             .start()
     }
 
@@ -174,7 +209,7 @@ export class Fruit extends Component {
         if (this.picked) return;
 
         AudioManager.instance.playOneShot('Click')
-        
+
         EventBus.emit(GameEvents.FRUIT_CLICKED, this)
     }
 }

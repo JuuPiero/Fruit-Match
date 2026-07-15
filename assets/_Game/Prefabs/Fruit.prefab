@@ -51,9 +51,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
+      "x": 0.8,
+      "y": 0.8,
+      "z": 0.8
     },
     "_mobility": 0,
     "_layer": 33554432,
@@ -152,6 +152,16 @@
     },
     "data": null,
     "fruitId": -1,
+    "outlineMaterial": {
+      "__uuid__": "b82b2ec7-1bf3-4840-b9af-66d2a0250c14",
+      "__expectedType__": "cc.Material"
+    },
+    "originScale": {
+      "__type__": "cc.Vec3",
+      "x": 0.8,
+      "y": 0.8,
+      "z": 0.8
+    },
     "_id": ""
   },
   {
