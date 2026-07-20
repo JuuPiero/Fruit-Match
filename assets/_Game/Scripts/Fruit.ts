@@ -94,14 +94,17 @@ export class Fruit extends Component {
     initialize(data: FruitData, fruitId: number, spawnDelay = 0) {
         this.data = data;
 
-        this.fruitId = fruitId;
+        this.fruitId = data.fruitType;
 
         this.picked = false;
 
         this.moving = false;
 
-        this._spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[fruitId]
-        this._outlineSpriteFrame = ServiceLocator.get(FruitConfigSA).fruitsOutline[fruitId]
+
+        // const spriteData = ServiceLocator.get(FruitConfigSA).getFruit(data.fruitType.toString();)
+        
+        this._spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[data.fruitType]
+        this._outlineSpriteFrame = ServiceLocator.get(FruitConfigSA).fruitsOutline[data.fruitType]
 
         this._sprite.spriteFrame = this._spriteFrame;
 
@@ -220,7 +223,7 @@ export class Fruit extends Component {
 
     onClick = () => {
         if (this.picked) return;
-
+          VFXManager.Instance.play('ModularBuff', this.node, 0.5)
         AudioManager.instance.playOneShot('Click')
 
         EventBus.emit(GameEvents.FRUIT_CLICKED, this)

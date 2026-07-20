@@ -9,9 +9,12 @@
     "__expectedType__": "cc.Prefab"
   },
   "trees": [
-    null,
     {
-      "__uuid__": "ff3dc70a-b66c-4462-a47f-f3d5ffc9eded@f9941",
+      "__uuid__": "42f64b0a-400f-4694-8483-1ad11e8b5a5d@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "35d2d81d-22e0-4855-a72e-0fc05329d976@f9941",
       "__expectedType__": "cc.SpriteFrame"
     }
   ]

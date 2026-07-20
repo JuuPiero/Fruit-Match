@@ -3,6 +3,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('FruitData')
 export class FruitData {
+    @property fruitType: number = 0;
     @property positionX: number = 0;
     @property positionY: number = 0;
 }
@@ -47,6 +48,7 @@ export class LevelData {
         if (data.fruits && Array.isArray(data.fruits)) {
             levelData.fruits = data.fruits.map((f: any) => {
                 const fruit = new FruitData();
+                fruit.fruitType = f.fruitType ?? 0
                 fruit.positionX = f.positionX ?? 0;
                 fruit.positionY = f.positionY ?? 0;
                 return fruit;

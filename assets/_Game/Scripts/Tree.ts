@@ -12,7 +12,7 @@ const { ccclass, property } = _decorator;
 export class Tree extends GameBehaviour {
 
     private static readonly FRUIT_SPAWN_INTERVAL = 0.02;
-    
+
     _uiTransform: UITransform = null;
 
     _sprite: Sprite = null;
@@ -32,10 +32,13 @@ export class Tree extends GameBehaviour {
 
         this.clearChildren()
         this.data = levelData.tree;
-        this._uiTransform.setContentSize(new Size(this.data.width, this.data.height))
+        // this._uiTransform.setContentSize(new Size(this.data.width, this.data.height))
         this.node.setPosition(new Vec3(this.data.positionX, this.data.positionY, 0))
 
-        this._sprite.spriteFrame = ServiceLocator.get(GameConfigSA).trees[this.data.treeType]
+
+        // console.log("Cây: " + ServiceLocator.get(GameConfigSA).treeMap.size);
+        
+        this._sprite.spriteFrame = ServiceLocator.get(GameConfigSA).getTree(this.data.treeType)
 
         const fruitPrefab = ServiceLocator.get(GameConfigSA).fruitPrefab
 
@@ -45,7 +48,12 @@ export class Tree extends GameBehaviour {
             const fruitData = levelData.fruits[i]
             const node = instantiate(fruitPrefab)
             node.setParent(this.node)
-            node.setPosition(new Vec3(fruitData.positionX, fruitData.positionY, 0))
+
+            const height = this._uiTransform.contentSize.height;
+            const width = this._uiTransform.contentSize.width;
+            node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
+
+            // node.setPosition(new Vec3(fruitData.positionX, fruitData.positionY , 0))
             const fruit = node.getComponent(Fruit)
 
             fruit.initialize(fruitData, fruitIds[i], i * Tree.FRUIT_SPAWN_INTERVAL)

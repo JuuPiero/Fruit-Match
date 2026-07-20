@@ -1,0 +1,71 @@
+{
+    "tree": {
+        "treeType": 1,
+        "positionX": 0.0,
+        "positionY": 0.0,
+        "width": 1431.0,
+        "height": 2048.0
+    },
+    "fruits": [
+        {
+            "fruitType": 16,
+            "positionX": -0.21015621721744538,
+            "positionY": 0.06262074410915375
+        },
+        {
+            "fruitType": 16,
+            "positionX": 0.2520511746406555,
+            "positionY": 0.1120968610048294
+        },
+        {
+            "fruitType": 1,
+            "positionX": -0.026555217802524568,
+            "positionY": 0.2767693102359772
+        },
+        {
+            "fruitType": 7,
+            "positionX": 0.015630396082997323,
+            "positionY": 0.10956360399723053
+        },
+        {
+            "fruitType": 12,
+            "positionX": -0.09554053097963333,
+            "positionY": 0.1812397837638855
+        },
+        {
+            "fruitType": 12,
+            "positionX": 0.1561833769083023,
+            "positionY": 0.22756247222423554
+        },
+        {
+            "fruitType": 1,
+            "positionX": 0.1330057680606842,
+            "positionY": 0.07877296954393387
+        },
+        {
+            "fruitType": 7,
+            "positionX": -0.16155122220516206,
+            "positionY": 0.23849184811115266
+        },
+        {
+            "fruitType": 16,
+            "positionX": -0.10675718635320664,
+            "positionY": 0.10584243386983872
+        },
+        {
+            "fruitType": 1,
+            "positionX": 0.10201991349458695,
+            "positionY": 0.1473248302936554
+        },
+        {
+            "fruitType": 12,
+            "positionX": 0.03130965307354927,
+            "positionY": 0.20586246252059937
+        },
+        {
+            "fruitType": 7,
+            "positionX": -0.2368248701095581,
+            "positionY": 0.12565909326076508
+        }
+    ]
+}
