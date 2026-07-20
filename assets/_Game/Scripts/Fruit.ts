@@ -1,4 +1,4 @@
-import { _decorator, Button, CCInteger, Component, EventMouse, Material, Node, Sprite, tween, Tween, Vec3 } from 'cc';
+import { _decorator, Button, CCInteger, Component, EventMouse, Material, Node, Sprite, SpriteFrame, tween, Tween, Vec3 } from 'cc';
 import { FruitData } from './Data/LevelData';
 import { VFXManager } from '../../Scripts/VFXManager';
 import { ServiceLocator } from '../../_iKame/Scripts/ServiceLocator';
@@ -48,6 +48,11 @@ export class Fruit extends Component {
     originScale: Vec3 = new Vec3(1, 1, 1);
 
 
+    private _spriteFrame: SpriteFrame = null;
+    private _outlineSpriteFrame: SpriteFrame = null;
+
+
+
     protected onLoad(): void {
         this._sprite = this.getComponent(Sprite)
         this._button = this.getComponent(Button)
@@ -86,7 +91,7 @@ export class Fruit extends Component {
     }
 
 
-    initialize(data: FruitData, fruitId: number) {
+    initialize(data: FruitData, fruitId: number, spawnDelay = 0) {
         this.data = data;
 
         this.fruitId = fruitId;
@@ -95,9 +100,12 @@ export class Fruit extends Component {
 
         this.moving = false;
 
-        this._sprite.spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[fruitId]
+        this._spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[fruitId]
+        this._outlineSpriteFrame = ServiceLocator.get(FruitConfigSA).fruitsOutline[fruitId]
 
-        this.playSpawnAnimation()
+        this._sprite.spriteFrame = this._spriteFrame;
+
+        this.playSpawnAnimation(spawnDelay)
     }
 
 
@@ -106,7 +114,9 @@ export class Fruit extends Component {
         this.moving = true;
         VFXManager.Instance.play('ModularBuff', this.node, 0.1)
 
-        this._sprite.customMaterial = this.outlineMaterial
+        // this._sprite.customMaterial = this.outlineMaterial
+
+        this._sprite.spriteFrame = this._outlineSpriteFrame
 
         // Đổi parent sang slot nhưng giữ nguyên vị trí world, rồi tween về tâm slot
         const worldPos = this.node.worldPosition.clone()
@@ -131,7 +141,9 @@ export class Fruit extends Component {
                 AudioManager.instance.playOneShot('Pop')
                 // VFXManager.Instance.play('LightGlowHalf', this.node)
                 VFXManager.Instance.play('ModularBuff', this.node, 1)
-                this._sprite.customMaterial = null
+                // this._sprite.customMaterial = null
+                this._sprite.spriteFrame = this._spriteFrame
+
                 onArrived?.();
 
             })
@@ -165,13 +177,13 @@ export class Fruit extends Component {
             .start()
     }
 
-    private playSpawnAnimation() {
+    private playSpawnAnimation(spawnDelay: number) {
         Tween.stopAllByTarget(this.node)
 
         const startPos = this.node.position.clone()
         const peakPos = new Vec3(startPos.x, startPos.y + SPAWN_BOUNCE_HEIGHT, startPos.z)
 
-        this.node.setScale(0.2, 0.2, 1)
+        this.node.setScale(0.0, 0.0, 1)
         this.node.setPosition(startPos)
 
         const targetScale = new Vec3(
@@ -181,6 +193,7 @@ export class Fruit extends Component {
         )
 
         tween(this.node)
+            .delay(spawnDelay)
             .to(SPAWN_SCALE_IN_DURATION, { scale: targetScale }, { easing: 'smooth' })
             .to(SPAWN_RISE_DURATION, { position: peakPos }, { easing: 'smooth' })
             .to(SPAWN_RISE_DURATION, { position: startPos, scale: this.originScale }, { easing: 'smooth' })
@@ -213,5 +226,4 @@ export class Fruit extends Component {
         EventBus.emit(GameEvents.FRUIT_CLICKED, this)
     }
 }
-
 

@@ -10,6 +10,8 @@ const { ccclass, property } = _decorator;
 
 @ccclass('Tree')
 export class Tree extends GameBehaviour {
+
+    private static readonly FRUIT_SPAWN_INTERVAL = 0.02;
     
     _uiTransform: UITransform = null;
 
@@ -46,7 +48,7 @@ export class Tree extends GameBehaviour {
             node.setPosition(new Vec3(fruitData.positionX, fruitData.positionY, 0))
             const fruit = node.getComponent(Fruit)
 
-            fruit.initialize(fruitData, fruitIds[i])
+            fruit.initialize(fruitData, fruitIds[i], i * Tree.FRUIT_SPAWN_INTERVAL)
 
         }
     }

@@ -8,6 +8,7 @@ import { GameEvents } from './GameEvents';
 import { PlayableAdsManager } from '../../_iKame/Scripts/PlayableAdsManager';
 import { ETrackingEvent, TrackingManager } from '../../_iKame/Scripts/TrackingManager';
 import { NavigationContainer } from '../../_iKame/Scripts/Navigation/NavigationContainer';
+import { PREVIEW } from 'cc/env';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -43,6 +44,9 @@ export class GameManager extends Component {
         EventBus.on(GameEvents.WIN, this.onWinGame)
         EventBus.on(GameEvents.LOSE, this.onLoseGame)
 
+        EventBus.on(GameEvents.MATCHED, this.onProgress)
+
+
 
     }
 
@@ -50,7 +54,7 @@ export class GameManager extends Component {
         EventBus.off(GameEvents.NEW_LEVEL, this.onNewGame)
         EventBus.off(GameEvents.WIN, this.onWinGame)
         EventBus.off(GameEvents.LOSE, this.onLoseGame)
-
+        EventBus.off(GameEvents.MATCHED, this.onProgress)
     }
 
     onNewGame = () => {
@@ -60,13 +64,15 @@ export class GameManager extends Component {
         TrackingManager.TrackEvent(ETrackingEvent.DISPLAYED)
         TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_STARTED)
 
+        this.total = this.levelManager.levelData.fruits.length / 3
+
     }
 
 
     onWinGame = () => {
         PlayableAdsManager.OpenStore()
         this.confettiNode.active = true;
-      
+
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
 
     }
@@ -74,6 +80,43 @@ export class GameManager extends Component {
         PlayableAdsManager.OpenStore()
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
     }
+
+
+
+    @property({ readonly: true }) public progress: number = 0
+    @property({ readonly: true }) public total: number = 0
+    progressTracked = {
+        quarter: false,  // 25%
+        half: false,     // 50%
+        threeQuarter: false  // 75%
+    }
+    onProgress = () => {
+        this.progress++
+
+        const percentage = (this.progress / this.total) * 100
+        console.log("progress " + percentage)
+
+        if (!this.progressTracked.quarter && percentage >= 25) {
+            this.progressTracked.quarter = true
+            TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_PASS_25)
+        }
+
+        if (!this.progressTracked.half && percentage >= 50) {
+            this.progressTracked.half = true
+            TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_PASS_50)
+        }
+
+        if (!this.progressTracked.threeQuarter && percentage >= 75) {
+            this.progressTracked.threeQuarter = true
+            TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_PASS_75)
+        }
+
+        if (this.progress === this.total) {
+            TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_SOLVED)
+        }
+    }
+
+
 }
 
 

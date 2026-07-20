@@ -64,7 +64,7 @@ export class Tray extends Component {
 
     // Mỗi khi có quả đáp xuống slot mới kiểm tra match / thắng thua
     private onFruitArrived = () => {
-        this.bounce()
+        // this.bounce()
         this.resolveMatches()
     }
 
@@ -109,6 +109,7 @@ export class Tray extends Component {
                     f.matchDestroy()
                 }
                 AudioManager.instance.playOneShot('Completed')
+                EventBus.emit(GameEvents.MATCHED)
 
 
                 this.layoutFruits()
@@ -120,6 +121,7 @@ export class Tray extends Component {
 
         if (this.matchedCount >= this.totalFruits) {
             this.gameEnded = true
+
             // Đợi 3 quả cuối chạy xong animation giải phóng rồi mới báo win
             this.scheduleOnce(() => {
                 console.log("Tray: WIN - đã match hết quả trên cây!")

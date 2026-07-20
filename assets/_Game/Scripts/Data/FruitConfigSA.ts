@@ -6,7 +6,9 @@ const { ccclass, property } = _decorator;
 @bh.createAssetMenu('FruitConfigSA', 'Config/FruitConfigSA')
 @bh.scriptable('FruitConfigSA')
 export class FruitConfigSA extends bh.ScriptableAsset {
-    @property(SpriteFrame) public fruits: SpriteFrame[] = []
+    @property(SpriteFrame) public fruits: SpriteFrame[] = [];
+    @property(SpriteFrame) public fruitsOutline: SpriteFrame[] = [];
+
 }
 
 

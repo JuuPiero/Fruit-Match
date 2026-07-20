@@ -12,6 +12,7 @@ export class EndGameScreen extends ScreenBase {
 
 
     protected start(): void {
+        TrackingManager.TrackEvent(ETrackingEvent.ENDCARD_SHOWN)
         // this.downloadBtn.getComponent(TweenScale).playDefaultAsync()
         // this.logo.getComponent(TweenScale).playDefaultAsync()
         this.downloadBtn.node.on(Button.EventType.CLICK, () => {
