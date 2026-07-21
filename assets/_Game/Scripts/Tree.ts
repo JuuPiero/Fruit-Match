@@ -52,6 +52,8 @@ export class Tree extends GameBehaviour {
 
         let spawnIndex = 0; // index = 0 is on top of stack
         slots.forEach((slot, index) => {
+            const stackFruits: Fruit[] = new Array(slot.fruits.length)
+
             for (let i = slot.fruits.length - 1; i >= 0; i--) {
                 const fruitData = slot.fruits[i]
                 const node = instantiate(fruitPrefab)
@@ -60,7 +62,23 @@ export class Tree extends GameBehaviour {
                 const fruit = node.getComponent(Fruit)
                 node.name = `Slot: ${index}, Index: ${spawnIndex}`
                 fruit.initialize(fruitData, spawnIndex * Tree.FRUIT_SPAWN_INTERVAL)
+                stackFruits[i] = fruit
                 spawnIndex++
+            }
+
+            this.setupStackLocking(stackFruits)
+        })
+    }
+
+    /** Chỉ quả trên cùng (index 0) của stack được phép tương tác, các quả dưới bị khoá (tối màu) cho tới khi lộ ra */
+    private setupStackLocking(stack: Fruit[]) {
+        if (stack.length === 0) return
+
+        stack.forEach((fruit, i) => {
+            fruit.setLocked(i !== 0, true)
+            fruit.onPicked = () => {
+                const next = stack[i + 1]
+                if (next) next.setLocked(false)
             }
         })
     }

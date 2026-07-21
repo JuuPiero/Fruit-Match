@@ -1,4 +1,4 @@
-import { _decorator, Button, CCInteger, Component, EventMouse, Material, Node, Sprite, SpriteFrame, tween, Tween, Vec3 } from 'cc';
+import { _decorator, Button, CCInteger, Color, Component, EventMouse, Material, Node, Sprite, SpriteFrame, tween, Tween, Vec3 } from 'cc';
 import { FruitData } from './Data/LevelData';
 import { VFXManager } from '../../Scripts/VFXManager';
 import { ServiceLocator } from '../../_iKame/Scripts/ServiceLocator';
@@ -21,6 +21,9 @@ const SWAY_DURATION = 0.8;
 const HOVER_SCALE_DURATION = 0.15;
 
 const FLY_ARC_HEIGHT = 90;
+
+const LOCK_TINT_DURATION = 0.15;
+const LOCKED_COLOR = new Color(120, 120, 120, 255);
 
 const LAND_PUNCH_DURATION = 0.32;
 const SPAWN_SCALE_IN_DURATION = 0.28;
@@ -45,6 +48,12 @@ export class Fruit extends Component {
 
     /** Đang bay/di chuyển tới slot, chưa được phép match */
     moving: boolean = false;
+
+    /** Bị chặn vì chưa phải quả trên cùng của stack trong slot */
+    locked: boolean = false;
+
+    /** Tree gán callback này để biết khi nào quả rời khỏi stack (được click/bay đi) */
+    onPicked?: () => void;
 
     @property(Material) outlineMaterial: Material = null;
 
@@ -83,7 +92,7 @@ export class Fruit extends Component {
 
 
     onMouseEnter(event: EventMouse) {
-        if (this.picked) return
+        if (this.picked || this.locked) return
         // console.log('Mouse hovered over the node!');
         tween(this.node)
             .to(HOVER_SCALE_DURATION, { worldScale: this.originScale.clone().add3f(0.1, 0.1, 0.1) }, { easing: 'quadOut' })
@@ -93,13 +102,30 @@ export class Fruit extends Component {
     }
 
     onMouseLeave(event: EventMouse) {
-        if (this.picked) return
+        if (this.picked || this.locked) return
         // console.log('Mouse left the node!');
         tween(this.node)
             .to(HOVER_SCALE_DURATION, { worldScale: this.originScale }, { easing: 'quadOut' })
             .start()
         this._sprite.spriteFrame = this._spriteFrame
 
+    }
+
+    /** Khoá/mở khoá quả (dùng cho fruit stack: chỉ quả trên cùng được phép tương tác) */
+    setLocked(locked: boolean, immediate = false) {
+        this.locked = locked
+        if (this._button) this._button.interactable = !locked
+
+        Tween.stopAllByTarget(this._sprite)
+        const targetColor = locked ? LOCKED_COLOR : Color.WHITE
+
+        if (immediate) {
+            this._sprite.color = targetColor
+        } else {
+            tween(this._sprite)
+                .to(LOCK_TINT_DURATION, { color: targetColor }, { easing: 'quadOut' })
+                .start()
+        }
     }
 
 
@@ -111,6 +137,10 @@ export class Fruit extends Component {
         this.picked = false;
 
         this.moving = false;
+
+        this.locked = false;
+
+        this.onPicked = undefined;
 
 
         // const spriteData = ServiceLocator.get(FruitConfigSA).getFruit(data.fruitType.toString();)
@@ -253,10 +283,11 @@ export class Fruit extends Component {
     }
 
     onClick = () => {
-        if (this.picked) return;
+        if (this.picked || this.locked) return;
           VFXManager.Instance.play('ModularBuff', this.node, 0.5)
         AudioManager.instance.playOneShot('Click')
 
+        this.onPicked?.()
         EventBus.emit(GameEvents.FRUIT_CLICKED, this)
     }
 }

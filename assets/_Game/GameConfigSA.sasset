@@ -16,6 +16,10 @@
     {
       "__uuid__": "35d2d81d-22e0-4855-a72e-0fc05329d976@f9941",
       "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "a71200f2-06f0-48c9-9a4a-08901d182a84@f9941",
+      "__expectedType__": "cc.SpriteFrame"
     }
   ]
 }
