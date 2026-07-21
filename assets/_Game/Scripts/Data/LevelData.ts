@@ -18,11 +18,20 @@ export class TreeData {
     @property height: number = 0;
 }
 
+@ccclass('SlotsFruit')
+export class SlotsFruit {
+    @property(FruitData) fruits: FruitData[] = [];
+}
+
 @ccclass('LevelData')
 export class LevelData {
     @property(TreeData) tree: TreeData = new TreeData();
-    @property(FruitData) fruits: FruitData[] = [];
 
+    @property(SlotsFruit) slots: SlotsFruit[] = []
+
+    get fruits(): FruitData[] {
+        return this.slots.reduce((acc: FruitData[], slot: SlotsFruit) => acc.concat(slot.fruits), []);
+    }
 
     static parseFromJson(jsonAsset: JsonAsset): LevelData {
         const levelData = new LevelData();
@@ -44,15 +53,27 @@ export class LevelData {
             levelData.tree.height = data.tree.height ?? 0;
         }
 
-        // 2. Gắn dữ liệu cho mảng Fruits
-        if (data.fruits && Array.isArray(data.fruits)) {
-            levelData.fruits = data.fruits.map((f: any) => {
-                const fruit = new FruitData();
-                fruit.fruitType = f.fruitType ?? 0
-                fruit.positionX = f.positionX ?? 0;
-                fruit.positionY = f.positionY ?? 0;
-                return fruit;
+        const parseFruit = (f: any): FruitData => {
+            const fruit = new FruitData();
+            fruit.fruitType = f.fruitType ?? 0
+            fruit.positionX = f.positionX ?? 0;
+            fruit.positionY = f.positionY ?? 0;
+            return fruit;
+        };
+
+        // 2. Gắn dữ liệu cho mảng Slots (mỗi slot chứa nhiều fruits)
+        if (data.slots && Array.isArray(data.slots)) {
+            levelData.slots = data.slots.map((s: any) => {
+                const slot = new SlotsFruit();
+                slot.fruits = Array.isArray(s.fruits) ? s.fruits.map(parseFruit) : [];
+                return slot;
             });
+        }
+        // 2b. Tương thích ngược với format cũ (mảng fruits phẳng ở cấp root)
+        else if (data.fruits && Array.isArray(data.fruits)) {
+            const slot = new SlotsFruit();
+            slot.fruits = data.fruits.map(parseFruit);
+            levelData.slots = [slot];
         }
 
         return levelData;

@@ -18,6 +18,10 @@ export const MATCH_FLY_UP_HEIGHT = 120;
 const SWAY_ANGLE = 6;
 const SWAY_DURATION = 0.8;
 
+const HOVER_SCALE_DURATION = 0.15;
+
+const FLY_ARC_HEIGHT = 90;
+
 const LAND_PUNCH_DURATION = 0.32;
 const SPAWN_SCALE_IN_DURATION = 0.28;
 const SPAWN_RISE_DURATION = 0.24;
@@ -81,17 +85,25 @@ export class Fruit extends Component {
     onMouseEnter(event: EventMouse) {
         if (this.picked) return
         // console.log('Mouse hovered over the node!');
-        this.node.setWorldScale(this.originScale.clone().add3f(0.1, 0.1, 0.1))
+        tween(this.node)
+            .to(HOVER_SCALE_DURATION, { worldScale: this.originScale.clone().add3f(0.1, 0.1, 0.1) }, { easing: 'quadOut' })
+            .start()
+        this._sprite.spriteFrame = this._outlineSpriteFrame
+
     }
 
     onMouseLeave(event: EventMouse) {
         if (this.picked) return
         // console.log('Mouse left the node!');
-        this.node.setWorldScale(this.originScale)
+        tween(this.node)
+            .to(HOVER_SCALE_DURATION, { worldScale: this.originScale }, { easing: 'quadOut' })
+            .start()
+        this._sprite.spriteFrame = this._spriteFrame
+
     }
 
 
-    initialize(data: FruitData, fruitId: number, spawnDelay = 0) {
+    initialize(data: FruitData, spawnDelay = 0) {
         this.data = data;
 
         this.fruitId = data.fruitType;
@@ -137,8 +149,28 @@ export class Fruit extends Component {
             .to(FRUIT_FLY_DURATION * 0.5, { scale: new Vec3(1, 1, 1) }, { easing: 'quadIn' })
             .start()
 
-        tween(this.node)
-            .to(FRUIT_FLY_DURATION, { position: new Vec3(0, 0, 0) }, { easing: 'quadOut' })
+        // Bay theo đường cong (quadratic bezier) thay vì đường thẳng cho mượt và "cong" hơn
+        const startPos = this.node.position.clone()
+        const endPos = new Vec3(0, 0, 0)
+        const arcSide = startPos.x >= 0 ? -1 : 1 // vòng cong lệch về phía ngược lại điểm xuất phát
+        const controlPos = new Vec3(
+            (startPos.x + endPos.x) * 0.5 + arcSide * Math.abs(startPos.x) * 0.3,
+            Math.max(startPos.y, endPos.y) + FLY_ARC_HEIGHT,
+            0
+        )
+
+        const flyProgress = { t: 0 }
+        tween(flyProgress)
+            .to(FRUIT_FLY_DURATION, { t: 1 }, {
+                easing: 'quadOut',
+                onUpdate: () => {
+                    const t = flyProgress.t
+                    const oneMinusT = 1 - t
+                    const x = oneMinusT * oneMinusT * startPos.x + 2 * oneMinusT * t * controlPos.x + t * t * endPos.x
+                    const y = oneMinusT * oneMinusT * startPos.y + 2 * oneMinusT * t * controlPos.y + t * t * endPos.y
+                    this.node.setPosition(x, y, 0)
+                }
+            })
             .call(() => {
                 this.moving = false;
                 AudioManager.instance.playOneShot('Pop')
@@ -149,15 +181,14 @@ export class Fruit extends Component {
 
                 onArrived?.();
 
+                // Punch 3 nhịp: bẹp mạnh -> vồng ngược lên -> lún về scale gốc
+                tween(this.node)
+                    .to(LAND_PUNCH_DURATION * 0.3, { scale: new Vec3(1.3, 0.7, 1) }, { easing: 'quadOut' })
+                    .to(LAND_PUNCH_DURATION * 0.35, { scale: new Vec3(0.9, 1.12, 1) }, { easing: 'quadInOut' })
+                    .to(LAND_PUNCH_DURATION * 0.35, { scale: new Vec3(1, 1, 1) }, { easing: 'quadOut' })
+                    .start()
             })
-            // Punch 3 nhịp: bẹp mạnh -> vồng ngược lên -> lún về scale gốc
-            .to(LAND_PUNCH_DURATION * 0.3, { scale: new Vec3(1.3, 0.7, 1) }, { easing: 'quadOut' })
-            .to(LAND_PUNCH_DURATION * 0.35, { scale: new Vec3(0.9, 1.12, 1) }, { easing: 'quadInOut' })
-            .to(LAND_PUNCH_DURATION * 0.35, { scale: new Vec3(1, 1, 1) }, { easing: 'quadOut' })
-            .start().call(() => {
-                // this._sprite.customMaterial = null
-
-            })
+            .start()
     }
 
     matchDestroy() {

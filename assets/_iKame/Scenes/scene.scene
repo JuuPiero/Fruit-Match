@@ -4948,7 +4948,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1080,
-      "height": 1920.0000000000002
+      "height": 1920
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -6123,7 +6123,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -4.89,
       "y": -30.241,
       "z": 0
     },
@@ -7657,7 +7657,7 @@
       "__id__": 175
     },
     "levelJson": {
-      "__uuid__": "53372be5-0fd9-4893-b1c8-8f0ec1963c5f",
+      "__uuid__": "9e58ef47-08ea-4855-b0d7-ec21c141fe71",
       "__expectedType__": "cc.JsonAsset"
     },
     "levelData": null,

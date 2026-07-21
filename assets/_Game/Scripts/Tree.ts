@@ -11,7 +11,7 @@ const { ccclass, property } = _decorator;
 @ccclass('Tree')
 export class Tree extends GameBehaviour {
 
-    private static readonly FRUIT_SPAWN_INTERVAL = 0.02;
+    private static readonly FRUIT_SPAWN_INTERVAL = 0.01;
 
     _uiTransform: UITransform = null;
 
@@ -32,33 +32,37 @@ export class Tree extends GameBehaviour {
 
         this.clearChildren()
         this.data = levelData.tree;
-        // this._uiTransform.setContentSize(new Size(this.data.width, this.data.height))
+        this._uiTransform.setContentSize(new Size(this.data.width, this.data.height))
         this.node.setPosition(new Vec3(this.data.positionX, this.data.positionY, 0))
 
 
         // console.log("Cây: " + ServiceLocator.get(GameConfigSA).treeMap.size);
-        
+
         this._sprite.spriteFrame = ServiceLocator.get(GameConfigSA).getTree(this.data.treeType)
 
         const fruitPrefab = ServiceLocator.get(GameConfigSA).fruitPrefab
 
-        const fruitIds = this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
+        // const fruitIds = this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
 
-        for (let i = 0; i < levelData.fruits.length; i++) {
-            const fruitData = levelData.fruits[i]
-            const node = instantiate(fruitPrefab)
-            node.setParent(this.node)
 
-            const height = this._uiTransform.contentSize.height;
-            const width = this._uiTransform.contentSize.width;
-            node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
+        const slots = levelData.slots;
 
-            // node.setPosition(new Vec3(fruitData.positionX, fruitData.positionY , 0))
-            const fruit = node.getComponent(Fruit)
+        const height = this._uiTransform.contentSize.height;
+        const width = this._uiTransform.contentSize.width;
 
-            fruit.initialize(fruitData, fruitIds[i], i * Tree.FRUIT_SPAWN_INTERVAL)
-
-        }
+        let spawnIndex = 0; // index = 0 is on top of stack
+        slots.forEach((slot, index) => {
+            for (let i = slot.fruits.length - 1; i >= 0; i--) {
+                const fruitData = slot.fruits[i]
+                const node = instantiate(fruitPrefab)
+                node.setParent(this.node)
+                node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
+                const fruit = node.getComponent(Fruit)
+                node.name = `Slot: ${index}, Index: ${spawnIndex}`
+                fruit.initialize(fruitData, spawnIndex * Tree.FRUIT_SPAWN_INTERVAL)
+                spawnIndex++
+            }
+        })
     }
 
     private generateFruitIds(fruitCount: number, fruitTypeCount: number): number[] {
