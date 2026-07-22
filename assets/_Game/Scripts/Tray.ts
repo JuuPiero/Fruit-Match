@@ -18,6 +18,10 @@ export class Tray extends Component {
     private gameEnded: boolean = false
 
 
+
+    sfxs = ['Excellent', 'Goodjob', 'Welldone', 'Amazing']
+
+
     initialize(totalFruits: number) {
         for (const fruit of this.fruits) {
             if (fruit?.node?.isValid) fruit.node.destroy()
@@ -108,6 +112,10 @@ export class Tray extends Component {
                 for (const f of matched) {
                     f.matchDestroy()
                 }
+                const randomItem = this.sfxs[Math.floor(Math.random() * this.sfxs.length)];
+                AudioManager.instance.playOneShot(randomItem)
+
+
                 AudioManager.instance.playOneShot('Completed')
                 EventBus.emit(GameEvents.MATCHED)
 

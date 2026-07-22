@@ -350,7 +350,7 @@
     "content": {
       "__id__": 8
     },
-    "padding": 100,
+    "padding": 0,
     "_id": "0ai7MeZvpPbalvDHGI2Z+Q"
   },
   {
@@ -6506,8 +6506,8 @@
     "__prefab": null,
     "_alignFlags": 5,
     "_target": null,
-    "_left": 132.075,
-    "_right": 132.075,
+    "_left": -294,
+    "_right": -294,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -6518,7 +6518,7 @@
     "_isAbsBottom": true,
     "_isAbsHorizontalCenter": true,
     "_isAbsVerticalCenter": true,
-    "_originalWidth": 815.85,
+    "_originalWidth": 1668,
     "_originalHeight": 1190.1,
     "_alignMode": 2,
     "_lockFlags": 0,
@@ -7506,6 +7506,22 @@
       {
         "__uuid__": "26d5bb3d-f11c-4f9e-a9fb-7960fdfc0c66",
         "__expectedType__": "cc.AudioClip"
+      },
+      {
+        "__uuid__": "dd9fca98-2824-4eee-a75f-6640a71372a1",
+        "__expectedType__": "cc.AudioClip"
+      },
+      {
+        "__uuid__": "5c2062a6-6289-4089-871b-501ae6df24b7",
+        "__expectedType__": "cc.AudioClip"
+      },
+      {
+        "__uuid__": "bc2aa0f0-f3c7-41f7-aa4a-b4b2c85ff75a",
+        "__expectedType__": "cc.AudioClip"
+      },
+      {
+        "__uuid__": "91ee833f-7cbd-468c-bc84-86fdc88572d5",
+        "__expectedType__": "cc.AudioClip"
       }
     ],
     "poolSize": 3,
@@ -7697,10 +7713,9 @@
       "__id__": 43
     },
     "levelJson": {
-      "__uuid__": "0387c4fc-ab78-405a-8a92-618c99aeb911",
+      "__uuid__": "fb0d061c-10ec-4110-9899-e6a6ce17bb61",
       "__expectedType__": "cc.JsonAsset"
     },
-    "cameraFit": null,
     "levelData": null,
     "_id": "bf/XTcpfpO/oA8OndoqbT1"
   },
@@ -8080,7 +8095,7 @@
         "__id__": 596
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 655

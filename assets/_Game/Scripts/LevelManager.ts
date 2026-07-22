@@ -12,7 +12,7 @@ export class LevelManager extends Component {
 
     @property(JsonAsset) levelJson: JsonAsset = null;
 
-    @property(CameraFit) cameraFit: CameraFit = null;
+    // @property(CameraFit) cameraFit: CameraFit = null;
 
     @property(LevelData) levelData: LevelData = null;
 
@@ -23,7 +23,7 @@ export class LevelManager extends Component {
         this.tree.initialize(this.levelData)
         this.tray.initialize(this.levelData.fruits.length)
 
-        this.cameraFit?.fit()
+        // this.cameraFit?.fit()
     }
 }
 

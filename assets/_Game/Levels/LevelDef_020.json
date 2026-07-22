@@ -1,0 +1,1019 @@
+{
+    "tree": {
+        "treeType": 20,
+        "positionX": 0.0,
+        "positionY": 0.0,
+        "width": 1431.0,
+        "height": 2048.0
+    },
+    "slots": [
+        {
+            "fruits": [
+                {
+                    "fruitType": 7,
+                    "positionX": 0.14120933413505555,
+                    "positionY": 0.050945401191711429
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": 0.13407529890537263,
+                    "positionY": 0.03635425120592117
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": 0.21421627700328828,
+                    "positionY": 0.047251105308532718
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": 0.16643822193145753,
+                    "positionY": 0.007816281169652939
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": 0.2083108127117157,
+                    "positionY": 0.08724856376647949
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": 0.22808034718036652,
+                    "positionY": 0.027801908552646638
+                },
+                {
+                    "fruitType": 16,
+                    "positionX": 0.20034964382648469,
+                    "positionY": 0.0611477829515934
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": 0.1151367723941803,
+                    "positionY": 0.06755732744932175
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": 0.1323845535516739,
+                    "positionY": 0.08679550141096115
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.17974981665611268,
+                    "positionY": 0.08150405436754227
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 18,
+                    "positionX": -0.19720661640167237,
+                    "positionY": 0.2912555932998657
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": -0.25801241397857668,
+                    "positionY": 0.29797929525375368
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": -0.16952404379844666,
+                    "positionY": 0.29927554726600649
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": -0.23120442032814027,
+                    "positionY": 0.2731889486312866
+                },
+                {
+                    "fruitType": 2,
+                    "positionX": -0.1701720952987671,
+                    "positionY": 0.27526870369911196
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.19099074602127076,
+                    "positionY": 0.314901739358902
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.2179679274559021,
+                    "positionY": 0.2979244291782379
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": -0.20315194129943849,
+                    "positionY": 0.26594841480255129
+                },
+                {
+                    "fruitType": 12,
+                    "positionX": -0.14621533453464509,
+                    "positionY": 0.3087886571884155
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": -0.216180682182312,
+                    "positionY": 0.31181225180625918
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 18,
+                    "positionX": -0.29810646176338198,
+                    "positionY": -0.007860048674046994
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.30095112323760989,
+                    "positionY": 0.04444902390241623
+                },
+                {
+                    "fruitType": 11,
+                    "positionX": -0.22264544665813447,
+                    "positionY": 0.021659938618540765
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": -0.28354978561401369,
+                    "positionY": 0.0024319461081176998
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": -0.29855233430862429,
+                    "positionY": -0.02230895683169365
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": -0.3018271028995514,
+                    "positionY": 0.008027060888707638
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.2757817506790161,
+                    "positionY": 0.01782527193427086
+                },
+                {
+                    "fruitType": 8,
+                    "positionX": -0.3078755736351013,
+                    "positionY": 0.029097819700837137
+                },
+                {
+                    "fruitType": 12,
+                    "positionX": -0.275632381439209,
+                    "positionY": -0.017780421301722528
+                },
+                {
+                    "fruitType": 16,
+                    "positionX": -0.2334892749786377,
+                    "positionY": 0.03938809037208557
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 19,
+                    "positionX": 0.20274269580841065,
+                    "positionY": 0.28419724106788638
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": 0.15796048939228059,
+                    "positionY": 0.307746946811676
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": 0.2375515252351761,
+                    "positionY": 0.29192018508911135
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": 0.18094509840011598,
+                    "positionY": 0.27581581473350527
+                },
+                {
+                    "fruitType": 25,
+                    "positionX": 0.13886356353759767,
+                    "positionY": 0.3224729299545288
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": 0.22460982203483582,
+                    "positionY": 0.2596152424812317
+                },
+                {
+                    "fruitType": 23,
+                    "positionX": 0.1975502073764801,
+                    "positionY": 0.3081749677658081
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": 0.14467258751392365,
+                    "positionY": 0.28602683544158938
+                },
+                {
+                    "fruitType": 2,
+                    "positionX": 0.13561418652534486,
+                    "positionY": 0.30442574620246889
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.2382420003414154,
+                    "positionY": 0.27482444047927859
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 18,
+                    "positionX": -0.06865087151527405,
+                    "positionY": 0.13648302853107453
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.08711357414722443,
+                    "positionY": 0.14934386312961579
+                },
+                {
+                    "fruitType": 11,
+                    "positionX": -0.0788147822022438,
+                    "positionY": 0.10713034868240357
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": -0.034936171025037768,
+                    "positionY": 0.14893393218517304
+                },
+                {
+                    "fruitType": 29,
+                    "positionX": -0.12578867375850678,
+                    "positionY": 0.1440339833498001
+                },
+                {
+                    "fruitType": 4,
+                    "positionX": -0.07589899748563767,
+                    "positionY": 0.18062779307365418
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": -0.12778198719024659,
+                    "positionY": 0.1051965206861496
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": -0.1310548484325409,
+                    "positionY": 0.16757722198963166
+                },
+                {
+                    "fruitType": 2,
+                    "positionX": -0.08984775841236115,
+                    "positionY": 0.134231835603714
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": -0.07956824451684952,
+                    "positionY": 0.08863909542560578
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 2,
+                    "positionX": -0.27614837884902956,
+                    "positionY": 0.18880413472652436
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.28416475653648379,
+                    "positionY": 0.1540081650018692
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": -0.2476630061864853,
+                    "positionY": 0.16929709911346436
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.294327050447464,
+                    "positionY": 0.12582413852214814
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": -0.26825711131095889,
+                    "positionY": 0.21709465980529786
+                },
+                {
+                    "fruitType": 4,
+                    "positionX": -0.24823212623596192,
+                    "positionY": 0.18528135120868684
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": -0.30606263875961306,
+                    "positionY": 0.17366021871566773
+                },
+                {
+                    "fruitType": 29,
+                    "positionX": -0.2814692556858063,
+                    "positionY": 0.1754695326089859
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": -0.25973695516586306,
+                    "positionY": 0.19994713366031648
+                },
+                {
+                    "fruitType": 23,
+                    "positionX": -0.2652203142642975,
+                    "positionY": 0.1454588770866394
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 2,
+                    "positionX": 0.019657602533698083,
+                    "positionY": 0.3471282422542572
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.025963209569454194,
+                    "positionY": 0.3612602651119232
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.016100652515888215,
+                    "positionY": 0.3270261883735657
+                },
+                {
+                    "fruitType": 12,
+                    "positionX": 0.03349543735384941,
+                    "positionY": 0.36792445182800295
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": -0.05501211807131767,
+                    "positionY": 0.34607166051864626
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.03343002498149872,
+                    "positionY": 0.31939128041267397
+                },
+                {
+                    "fruitType": 4,
+                    "positionX": -0.055108170956373218,
+                    "positionY": 0.3151934742927551
+                },
+                {
+                    "fruitType": 29,
+                    "positionX": 0.05910593643784523,
+                    "positionY": 0.3559264838695526
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": 0.0002650032110977918,
+                    "positionY": 0.34073498845100405
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 19,
+                    "positionX": 0.24996893107891084,
+                    "positionY": 0.17767252027988435
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": 0.27639222145080569,
+                    "positionY": 0.13884234428405763
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": 0.2286200225353241,
+                    "positionY": 0.15576334297657014
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": 0.2367769330739975,
+                    "positionY": 0.20186178386211396
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.25181981921195986,
+                    "positionY": 0.12396534532308579
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.22115519642829896,
+                    "positionY": 0.1721697896718979
+                },
+                {
+                    "fruitType": 4,
+                    "positionX": 0.27309450507164,
+                    "positionY": 0.12099230289459229
+                },
+                {
+                    "fruitType": 27,
+                    "positionX": 0.27297553420066836,
+                    "positionY": 0.1662125140428543
+                },
+                {
+                    "fruitType": 11,
+                    "positionX": 0.257915735244751,
+                    "positionY": 0.15410993993282319
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 0,
+                    "positionX": 0.2240334302186966,
+                    "positionY": -0.05585750192403793
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": 0.21105115115642548,
+                    "positionY": -0.022833870723843576
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.2420167773962021,
+                    "positionY": -0.0630439892411232
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": 0.1951662003993988,
+                    "positionY": -0.05684253200888634
+                },
+                {
+                    "fruitType": 26,
+                    "positionX": 0.22447115182876588,
+                    "positionY": -0.07247398793697357
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": 0.19632498919963838,
+                    "positionY": -0.04076897352933884
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.20632252097129823,
+                    "positionY": -0.07409261167049408
+                },
+                {
+                    "fruitType": 27,
+                    "positionX": 0.23523229360580445,
+                    "positionY": -0.037206508219242099
+                },
+                {
+                    "fruitType": 11,
+                    "positionX": 0.18325942754745484,
+                    "positionY": -0.031182387843728067
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 20,
+                    "positionX": 0.046761978417634967,
+                    "positionY": 0.21131910383701325
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": 0.09174967557191849,
+                    "positionY": 0.20709168910980225
+                },
+                {
+                    "fruitType": 16,
+                    "positionX": 0.042652904987335208,
+                    "positionY": 0.24509821832180024
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": 0.04383539408445358,
+                    "positionY": 0.182174950838089
+                },
+                {
+                    "fruitType": 29,
+                    "positionX": 0.11286729574203491,
+                    "positionY": 0.23347437381744386
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": 0.011207351461052895,
+                    "positionY": 0.2259002923965454
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.10753504186868668,
+                    "positionY": 0.1814032793045044
+                },
+                {
+                    "fruitType": 26,
+                    "positionX": 0.07220378518104553,
+                    "positionY": 0.267476350069046
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 2,
+                    "positionX": -0.0937076285481453,
+                    "positionY": 0.0063714091666042809
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.10278937220573425,
+                    "positionY": 0.023946212604641916
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.14189603924751283,
+                    "positionY": 0.005277832970023155
+                },
+                {
+                    "fruitType": 23,
+                    "positionX": -0.08598684519529343,
+                    "positionY": 0.060485657304525378
+                },
+                {
+                    "fruitType": 29,
+                    "positionX": -0.0781482383608818,
+                    "positionY": 0.02045075036585331
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": -0.12082959711551666,
+                    "positionY": -0.004981151316314936
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": -0.10007978230714798,
+                    "positionY": -0.024657463654875757
+                },
+                {
+                    "fruitType": 26,
+                    "positionX": -0.10300906002521515,
+                    "positionY": 0.04007812961935997
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 0,
+                    "positionX": -0.04631136357784271,
+                    "positionY": 0.2553313076496124
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": -0.08253978192806244,
+                    "positionY": 0.2774401307106018
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.08467965573072434,
+                    "positionY": 0.2401120811700821
+                },
+                {
+                    "fruitType": 16,
+                    "positionX": -0.02214769460260868,
+                    "positionY": 0.27744653820991518
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": -0.11122485995292664,
+                    "positionY": 0.27334877848625185
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": -0.02924351580440998,
+                    "positionY": 0.22935272753238679
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.04676102474331856,
+                    "positionY": 0.3083692491054535
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": -0.12554879486560822,
+                    "positionY": 0.23858514428138734
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 0,
+                    "positionX": -0.23642918467521668,
+                    "positionY": 0.09789630025625229
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": -0.24347655475139619,
+                    "positionY": 0.12922316789627076
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": -0.2257910817861557,
+                    "positionY": 0.048754505813121799
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": -0.2263406217098236,
+                    "positionY": 0.0714557096362114
+                },
+                {
+                    "fruitType": 4,
+                    "positionX": -0.213680699467659,
+                    "positionY": 0.08653556555509567
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": -0.20304429531097413,
+                    "positionY": 0.10530731081962586
+                },
+                {
+                    "fruitType": 8,
+                    "positionX": -0.21723982691764832,
+                    "positionY": 0.1303674429655075
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 7,
+                    "positionX": 0.2969907224178314,
+                    "positionY": 0.04222431033849716
+                },
+                {
+                    "fruitType": 11,
+                    "positionX": 0.3098023533821106,
+                    "positionY": 0.07605648785829544
+                },
+                {
+                    "fruitType": 14,
+                    "positionX": 0.289282888174057,
+                    "positionY": 0.0125729413703084
+                },
+                {
+                    "fruitType": 0,
+                    "positionX": 0.2713207006454468,
+                    "positionY": 0.03437073901295662
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.2953193187713623,
+                    "positionY": 0.0569879412651062
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": 0.22410975396633149,
+                    "positionY": 0.051795318722724918
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": 0.24578599631786347,
+                    "positionY": 0.03788674622774124
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 7,
+                    "positionX": 0.10145281255245209,
+                    "positionY": 0.1134868860244751
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.10552762448787689,
+                    "positionY": 0.15728731453418733
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": 0.14934507012367249,
+                    "positionY": 0.11656656116247177
+                },
+                {
+                    "fruitType": 12,
+                    "positionX": 0.06571092456579209,
+                    "positionY": 0.16766545176506043
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.1479867696762085,
+                    "positionY": 0.16125692427158357
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": 0.10063233971595764,
+                    "positionY": 0.13437283039093018
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": 0.13313975930213929,
+                    "positionY": 0.12575241923332215
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 8,
+                    "positionX": -0.18658475577831269,
+                    "positionY": 0.21213972568511964
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": -0.1923070102930069,
+                    "positionY": 0.1739187389612198
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": -0.13616029918193818,
+                    "positionY": 0.2044387310743332
+                },
+                {
+                    "fruitType": 16,
+                    "positionX": -0.23425370454788209,
+                    "positionY": 0.21152211725711823
+                },
+                {
+                    "fruitType": 29,
+                    "positionX": -0.16097776591777802,
+                    "positionY": 0.1561630815267563
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": -0.14978860318660737,
+                    "positionY": 0.24568228423595429
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 7,
+                    "positionX": 0.18117466568946839,
+                    "positionY": 0.21153338253498078
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.14061756432056428,
+                    "positionY": 0.2339036911725998
+                },
+                {
+                    "fruitType": 8,
+                    "positionX": 0.21660955250263215,
+                    "positionY": 0.19419465959072114
+                },
+                {
+                    "fruitType": 23,
+                    "positionX": 0.18999460339546204,
+                    "positionY": 0.27388983964920046
+                },
+                {
+                    "fruitType": 24,
+                    "positionX": 0.13315455615520478,
+                    "positionY": 0.192648783326149
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": 0.18223732709884644,
+                    "positionY": 0.2287353128194809
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 14,
+                    "positionX": -0.0034249313175678255,
+                    "positionY": 0.05012582242488861
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": -0.03227056562900543,
+                    "positionY": 0.06002084165811539
+                },
+                {
+                    "fruitType": 19,
+                    "positionX": -0.0003035131376236677,
+                    "positionY": 0.06366891413927078
+                },
+                {
+                    "fruitType": 12,
+                    "positionX": -0.010830775834619999,
+                    "positionY": 0.08202848583459854
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": -0.07412917166948319,
+                    "positionY": 0.06789430230855942
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": -0.06444894522428513,
+                    "positionY": 0.07850327342748642
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 14,
+                    "positionX": 0.07014952600002289,
+                    "positionY": 0.30127453804016116
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.11442040652036667,
+                    "positionY": 0.28400135040283205
+                },
+                {
+                    "fruitType": 8,
+                    "positionX": 0.08186091482639313,
+                    "positionY": 0.3322731554508209
+                },
+                {
+                    "fruitType": 17,
+                    "positionX": 0.05164027586579323,
+                    "positionY": 0.26842549443244936
+                },
+                {
+                    "fruitType": 22,
+                    "positionX": 0.15837565064430238,
+                    "positionY": 0.31686392426490786
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 14,
+                    "positionX": 0.14268752932548524,
+                    "positionY": -0.009627038612961769
+                },
+                {
+                    "fruitType": 23,
+                    "positionX": 0.2068234086036682,
+                    "positionY": 0.00435504037886858
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": 0.2014523297548294,
+                    "positionY": -0.053856901824474338
+                },
+                {
+                    "fruitType": 7,
+                    "positionX": 0.1609177440404892,
+                    "positionY": -0.020393935963511468
+                },
+                {
+                    "fruitType": 4,
+                    "positionX": 0.21349917352199555,
+                    "positionY": -0.03967730700969696
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 14,
+                    "positionX": -0.10730625689029694,
+                    "positionY": -0.058728013187646869
+                },
+                {
+                    "fruitType": 5,
+                    "positionX": -0.12485738098621369,
+                    "positionY": -0.07214179635047913
+                },
+                {
+                    "fruitType": 18,
+                    "positionX": -0.10460969805717468,
+                    "positionY": -0.03657219186425209
+                },
+                {
+                    "fruitType": 16,
+                    "positionX": -0.1251600831747055,
+                    "positionY": -0.04042954370379448
+                },
+                {
+                    "fruitType": 24,
+                    "positionX": -0.12936142086982728,
+                    "positionY": -0.05776292830705643
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 14,
+                    "positionX": -0.0802864357829094,
+                    "positionY": 0.3153979480266571
+                },
+                {
+                    "fruitType": 24,
+                    "positionX": -0.15393368899822236,
+                    "positionY": 0.3115328252315521
+                },
+                {
+                    "fruitType": 11,
+                    "positionX": -0.07500941306352616,
+                    "positionY": 0.33671873807907107
+                },
+                {
+                    "fruitType": 25,
+                    "positionX": -0.04718898609280586,
+                    "positionY": 0.35330232977867129
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 12,
+                    "positionX": -0.13923576474189759,
+                    "positionY": 0.07145076245069504
+                },
+                {
+                    "fruitType": 25,
+                    "positionX": -0.08972334116697312,
+                    "positionY": 0.04886500909924507
+                },
+                {
+                    "fruitType": 20,
+                    "positionX": -0.12413988262414932,
+                    "positionY": 0.1073627918958664
+                },
+                {
+                    "fruitType": 8,
+                    "positionX": -0.15572257339954377,
+                    "positionY": 0.034863416105508807
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 5,
+                    "positionX": 0.3017273247241974,
+                    "positionY": 0.022835584357380868
+                },
+                {
+                    "fruitType": 27,
+                    "positionX": 0.22282224893569947,
+                    "positionY": -0.02034076303243637
+                },
+                {
+                    "fruitType": 9,
+                    "positionX": 0.23158201575279237,
+                    "positionY": -0.04380137473344803
+                },
+                {
+                    "fruitType": 23,
+                    "positionX": 0.2799639105796814,
+                    "positionY": 0.006694155279546976
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 5,
+                    "positionX": 0.22640128433704377,
+                    "positionY": 0.10574188083410263
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 5,
+                    "positionX": -0.02540895901620388,
+                    "positionY": 0.18664199113845826
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitType": 5,
+                    "positionX": 0.1696387678384781,
+                    "positionY": 0.16775165498256684
+                }
+            ]
+        }
+    ]
+}

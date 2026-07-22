@@ -8,7 +8,7 @@ import { GameEvents } from './GameEvents';
 import { PlayableAdsManager } from '../../_iKame/Scripts/PlayableAdsManager';
 import { ETrackingEvent, TrackingManager } from '../../_iKame/Scripts/TrackingManager';
 import { NavigationContainer } from '../../_iKame/Scripts/Navigation/NavigationContainer';
-import { PREVIEW } from 'cc/env';
+import { AudioManager } from '../../_iKame/Scripts/AudioManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -63,6 +63,8 @@ export class GameManager extends Component {
         TrackingManager.TrackEvent(ETrackingEvent.LOADED)
         TrackingManager.TrackEvent(ETrackingEvent.DISPLAYED)
         TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_STARTED)
+
+        // AudioManager.instance.playMusic('BGM')
 
         this.total = this.levelManager.levelData.fruits.length / 3
 
