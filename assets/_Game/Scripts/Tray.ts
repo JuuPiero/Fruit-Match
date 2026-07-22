@@ -113,7 +113,7 @@ export class Tray extends Component {
                     f.matchDestroy()
                 }
                 const randomItem = this.sfxs[Math.floor(Math.random() * this.sfxs.length)];
-                AudioManager.instance.playOneShot(randomItem)
+                // AudioManager.instance.playOneShot(randomItem)
 
 
                 AudioManager.instance.playOneShot('Completed')

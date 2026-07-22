@@ -64,7 +64,7 @@ export class GameManager extends Component {
         TrackingManager.TrackEvent(ETrackingEvent.DISPLAYED)
         TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_STARTED)
 
-        // AudioManager.instance.playMusic('BGM')
+        AudioManager.instance.playMusic('BGM')
 
         this.total = this.levelManager.levelData.fruits.length / 3
 
