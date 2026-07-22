@@ -141,7 +141,7 @@ export class Fruit extends Component {
     }
 
 
-    initialize(data: FruitData, spawnDelay = 0) {
+    initialize(data: FruitData, spawnDelay = 0, onSpawnComplete?: () => void) {
         this.data = data;
 
         this.fruitId = data.fruitType;
@@ -156,13 +156,13 @@ export class Fruit extends Component {
 
 
         // const spriteData = ServiceLocator.get(FruitConfigSA).getFruit(data.fruitType.toString();)
-        
+
         this._spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[data.fruitType]
         this._outlineSpriteFrame = ServiceLocator.get(FruitConfigSA).fruitsOutline[data.fruitType]
 
         this._sprite.spriteFrame = this._spriteFrame;
 
-        this.playSpawnAnimation(spawnDelay)
+        this.playSpawnAnimation(spawnDelay, onSpawnComplete)
     }
 
 
@@ -253,7 +253,7 @@ export class Fruit extends Component {
             .start()
     }
 
-    private playSpawnAnimation(spawnDelay: number) {
+    private playSpawnAnimation(spawnDelay: number, onSpawnComplete?: () => void) {
         Tween.stopAllByTarget(this.node)
 
         const startPos = this.node.position.clone()
@@ -273,7 +273,10 @@ export class Fruit extends Component {
             .to(SPAWN_SCALE_IN_DURATION, { scale: targetScale }, { easing: 'smooth' })
             .to(SPAWN_RISE_DURATION, { position: peakPos }, { easing: 'smooth' })
             .to(SPAWN_RISE_DURATION, { position: startPos, scale: this.originScale }, { easing: 'smooth' })
-            .call(() => this.swaying())
+            .call(() => {
+                this.swaying()
+                onSpawnComplete?.()
+            })
             .start()
     }
 

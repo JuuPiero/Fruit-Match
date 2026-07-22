@@ -50,7 +50,7 @@ export class Tutorial extends Component {
 
         for (let i = 0; i < treeChildren.length; i++) {
             const fruit = treeChildren[i].getComponent(Fruit)
-            if (!fruit || fruit.picked) continue
+            if (!fruit || fruit.picked || fruit.locked) continue
             // indexRank càng nhỏ càng là child cuối (lộ nhất)
             candidates.push({ fruit, indexRank: treeChildren.length - 1 - i, xRank: 0 })
         }
