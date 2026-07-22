@@ -52,6 +52,14 @@ export class Fruit extends Component {
     /** Bị chặn vì chưa phải quả trên cùng của stack trong slot */
     locked: boolean = false;
 
+    /** Editor only: các fruit cùng stackIndex sẽ được gom vào chung 1 slot (stack). -1 = đứng riêng (slot 1 quả). */
+    @property({ type: CCInteger, tooltip: 'Editor only: fruits sharing the same stackIndex form one stack. -1 = standalone (own single-fruit stack).' })
+    stackIndex: number = -1;
+
+    /** Editor only: thứ tự trong stack. 0 = quả trên cùng (được click trước). */
+    @property({ type: CCInteger, tooltip: 'Editor only: order within the stack. 0 = top of stack (picked first).' })
+    orderInStack: number = 0;
+
     /** Tree gán callback này để biết khi nào quả rời khỏi stack (được click/bay đi) */
     onPicked?: () => void;
 

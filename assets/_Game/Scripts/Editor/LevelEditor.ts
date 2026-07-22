@@ -1,6 +1,6 @@
 import { _decorator, CCBoolean, Component, Sprite, UITransform } from 'cc';
 import { Tree } from '../Tree';
-import { FruitData, LevelData, TreeData } from '../Data/LevelData';
+import { FruitData, LevelData, SlotsFruit, TreeData } from '../Data/LevelData';
 import { GameConfigSA } from '../Data/GameConfigSA';
 import { FruitConfigSA } from '../Data/FruitConfigSA';
 import { Fruit } from '../Fruit';
@@ -44,13 +44,6 @@ export class LevelEditor extends Component {
         }
 
         const level = new LevelData();
-        const fruits = this.getComponentsInChildren(Fruit)
-        for (const item of fruits) {
-            const fruitData = new FruitData();
-            fruitData.positionX = item.node.position.x;
-            fruitData.positionY = item.node.position.y;
-            level.fruits.push(fruitData);
-        }
 
         const treeData = new TreeData();
         const uiTree: UITransform = this.tree.getComponent(UITransform);
@@ -63,20 +56,46 @@ export class LevelEditor extends Component {
 
         level.tree = treeData;
 
+        // Gom các fruit theo stackIndex thành từng slot (stack). stackIndex = -1 => đứng riêng (slot 1 quả).
+        const stackGroups = new Map<number, { fruit: Fruit; data: FruitData }[]>();
+        let standaloneKey = -1;
+
+        const fruits = this.getComponentsInChildren(Fruit);
+        for (const item of fruits) {
+            const fruitData = new FruitData();
+            fruitData.positionX = item.node.position.x / treeData.width;
+            fruitData.positionY = item.node.position.y / treeData.height;
+
+            const fruitSprite = item.getComponent(Sprite);
+            fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
+            if (fruitData.fruitType < 0) {
+                console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig.`);
+            }
+
+            const key = item.stackIndex >= 0 ? item.stackIndex : standaloneKey--;
+            if (!stackGroups.has(key)) {
+                stackGroups.set(key, []);
+            }
+            stackGroups.get(key).push({ fruit: item, data: fruitData });
+        }
+
+        const slots: SlotsFruit[] = Array.from(stackGroups.entries())
+            .sort(([a], [b]) => a - b)
+            .map(([, entries]) => {
+                entries.sort((a, b) => a.fruit.orderInStack - b.fruit.orderInStack);
+                const slot = new SlotsFruit();
+                slot.fruits = entries.map(e => e.data);
+                return slot;
+            });
+
+        level.slots = slots;
+
 
         const json = JSON.stringify(level)
 
         const blob = new Blob([json], { type: 'application/json' });
         this.saveBlobToFile(blob, 'data.json');
 
-        // const projectPath = (globalThis as any).Editor?.Project?.path ?? process.cwd();
-        // const outputDir = path.join(projectPath, 'assets', '_Game', 'Levels');
-        // const outputPath = path.join(outputDir, 'level.json');
-
-        // fs.mkdirSync(outputDir, { recursive: true });
-        // fs.writeFileSync(outputPath, JSON.stringify(level, null, 2), 'utf8');
-
-        // console.log(`Saved level JSON: ${outputPath}`);
     }
 
     saveBlobToFile(blob: Blob, fileName: string): void {
