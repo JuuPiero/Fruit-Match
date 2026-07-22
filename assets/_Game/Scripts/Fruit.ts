@@ -135,6 +135,10 @@ export class Fruit extends Component {
                 .start()
         }
     }
+     setHighlighted(highlighted: boolean) {
+        if (this.picked) return
+        this._sprite.spriteFrame = highlighted ? this._outlineSpriteFrame : this._spriteFrame
+    }
 
 
     initialize(data: FruitData, spawnDelay = 0) {

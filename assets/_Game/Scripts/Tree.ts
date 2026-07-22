@@ -42,7 +42,7 @@ export class Tree extends GameBehaviour {
 
         const fruitPrefab = ServiceLocator.get(GameConfigSA).fruitPrefab
 
-        // const fruitIds = this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
+        const fruitIds = this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
 
 
         const slots = levelData.slots;

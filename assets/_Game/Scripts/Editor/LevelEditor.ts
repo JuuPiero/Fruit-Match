@@ -1,4 +1,4 @@
-import { _decorator, CCBoolean, Component, Sprite, UITransform } from 'cc';
+import { _decorator, CCBoolean, Color, Component, Sprite, UITransform } from 'cc';
 import { Tree } from '../Tree';
 import { FruitData, LevelData, SlotsFruit, TreeData } from '../Data/LevelData';
 import { GameConfigSA } from '../Data/GameConfigSA';
@@ -7,6 +7,9 @@ import { Fruit } from '../Fruit';
 const { ccclass, property, executeInEditMode } = _decorator;
 // const fs = require('fs');
 // const path = require('path');
+
+/** Giống LOCKED_COLOR trong Fruit.ts, dùng để preview màu tối của fruit bị khoá trong editor. */
+const LOCKED_PREVIEW_COLOR = new Color(120, 120, 120, 255);
 
 @ccclass('LevelEditor')
 @executeInEditMode
@@ -37,6 +40,55 @@ export class LevelEditor extends Component {
         this._saveLevel = false;
     }
 
+    private _previewStackLock = false;
+
+    @property(CCBoolean)
+    public get previewStackLock(): boolean {
+        return this._previewStackLock;
+    }
+
+    public set previewStackLock(v: boolean) {
+        if (this._previewStackLock === v) {
+            return;
+        }
+
+        this._previewStackLock = v;
+        if (!v) {
+            return;
+        }
+
+        this.applyStackLockPreview();
+        this._previewStackLock = false;
+    }
+
+    /** Gom các fruit theo stackIndex thành từng stack (mảng con), đã sắp theo orderInStack (0 = trên cùng). stackIndex = -1 => đứng riêng (stack 1 quả). */
+    private getFruitStacks(): Fruit[][] {
+        const groups = new Map<number, Fruit[]>();
+        let standaloneKey = -1;
+
+        for (const item of this.getComponentsInChildren(Fruit)) {
+            const key = item.stackIndex >= 0 ? item.stackIndex : standaloneKey--;
+            if (!groups.has(key)) {
+                groups.set(key, []);
+            }
+            groups.get(key).push(item);
+        }
+
+        return Array.from(groups.entries())
+            .sort(([a], [b]) => a - b)
+            .map(([, stack]) => stack.sort((a, b) => a.orderInStack - b.orderInStack));
+    }
+
+    /** Tô tối các fruit không phải trên cùng của mỗi stack, giống lúc chơi thật (Fruit.setLocked). Không dùng setLocked() trực tiếp vì Fruit không chạy onLoad ở edit mode nên _sprite chưa được cache. */
+    private applyStackLockPreview(): void {
+        for (const stack of this.getFruitStacks()) {
+            stack.forEach((fruit, i) => {
+                const sprite = fruit.getComponent(Sprite);
+                if (sprite) sprite.color = i !== 0 ? LOCKED_PREVIEW_COLOR : Color.WHITE;
+            });
+        }
+    }
+
     private saveCurrentLevelToJson(): void {
         if (!this.tree || !this.gameConfig) {
             console.warn('LevelEditor: tree or gameConfig is not assigned.');
@@ -56,37 +108,23 @@ export class LevelEditor extends Component {
 
         level.tree = treeData;
 
-        // Gom các fruit theo stackIndex thành từng slot (stack). stackIndex = -1 => đứng riêng (slot 1 quả).
-        const stackGroups = new Map<number, { fruit: Fruit; data: FruitData }[]>();
-        let standaloneKey = -1;
+        const slots: SlotsFruit[] = this.getFruitStacks().map(stack => {
+            const slot = new SlotsFruit();
+            slot.fruits = stack.map(item => {
+                const fruitData = new FruitData();
+                fruitData.positionX = item.node.position.x / treeData.width;
+                fruitData.positionY = item.node.position.y / treeData.height;
 
-        const fruits = this.getComponentsInChildren(Fruit);
-        for (const item of fruits) {
-            const fruitData = new FruitData();
-            fruitData.positionX = item.node.position.x / treeData.width;
-            fruitData.positionY = item.node.position.y / treeData.height;
+                const fruitSprite = item.getComponent(Sprite);
+                fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
+                if (fruitData.fruitType < 0) {
+                    console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig.`);
+                }
 
-            const fruitSprite = item.getComponent(Sprite);
-            fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
-            if (fruitData.fruitType < 0) {
-                console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig.`);
-            }
-
-            const key = item.stackIndex >= 0 ? item.stackIndex : standaloneKey--;
-            if (!stackGroups.has(key)) {
-                stackGroups.set(key, []);
-            }
-            stackGroups.get(key).push({ fruit: item, data: fruitData });
-        }
-
-        const slots: SlotsFruit[] = Array.from(stackGroups.entries())
-            .sort(([a], [b]) => a - b)
-            .map(([, entries]) => {
-                entries.sort((a, b) => a.fruit.orderInStack - b.fruit.orderInStack);
-                const slot = new SlotsFruit();
-                slot.fruits = entries.map(e => e.data);
-                return slot;
+                return fruitData;
             });
+            return slot;
+        });
 
         level.slots = slots;
 
