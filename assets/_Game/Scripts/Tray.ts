@@ -17,6 +17,7 @@ export class Tray extends Component {
     private matchedCount: number = 0
     private gameEnded: boolean = false
 
+    sfxs = ['Amazing', 'Excellent', 'Goodjob', 'Welldone']
 
     initialize(totalFruits: number) {
         for (const fruit of this.fruits) {
@@ -104,7 +105,8 @@ export class Tray extends Component {
                 }
                 vfxPos.multiplyScalar(1 / matched.length)
                 vfxPos.y += MATCH_FLY_UP_HEIGHT
-
+                const randomItem = this.sfxs[Math.floor(Math.random() * this.sfxs.length)];
+                AudioManager.instance.playOneShot(randomItem)
                 for (const f of matched) {
                     f.matchDestroy()
                 }

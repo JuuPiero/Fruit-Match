@@ -9,7 +9,7 @@ import { AudioManager } from '../../_iKame/Scripts/AudioManager';
 const { ccclass, property } = _decorator;
 
 export const FRUIT_FLY_DURATION = 0.3;
-
+const HOVER_SCALE_DURATION = 0.15;
 const MATCH_FLY_UP_DURATION = 0.25;
 const MATCH_VANISH_DURATION = 0.15;
 export const FRUIT_MATCH_DURATION = MATCH_FLY_UP_DURATION + MATCH_VANISH_DURATION;
@@ -78,17 +78,27 @@ export class Fruit extends Component {
 
 
 
+    
     onMouseEnter(event: EventMouse) {
-        if (this.picked) return
+        if (this.picked ) return
         // console.log('Mouse hovered over the node!');
-        this.node.setWorldScale(this.originScale.clone().add3f(0.1, 0.1, 0.1))
+        tween(this.node)
+            .to(HOVER_SCALE_DURATION, { worldScale: this.originScale.clone().add3f(0.1, 0.1, 0.1) }, { easing: 'quadOut' })
+            .start()
+        this._sprite.spriteFrame = this._outlineSpriteFrame
+
     }
 
     onMouseLeave(event: EventMouse) {
         if (this.picked) return
         // console.log('Mouse left the node!');
-        this.node.setWorldScale(this.originScale)
+        tween(this.node)
+            .to(HOVER_SCALE_DURATION, { worldScale: this.originScale }, { easing: 'quadOut' })
+            .start()
+        this._sprite.spriteFrame = this._spriteFrame
+
     }
+
 
 
     initialize(data: FruitData, fruitId: number, spawnDelay = 0) {
