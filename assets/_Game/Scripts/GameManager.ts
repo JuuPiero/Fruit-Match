@@ -9,6 +9,7 @@ import { PlayableAdsManager } from '../../_iKame/Scripts/PlayableAdsManager';
 import { ETrackingEvent, TrackingManager } from '../../_iKame/Scripts/TrackingManager';
 import { NavigationContainer } from '../../_iKame/Scripts/Navigation/NavigationContainer';
 import { PREVIEW } from 'cc/env';
+import { AudioManager } from '../../_iKame/Scripts/AudioManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -63,6 +64,7 @@ export class GameManager extends Component {
         TrackingManager.TrackEvent(ETrackingEvent.LOADED)
         TrackingManager.TrackEvent(ETrackingEvent.DISPLAYED)
         TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_STARTED)
+        AudioManager.instance.playMusic('BGM')
 
         this.total = this.levelManager.levelData.fruits.length / 3
 
@@ -70,6 +72,8 @@ export class GameManager extends Component {
 
 
     onWinGame = () => {
+        AudioManager.instance.stopMusic()
+
         PlayableAdsManager.OpenStore()
         this.confettiNode.active = true;
 
@@ -77,6 +81,8 @@ export class GameManager extends Component {
 
     }
     onLoseGame = () => {
+        AudioManager.instance.stopMusic()
+
         PlayableAdsManager.OpenStore()
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
     }

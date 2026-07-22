@@ -1,0 +1,239 @@
+{
+    "tree": {
+        "treeType": 0,
+        "positionX": 17.614,
+        "positionY": 0,
+        "width": 1417.8,
+        "height": 2029.8
+    },
+    "fruits": [
+        {
+            "positionX": -158.453,
+            "positionY": 646.561
+        },
+        {
+            "positionX": -44.312,
+            "positionY": 646.561
+        },
+        {
+            "positionX": 20.63,
+            "positionY": 561.939
+        },
+        {
+            "positionX": 168.226,
+            "positionY": 607.202
+        },
+        {
+            "positionX": 56.053,
+            "positionY": 607.202
+        },
+        {
+            "positionX": 56.053,
+            "positionY": 487.157
+        },
+        {
+            "positionX": 191.842,
+            "positionY": 487.157
+        },
+        {
+            "positionX": 313.855,
+            "positionY": 439.926
+        },
+        {
+            "positionX": 313.855,
+            "positionY": 235.259
+        },
+        {
+            "positionX": 313.855,
+            "positionY": 172.285
+        },
+        {
+            "positionX": 402.413,
+            "positionY": 201.804
+        },
+        {
+            "positionX": 368.958,
+            "positionY": 105.374
+        },
+        {
+            "positionX": 368.958,
+            "positionY": 313.977
+        },
+        {
+            "positionX": 225.297,
+            "positionY": 313.977
+        },
+        {
+            "positionX": 122.963,
+            "positionY": 313.977
+        },
+        {
+            "positionX": 122.963,
+            "positionY": 398.599
+        },
+        {
+            "positionX": 207.585,
+            "positionY": 398.599
+        },
+        {
+            "positionX": 252.848,
+            "positionY": 534.388
+        },
+        {
+            "positionX": 97.38,
+            "positionY": 534.388
+        },
+        {
+            "positionX": -87.608,
+            "positionY": 534.388
+        },
+        {
+            "positionX": -180.102,
+            "positionY": 534.388
+        },
+        {
+            "positionX": -256.852,
+            "positionY": 534.388
+        },
+        {
+            "positionX": -256.852,
+            "positionY": 591.459
+        },
+        {
+            "positionX": -256.852,
+            "positionY": 414.343
+        },
+        {
+            "positionX": -172.23,
+            "positionY": 414.343
+        },
+        {
+            "positionX": -172.23,
+            "positionY": 312.343
+        },
+        {
+            "positionX": -34.473,
+            "positionY": 312.343
+        },
+        {
+            "positionX": -34.473,
+            "positionY": 408.773
+        },
+        {
+            "positionX": -85.64,
+            "positionY": 408.773
+        },
+        {
+            "positionX": -85.64,
+            "positionY": 450.1
+        },
+        {
+            "positionX": -327.698,
+            "positionY": 450.1
+        },
+        {
+            "positionX": -327.698,
+            "positionY": 355.638
+        },
+        {
+            "positionX": -422.16,
+            "positionY": 355.638
+        },
+        {
+            "positionX": -422.16,
+            "positionY": 217.881
+        },
+        {
+            "positionX": -327.698,
+            "positionY": 217.881
+        },
+        {
+            "positionX": -280.467,
+            "positionY": 261.176
+        },
+        {
+            "positionX": -384.769,
+            "positionY": 117.515
+        },
+        {
+            "positionX": -308.019,
+            "positionY": 117.515
+        },
+        {
+            "positionX": -256.852,
+            "positionY": 330.054
+        },
+        {
+            "positionX": -213.557,
+            "positionY": 237.56
+        },
+        {
+            "positionX": -111.223,
+            "positionY": 237.56
+        },
+        {
+            "positionX": 30.47,
+            "positionY": 237.56
+        },
+        {
+            "positionX": 30.47,
+            "positionY": 347.765
+        },
+        {
+            "positionX": 30.47,
+            "positionY": 398.932
+        },
+        {
+            "positionX": 30.47,
+            "positionY": 660.67
+        },
+        {
+            "positionX": 382.733,
+            "positionY": 394.996
+        },
+        {
+            "positionX": 298.111,
+            "positionY": 316.278
+        },
+        {
+            "positionX": -89.576,
+            "positionY": 316.278
+        },
+        {
+            "positionX": -398.545,
+            "positionY": 267.079
+        },
+        {
+            "positionX": -398.545,
+            "positionY": 422.547
+        },
+        {
+            "positionX": -357.218,
+            "positionY": 515.041
+        },
+        {
+            "positionX": -475.295,
+            "positionY": 129.322
+        },
+        {
+            "positionX": 180.033,
+            "positionY": 170.649
+        },
+        {
+            "positionX": 233.168,
+            "positionY": 217.88
+        },
+        {
+            "positionX": 121.959,
+            "positionY": 446.714
+        },
+        {
+            "positionX": -190.283,
+            "positionY": 472.378
+        },
+        {
+            "positionX": -115.43,
+            "positionY": 604.974
+        }
+    ]
+}

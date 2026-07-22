@@ -101,7 +101,7 @@ export class Fruit extends Component {
 
 
 
-    initialize(data: FruitData, fruitId: number, spawnDelay = 0) {
+    initialize(data: FruitData, fruitId: number, spawnDelay = 0, onSpawned?: () => void) {
         this.data = data;
 
         this.fruitId = fruitId;
@@ -115,7 +115,7 @@ export class Fruit extends Component {
 
         this._sprite.spriteFrame = this._spriteFrame;
 
-        this.playSpawnAnimation(spawnDelay)
+        this.playSpawnAnimation(spawnDelay, onSpawned)
     }
 
 
@@ -187,7 +187,7 @@ export class Fruit extends Component {
             .start()
     }
 
-    private playSpawnAnimation(spawnDelay: number) {
+    private playSpawnAnimation(spawnDelay: number, onSpawned?: () => void) {
         Tween.stopAllByTarget(this.node)
 
         const startPos = this.node.position.clone()
@@ -207,7 +207,10 @@ export class Fruit extends Component {
             .to(SPAWN_SCALE_IN_DURATION, { scale: targetScale }, { easing: 'smooth' })
             .to(SPAWN_RISE_DURATION, { position: peakPos }, { easing: 'smooth' })
             .to(SPAWN_RISE_DURATION, { position: startPos, scale: this.originScale }, { easing: 'smooth' })
-            .call(() => this.swaying())
+            .call(() => {
+                this.swaying()
+                onSpawned?.()
+            })
             .start()
     }
 
@@ -228,7 +231,13 @@ export class Fruit extends Component {
             .start()
     }
 
+    setHighlighted(highlighted: boolean) {
+        if (this.picked) return
+        this._sprite.spriteFrame = highlighted ? this._outlineSpriteFrame : this._spriteFrame
+    }
+
     onClick = () => {
+
         if (this.picked) return;
 
         AudioManager.instance.playOneShot('Click')

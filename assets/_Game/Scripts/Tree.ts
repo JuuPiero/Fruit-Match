@@ -5,6 +5,7 @@ import { ServiceLocator } from '../../_iKame/Scripts/ServiceLocator';
 import { GameConfigSA } from './Data/GameConfigSA';
 import { Fruit } from './Fruit';
 import { FruitConfigSA } from './Data/FruitConfigSA';
+import { Tutorial } from './Tutorial';
 const { ccclass, property } = _decorator;
 
 
@@ -41,6 +42,9 @@ export class Tree extends GameBehaviour {
 
         const fruitIds = this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
 
+        let spawnedCount = 0
+        const totalFruits = levelData.fruits.length
+
         for (let i = 0; i < levelData.fruits.length; i++) {
             const fruitData = levelData.fruits[i]
             const node = instantiate(fruitPrefab)
@@ -48,9 +52,17 @@ export class Tree extends GameBehaviour {
             node.setPosition(new Vec3(fruitData.positionX, fruitData.positionY, 0))
             const fruit = node.getComponent(Fruit)
 
-            fruit.initialize(fruitData, fruitIds[i], i * Tree.FRUIT_SPAWN_INTERVAL)
+            fruit.initialize(fruitData, fruitIds[i], i * Tree.FRUIT_SPAWN_INTERVAL, () => {
+                spawnedCount++
+                if (spawnedCount === totalFruits) {
+                    ServiceLocator.get(Tutorial).begin(this.node.children)
+                }
+            })
 
         }
+
+
+
     }
 
     private generateFruitIds(fruitCount: number, fruitTypeCount: number): number[] {
