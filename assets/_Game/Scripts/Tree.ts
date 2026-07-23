@@ -26,7 +26,7 @@ export class Tree extends GameBehaviour {
         this._sprite = this.getComponent(Sprite)
     }
 
-    initialize(levelData: LevelData, randomizeFruitTypes = false) {
+    initialize(levelData: LevelData, randomizeFruitTypes = false, flattenFruits = false) {
         // this.node.destroyAllChildren()
         const allFruitsSpriteFrame = ServiceLocator.get(FruitConfigSA).fruits
 
@@ -86,7 +86,11 @@ export class Tree extends GameBehaviour {
                 spawnIndex++
             }
 
-            this.setupStackLocking(stackFruits)
+            if (flattenFruits) {
+                stackFruits.forEach(fruit => fruit.setLocked(false, true))
+            } else {
+                this.setupStackLocking(stackFruits)
+            }
             topFruits.push(stackFruits[0])
         })
 
