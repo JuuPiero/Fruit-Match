@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, EventKeyboard, Input, input, KeyCode, Node } from 'cc';
 import { LevelManager } from './LevelManager';
 import { GameConfigSA } from './Data/GameConfigSA';
 import { FruitConfigSA } from './Data/FruitConfigSA';
@@ -9,6 +9,7 @@ import { PlayableAdsManager } from '../../_iKame/Scripts/PlayableAdsManager';
 import { ETrackingEvent, TrackingManager } from '../../_iKame/Scripts/TrackingManager';
 import { NavigationContainer } from '../../_iKame/Scripts/Navigation/NavigationContainer';
 import { AudioManager } from '../../_iKame/Scripts/AudioManager';
+import { Tutorial } from './Tutorial';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -46,8 +47,25 @@ export class GameManager extends Component {
 
         EventBus.on(GameEvents.MATCHED, this.onProgress)
 
+        input.on(Input.EventType.KEY_DOWN, this.toggleMusic, this);
 
+    }
 
+    isPlayMusic = true;
+    toggleMusic(event: EventKeyboard) {
+        if (event.keyCode === KeyCode.F12) {
+            console.log('Move Forward');
+            if (this.isPlayMusic) {
+                AudioManager.instance.stopMusic()
+                this.isPlayMusic = false;
+                ServiceLocator.get(Tutorial).stop()
+            }
+            else {
+                AudioManager.instance.playMusic('BGM')
+                this.isPlayMusic = true;
+
+            }
+        }
     }
 
     protected onDisable(): void {
@@ -55,6 +73,8 @@ export class GameManager extends Component {
         EventBus.off(GameEvents.WIN, this.onWinGame)
         EventBus.off(GameEvents.LOSE, this.onLoseGame)
         EventBus.off(GameEvents.MATCHED, this.onProgress)
+
+        input.off(Input.EventType.KEY_DOWN, this.toggleMusic, this);
     }
 
     onNewGame = () => {

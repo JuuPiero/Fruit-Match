@@ -110,7 +110,7 @@ export class Tutorial extends Component {
         }
     }
 
-    private stop() {
+    public stop() {
         this.stopped = true
         this.targetFruits = []
         this.clearHighlight()

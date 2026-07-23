@@ -7719,9 +7719,10 @@
       "__id__": 177
     },
     "levelJson": {
-      "__uuid__": "fb0d061c-10ec-4110-9899-e6a6ce17bb61",
+      "__uuid__": "1b2f1f67-2e14-45d8-95ab-27555f8475e8",
       "__expectedType__": "cc.JsonAsset"
     },
+    "randomizeFruitTypes": false,
     "levelData": null,
     "_id": "bf/XTcpfpO/oA8OndoqbT1"
   },
