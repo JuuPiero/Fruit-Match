@@ -69,11 +69,14 @@ export class LevelData {
                 return slot;
             });
         }
-        // 2b. Tương thích ngược với format cũ (mảng fruits phẳng ở cấp root)
+        // 2b. Tương thích ngược với format cũ (mảng fruits phẳng ở cấp root, không có khái niệm stack)
+        // Mỗi fruit tách thành 1 slot riêng để tất cả đều active/mở khoá ngay từ đầu, không bị stack chồng nhau
         else if (data.fruits && Array.isArray(data.fruits)) {
-            const slot = new SlotsFruit();
-            slot.fruits = data.fruits.map(parseFruit);
-            levelData.slots = [slot];
+            levelData.slots = data.fruits.map((f: any) => {
+                const slot = new SlotsFruit();
+                slot.fruits = [parseFruit(f)];
+                return slot;
+            });
         }
 
         return levelData;

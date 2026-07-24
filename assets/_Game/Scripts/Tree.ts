@@ -43,17 +43,25 @@ export class Tree extends GameBehaviour {
 
         const fruitPrefab = ServiceLocator.get(GameConfigSA).fruitPrefab
 
-        const fruitIds = randomizeFruitTypes
-            ? this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
-            : null
-
-        if (fruitIds) {
-            // Đảm bảo luôn có ít nhất 1 nhóm 3 quả cùng loại nằm ở đầu stack (đang active) để tutorial luôn chạy được
-            this.ensureTopStackMatchExists(fruitIds, this.getTopSpawnIndices(levelData.slots))
-        }
-
-
         const slots = levelData.slots;
+        const fruitDatas = this.getFruitDatasInSpawnOrder(slots)
+
+        const fruitTypes = randomizeFruitTypes
+            ? this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
+            : fruitDatas.map(data => data.fruitType)
+
+        // Luôn fix cứng 3 quả cuối cùng của cây (theo thứ tự render/sibling cuối cùng) cùng 1 loại để tutorial luôn có nhóm chắc chắn để chỉ
+        // - flattenFruits: mọi quả đều active nên lấy đúng 3 quả render sau cùng (kể cả không phải top stack)
+        // - không flatten: chỉ quả top của stack mới active/tương tác được, nên chỉ được chọn trong số các quả top
+        // Thứ tự đảo ngược (quả cuối cùng -> quả thứ 3 từ cuối) để tutorial trỏ vào quả cuối cùng trước
+        const targetIndices = (flattenFruits
+            ? [fruitTypes.length - 3, fruitTypes.length - 2, fruitTypes.length - 1].filter(idx => idx >= 0)
+            : this.getTopSpawnIndices(slots).slice(-3)
+        ).reverse()
+        const tutorialSpawnIndices = this.forceFruitsMatch(fruitTypes, targetIndices)
+
+        fruitDatas.forEach((data, idx) => data.fruitType = fruitTypes[idx])
+
 
         const height = this._uiTransform.contentSize.height;
         const width = this._uiTransform.contentSize.width;
@@ -63,14 +71,12 @@ export class Tree extends GameBehaviour {
 
         let spawnIndex = 0; // index = 0 is on top of stack
         const topFruits: Fruit[] = []
+        const fruitsBySpawnIndex: Fruit[] = new Array(totalFruits)
         slots.forEach((slot, index) => {
             const stackFruits: Fruit[] = new Array(slot.fruits.length)
 
             for (let i = slot.fruits.length - 1; i >= 0; i--) {
                 const fruitData = slot.fruits[i]
-                if (fruitIds) {
-                    fruitData.fruitType = fruitIds[spawnIndex]
-                }
                 const node = instantiate(fruitPrefab)
                 node.setParent(this.node)
                 node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
@@ -79,10 +85,12 @@ export class Tree extends GameBehaviour {
                 fruit.initialize(fruitData, spawnIndex * Tree.FRUIT_SPAWN_INTERVAL, () => {
                     spawnedCount++
                     if (spawnedCount === totalFruits) {
-                        ServiceLocator.get(Tutorial).begin(this.node.children)
+                        const tutorialGroup = tutorialSpawnIndices?.map(idx => fruitsBySpawnIndex[idx])
+                        ServiceLocator.get(Tutorial).begin(this.node.children, tutorialGroup)
                     }
                 })
                 stackFruits[i] = fruit
+                fruitsBySpawnIndex[spawnIndex] = fruit
                 spawnIndex++
             }
 
@@ -108,8 +116,6 @@ export class Tree extends GameBehaviour {
                 const next = stack[i + 1]
                 if (next) {
                     next.setLocked(false)
-                    // Quả vừa lộ ra cũng là quả trên cùng mới của stack, đẩy xuống cuối sibling để render đè lên
-                    next.node.setSiblingIndex(-1)
                 }
             }
         })
@@ -126,41 +132,54 @@ export class Tree extends GameBehaviour {
         return topIndices
     }
 
-    /** Khi random loại quả, đảm bảo luôn có ít nhất 3 quả cùng loại nằm ở đầu stack (đang active) để tutorial luôn tìm được nhóm để chỉ */
-    private ensureTopStackMatchExists(fruitIds: number[], topSpawnIndices: number[]) {
-        if (topSpawnIndices.length < 3) return
-
-        const countAtTopByType = new Map<number, number>()
-        for (const idx of topSpawnIndices) {
-            const type = fruitIds[idx]
-            countAtTopByType.set(type, (countAtTopByType.get(type) ?? 0) + 1)
+    /** FruitData theo đúng thứ tự spawn (giống thứ tự gán spawnIndex trong initialize()) */
+    private getFruitDatasInSpawnOrder(slots: SlotsFruit[]) {
+        const fruitDatas: { fruitType: number }[] = []
+        for (const slot of slots) {
+            for (let i = slot.fruits.length - 1; i >= 0; i--) {
+                fruitDatas.push(slot.fruits[i])
+            }
         }
-        if ([...countAtTopByType.values()].some(count => count >= 3)) return
+        return fruitDatas
+    }
+
+    /** Đổi chỗ (không đổi tổng số lượng mỗi loại) để các quả tại targetIndices đều cùng 1 loại, dùng cho tutorial luôn tìm được nhóm để chỉ */
+    private forceFruitsMatch(fruitTypes: number[], targetIndices: number[]): number[] {
+        if (targetIndices.length < 3) return null
 
         const totalCountByType = new Map<number, number>()
-        for (const id of fruitIds) totalCountByType.set(id, (totalCountByType.get(id) ?? 0) + 1)
-        const targetType = [...totalCountByType.entries()].find(([, count]) => count >= 3)?.[0]
-        if (targetType === undefined) return
+        for (const type of fruitTypes) totalCountByType.set(type, (totalCountByType.get(type) ?? 0) + 1)
 
-        const topSet = new Set(topSpawnIndices)
-        const alreadyMatching = topSpawnIndices.filter(idx => fruitIds[idx] === targetType)
-        const topSlotsToFill = topSpawnIndices
-            .filter(idx => fruitIds[idx] !== targetType)
-            .slice(0, 3 - alreadyMatching.length)
+        const countAtTargetByType = new Map<number, number>()
+        for (const idx of targetIndices) {
+            const type = fruitTypes[idx]
+            countAtTargetByType.set(type, (countAtTargetByType.get(type) ?? 0) + 1)
+        }
 
-        // Đổi chỗ (không thay đổi tổng số lượng mỗi loại) với các quả khác đang giữ targetType nhưng không nằm ở đầu stack
-        const donorIndices = fruitIds
-            .map((id, idx) => ({ id, idx }))
-            .filter(({ id, idx }) => id === targetType && !topSet.has(idx))
+        let targetType = [...countAtTargetByType.entries()].find(([, count]) => count === targetIndices.length)?.[0]
+        if (targetType === undefined) {
+            targetType = [...totalCountByType.entries()].find(([, count]) => count >= targetIndices.length)?.[0]
+        }
+        if (targetType === undefined) return null
+
+        const targetSet = new Set(targetIndices)
+        const indicesToFill = targetIndices.filter(idx => fruitTypes[idx] !== targetType)
+
+        // Đổi chỗ với các quả khác đang giữ targetType nhưng không nằm trong targetIndices
+        const donorIndices = fruitTypes
+            .map((type, idx) => ({ type, idx }))
+            .filter(({ type, idx }) => type === targetType && !targetSet.has(idx))
             .map(({ idx }) => idx)
 
-        topSlotsToFill.forEach((topIdx, i) => {
+        indicesToFill.forEach((idx, i) => {
             const donorIdx = donorIndices[i]
             if (donorIdx === undefined) return
-            const tmp = fruitIds[topIdx]
-            fruitIds[topIdx] = fruitIds[donorIdx]
-            fruitIds[donorIdx] = tmp
+            const tmp = fruitTypes[idx]
+            fruitTypes[idx] = fruitTypes[donorIdx]
+            fruitTypes[donorIdx] = tmp
         })
+
+        return targetIndices
     }
 
     private generateFruitIds(fruitCount: number, fruitTypeCount: number): number[] {

@@ -32,8 +32,10 @@ export class GameConfigSA extends bh.ScriptableAsset {
         //         this.treeMap.set(item.name, item);
         //     }
         // }
+        const tree = this.treeMap.get(treeType.toString())
+        if(!tree) return this.trees[treeType];
 
-        return this.treeMap.get(treeType.toString());
+        return this.treeMap.get(treeType.toString()) 
     }
 
 }

@@ -32,11 +32,12 @@ export class Tutorial extends Component {
         EventBus.off(GameEvents.FRUIT_CLICKED, this.onFruitClicked)
     }
 
-    /** Chọn 3 quả giống nhau, ưu tiên nhóm nằm ở child cuối / bên phải (lộ nhất) của cây rồi bắt đầu chỉ */
-    begin(treeChildren: Node[]) {
+    /** Chọn 3 quả giống nhau, ưu tiên nhóm nằm ở child cuối / bên phải (lộ nhất) của cây rồi bắt đầu chỉ.
+     *  Nếu truyền sẵn forcedGroup (vd. 3 quả cuối được fix cứng cùng loại khi randomize + flatten), dùng luôn nhóm đó. */
+    begin(treeChildren: Node[], forcedGroup?: Fruit[]) {
         if (this.stopped) return
 
-        const group = this.selectTargetGroup(treeChildren)
+        const group = forcedGroup ?? this.selectTargetGroup(treeChildren)
         if (!group) return
 
         this.targetFruits = group
