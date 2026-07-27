@@ -25,7 +25,8 @@ export class GameManager extends Component {
 
     @property(Node) confettiNode: Node = null
 
-
+ @property(Node) sad: Node = null;
+    @property(Node) win: Node = null;
     protected onLoad(): void {
         ServiceLocator.register(GameConfigSA, this.gameConfig)
         ServiceLocator.register(FruitConfigSA, this.fruitConfig)
@@ -95,12 +96,14 @@ export class GameManager extends Component {
         PlayableAdsManager.OpenStore()
         this.confettiNode.active = true;
 
-        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
-
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', {isWin: true})
+        this.win.active = true
     }
     onLoseGame = () => {
         PlayableAdsManager.OpenStore()
-        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen')
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', {isWin: false})
+        this.sad.active = true
+
     }
 
 

@@ -50,15 +50,15 @@ export class Tree extends GameBehaviour {
             ? this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
             : fruitDatas.map(data => data.fruitType)
 
-        // Luôn fix cứng 3 quả cuối cùng của cây (theo thứ tự render/sibling cuối cùng) cùng 1 loại để tutorial luôn có nhóm chắc chắn để chỉ
-        // - flattenFruits: mọi quả đều active nên lấy đúng 3 quả render sau cùng (kể cả không phải top stack)
-        // - không flatten: chỉ quả top của stack mới active/tương tác được, nên chỉ được chọn trong số các quả top
-        // Thứ tự đảo ngược (quả cuối cùng -> quả thứ 3 từ cuối) để tutorial trỏ vào quả cuối cùng trước
-        const targetIndices = (flattenFruits
-            ? [fruitTypes.length - 3, fruitTypes.length - 2, fruitTypes.length - 1].filter(idx => idx >= 0)
-            : this.getTopSpawnIndices(slots).slice(-3)
-        ).reverse()
-        const tutorialSpawnIndices = this.forceFruitsMatch(fruitTypes, targetIndices)
+        // Chỉ khi vừa random loại quả vừa flatten toàn bộ cây:
+        // ép đúng 3 quả spawn cuối thành cùng loại và đưa chúng cho tutorial theo
+        // thứ tự quả cuối cùng -> lùi dần.
+        const targetIndices = randomizeFruitTypes && flattenFruits
+            ? [fruitTypes.length - 1, fruitTypes.length - 2, fruitTypes.length - 3].filter(idx => idx >= 0)
+            : null
+        const tutorialSpawnIndices = targetIndices
+            ? this.forceFruitsMatch(fruitTypes, targetIndices)
+            : null
 
         fruitDatas.forEach((data, idx) => data.fruitType = fruitTypes[idx])
 
@@ -86,7 +86,9 @@ export class Tree extends GameBehaviour {
                     spawnedCount++
                     if (spawnedCount === totalFruits) {
                         const tutorialGroup = tutorialSpawnIndices?.map(idx => fruitsBySpawnIndex[idx])
-                        ServiceLocator.get(Tutorial).begin(this.node.children, tutorialGroup)
+                        this.scheduleOnce(() => {
+                            ServiceLocator.get(Tutorial).begin(this.node.children, tutorialGroup)
+                        })
                     }
                 })
                 stackFruits[i] = fruit
@@ -102,8 +104,11 @@ export class Tree extends GameBehaviour {
             topFruits.push(stackFruits[0])
         })
 
-        // Dồn các quả trên cùng (index 0) của mọi stack xuống cuối danh sách sibling để luôn render đè lên các quả bị khoá
-        topFruits.forEach(fruit => fruit.node.setSiblingIndex(-1))
+        // Chỉ cần dồn quả top lên trước khi đang dùng stack. Với flattenFruits,
+        // thao tác này sẽ phá thứ tự spawn/render cuối dùng để chọn target tutorial.
+        if (!flattenFruits) {
+            topFruits.forEach(fruit => fruit.node.setSiblingIndex(-1))
+        }
     }
 
     /** Chỉ quả trên cùng (index 0) của stack được phép tương tác, các quả dưới bị khoá (tối màu) cho tới khi lộ ra */
@@ -156,9 +161,22 @@ export class Tree extends GameBehaviour {
             countAtTargetByType.set(type, (countAtTargetByType.get(type) ?? 0) + 1)
         }
 
-        let targetType = [...countAtTargetByType.entries()].find(([, count]) => count === targetIndices.length)?.[0]
+        // Không dùng spread Map.entries() ở đây. Khi build Web, Babel của Cocos có thể
+        // transpile `[...map.entries()]` thành `[].concat(map.entries())`, khiến không
+        // duyệt được entry và targetType luôn undefined dù Editor vẫn chạy đúng.
+        let targetType: number = undefined
+        countAtTargetByType.forEach((count, type) => {
+            if (targetType === undefined && count === targetIndices.length) {
+                targetType = type
+            }
+        })
+
         if (targetType === undefined) {
-            targetType = [...totalCountByType.entries()].find(([, count]) => count >= targetIndices.length)?.[0]
+            totalCountByType.forEach((count, type) => {
+                if (targetType === undefined && count >= targetIndices.length) {
+                    targetType = type
+                }
+            })
         }
         if (targetType === undefined) return null
 

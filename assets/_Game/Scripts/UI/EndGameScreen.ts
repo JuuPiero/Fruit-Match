@@ -9,6 +9,7 @@ const { ccclass, property } = _decorator;
 export class EndGameScreen extends ScreenBase {
     @property(Button) downloadBtn: Button = null;
     @property(Node) logo: Node = null;
+   
 
 
     protected start(): void {

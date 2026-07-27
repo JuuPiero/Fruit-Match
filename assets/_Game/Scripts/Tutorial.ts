@@ -37,7 +37,12 @@ export class Tutorial extends Component {
     begin(treeChildren: Node[], forcedGroup?: Fruit[]) {
         if (this.stopped) return
 
-        const group = forcedGroup ?? this.selectTargetGroup(treeChildren)
+        const validForcedGroup = forcedGroup?.filter(fruit => fruit?.node?.isValid)
+        // Khi Tree truyền forcedGroup (randomize + flatten), dùng chính xác nhóm đó.
+        // Các cấu hình khác vẫn dùng logic tự tìm nhóm ban đầu.
+        const group = validForcedGroup?.length === 3
+            ? validForcedGroup
+            : this.selectTargetGroup(treeChildren)
         if (!group) return
 
         this.targetFruits = group
@@ -88,6 +93,9 @@ export class Tutorial extends Component {
 
         // Dừng tween lắc trước khi đổi vị trí, nếu không nó sẽ kéo tay về vị trí gốc cũ mỗi frame
         Tween.stopAllByTarget(this.node)
+        // Trong Web build, worldPosition có thể vẫn là cache của frame trước nếu vừa
+        // kết thúc tween spawn. Ép cập nhật transform trước khi lấy vị trí mục tiêu.
+        fruit.node.updateWorldTransform()
         this.node.setWorldPosition(fruit.node.worldPosition.clone().add(this.offset))
         this.playTapAnimation()
     }
