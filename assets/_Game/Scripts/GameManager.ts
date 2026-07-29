@@ -10,6 +10,7 @@ import { ETrackingEvent, TrackingManager } from '../../_iKame/Scripts/TrackingMa
 import { NavigationContainer } from '../../_iKame/Scripts/Navigation/NavigationContainer';
 import { AudioManager } from '../../_iKame/Scripts/AudioManager';
 import { Tutorial } from './Tutorial';
+import { PREVIEW } from 'cc/env';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -25,7 +26,7 @@ export class GameManager extends Component {
 
     @property(Node) confettiNode: Node = null
 
- @property(Node) sad: Node = null;
+    @property(Node) sad: Node = null;
     @property(Node) win: Node = null;
     protected onLoad(): void {
         ServiceLocator.register(GameConfigSA, this.gameConfig)
@@ -96,12 +97,12 @@ export class GameManager extends Component {
         PlayableAdsManager.OpenStore()
         this.confettiNode.active = true;
 
-        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', {isWin: true})
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: true })
         this.win.active = true
     }
     onLoseGame = () => {
         PlayableAdsManager.OpenStore()
-        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', {isWin: false})
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false })
         this.sad.active = true
 
     }
@@ -119,8 +120,11 @@ export class GameManager extends Component {
         this.progress++
 
         const percentage = (this.progress / this.total) * 100
-        console.log("progress " + percentage)
 
+        if (PREVIEW) {
+            console.log("progress " + percentage)
+
+        }
         if (!this.progressTracked.quarter && percentage >= 25) {
             this.progressTracked.quarter = true
             TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_PASS_25)
