@@ -1,4 +1,4 @@
-import { _decorator, Component, EventKeyboard, Input, input, KeyCode, Node } from 'cc';
+import { _decorator, Button, Component, EventKeyboard, Input, input, KeyCode, Node } from 'cc';
 import { LevelManager } from './LevelManager';
 import { GameConfigSA } from './Data/GameConfigSA';
 import { FruitConfigSA } from './Data/FruitConfigSA';
@@ -61,12 +61,17 @@ export class GameManager extends Component {
                 AudioManager.instance.stopMusic()
                 this.isPlayMusic = false;
                 ServiceLocator.get(Tutorial).stop()
+
+                this.dowloadButton.node.active = false
             }
             else {
                 AudioManager.instance.playMusic('BGM')
                 this.isPlayMusic = true;
+                this.dowloadButton.node.active = true
 
             }
+            this.levelManager.tray.moveToNewPosition()
+
         }
     }
 
@@ -90,23 +95,48 @@ export class GameManager extends Component {
 
         this.total = this.levelManager.levelData.fruits.length / 3
 
+
+
+        this.dowloadButton.node.on(Button.EventType.CLICK, () => {
+            TrackingManager.TrackEvent(ETrackingEvent.CTA_CLICKED)
+            PlayableAdsManager.OpenStore()
+        })
+
     }
 
 
     onWinGame = () => {
-        PlayableAdsManager.OpenStore()
         this.confettiNode.active = true;
+        this.dowloadButton.node.active = false
 
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: true })
         this.win.active = true
+
+
+        this,this.scheduleOnce(() => {
+            PlayableAdsManager.OpenStore()
+        }, 3)
     }
     onLoseGame = () => {
-        PlayableAdsManager.OpenStore()
+        this.dowloadButton.node.active = false
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false })
         this.sad.active = true
-
+         this,this.scheduleOnce(() => {
+            PlayableAdsManager.OpenStore()
+        }, 3)
     }
 
+
+    openStore() {
+        PlayableAdsManager.OpenStore()
+    }
+
+
+    @property(Button) dowloadButton: Button = null;
+
+    onToggleVideo = () => {
+
+    }
 
 
     @property({ readonly: true }) public progress: number = 0

@@ -3,6 +3,7 @@ export const GameEvents =  {
     FRUIT_CLICKED: "FRUIT_CLICKED",
     WIN: "WIN",
     LOSE: "LOSE",
-    MATCHED: "MATCHED"
+    MATCHED: "MATCHED",
+    TOGGLE_VIDEO: "TOGGLE_VIDEO"
 
 }

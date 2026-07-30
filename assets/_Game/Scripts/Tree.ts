@@ -26,7 +26,13 @@ export class Tree extends GameBehaviour {
         this._sprite = this.getComponent(Sprite)
     }
 
-    initialize(levelData: LevelData, randomizeFruitTypes = false, flattenFruits = false) {
+    initialize(
+        levelData: LevelData,
+        randomizeFruitTypes = false,
+        flattenFruits = false,
+        fruitRandomSeed = '0',
+        randomFruitTypeCount = 0,
+    ) {
         // this.node.destroyAllChildren()
         const allFruitsSpriteFrame = ServiceLocator.get(FruitConfigSA).fruits
 
@@ -46,8 +52,12 @@ export class Tree extends GameBehaviour {
         const slots = levelData.slots;
         const fruitDatas = this.getFruitDatasInSpawnOrder(slots)
 
+        // 0 nghĩa là dùng tất cả loại fruit. Giá trị lớn hơn số sprite sẽ tự giới hạn về số sprite hiện có.
+        const fruitTypeCount = randomFruitTypeCount > 0
+            ? Math.min(randomFruitTypeCount, allFruitsSpriteFrame.length)
+            : allFruitsSpriteFrame.length
         const fruitTypes = randomizeFruitTypes
-            ? this.generateFruitIds(levelData.fruits.length, allFruitsSpriteFrame.length)
+            ? this.generateFruitIds(levelData.fruits.length, fruitTypeCount, fruitRandomSeed)
             : fruitDatas.map(data => data.fruitType)
 
         // Chỉ khi vừa random loại quả vừa flatten toàn bộ cây:
@@ -200,32 +210,64 @@ export class Tree extends GameBehaviour {
         return targetIndices
     }
 
-    private generateFruitIds(fruitCount: number, fruitTypeCount: number): number[] {
+    private generateFruitIds(fruitCount: number, fruitTypeCount: number, seed: string): number[] {
         if (fruitCount % 3 !== 0) {
             console.warn(`Tree: số lượng quả (${fruitCount}) không chia hết cho 3, sẽ thừa ${fruitCount % 3} quả không thể match! Hãy sửa lại level.`)
         }
 
         const fruitIds: number[] = []
+        const random = this.createSeededRandom(seed)
 
-        // Mỗi nhóm 3 quả dùng chung 1 loại random
+        // Mỗi nhóm 3 quả dùng chung 1 loại. Dùng hết các loại trước khi lặp lại
+        // để số bộ 3 cùng loại là ít nhất có thể.
         const groupCount = Math.floor(fruitCount / 3)
+        const availableTypes = Array.from({ length: fruitTypeCount }, (_, index) => index)
+        let typeIndex = availableTypes.length
         for (let i = 0; i < groupCount; i++) {
-            const id = Math.floor(Math.random() * fruitTypeCount)
+            // Mỗi lượt dùng hết tất cả loại fruit sẽ shuffle lại thứ tự để vẫn có tính random.
+            if (typeIndex >= availableTypes.length) {
+                for (let j = availableTypes.length - 1; j > 0; j--) {
+                    const swapIndex = Math.floor(random() * (j + 1))
+                    const currentType = availableTypes[j]
+                    availableTypes[j] = availableTypes[swapIndex]
+                    availableTypes[swapIndex] = currentType
+                }
+                typeIndex = 0
+            }
+
+            const id = availableTypes[typeIndex++]
             fruitIds.push(id, id, id)
         }
 
         // Quả thừa (level sai) vẫn gán random để không bị lỗi
         while (fruitIds.length < fruitCount) {
-            fruitIds.push(Math.floor(Math.random() * fruitTypeCount))
+            fruitIds.push(Math.floor(random() * fruitTypeCount))
         }
 
         // Shuffle (Fisher-Yates) để các quả cùng loại không nằm cạnh nhau
         for (let i = fruitIds.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+            const j = Math.floor(random() * (i + 1));
             [fruitIds[i], fruitIds[j]] = [fruitIds[j], fruitIds[i]]
         }
 
         return fruitIds
+    }
+
+    /** PRNG xác định: cùng seed luôn sinh ra cùng dãy số, không phụ thuộc Math.random(). */
+    private createSeededRandom(seed: string): () => number {
+        let state = 2166136261
+        for (let i = 0; i < seed.length; i++) {
+            state ^= seed.charCodeAt(i)
+            state = Math.imul(state, 16777619)
+        }
+
+        return () => {
+            state += 0x6D2B79F5
+            let value = state
+            value = Math.imul(value ^ (value >>> 15), value | 1)
+            value ^= value + Math.imul(value ^ (value >>> 7), value | 61)
+            return ((value ^ (value >>> 14)) >>> 0) / 4294967296
+        }
     }
 }
 

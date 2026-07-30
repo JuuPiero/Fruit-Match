@@ -40,6 +40,18 @@ export class Tray extends Component {
         EventBus.off(GameEvents.FRUIT_CLICKED, this.onFruitClicked)
     }
 
+    @property public initPosition: Vec3 = new Vec3(0, -620, 0);
+    @property public newPosition: Vec3 = new Vec3(0, -790, 0);
+
+    public moveToNewPosition() {
+        if(this.node.position.equals(this.initPosition)) {
+            this.node.setPosition(this.newPosition)
+        }
+        else {
+            this.node.setPosition(this.initPosition)
+        }
+    }
+
     onFruitClicked = (fruit: Fruit) => {
         if (this.gameEnded) return
         if (this.fruits.length >= this.slots.length) return
