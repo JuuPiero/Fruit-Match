@@ -1,4 +1,4 @@
-import { _decorator, SpriteFrame } from 'cc';
+import { _decorator, CCBoolean, SpriteFrame } from 'cc';
 import { bh } from 'db://scriptable-asset/scriptable_runtime';
 
 const { ccclass, property } = _decorator;
@@ -10,7 +10,21 @@ export class FruitConfigSA extends bh.ScriptableAsset {
     @property(SpriteFrame) public fruitsOutline: SpriteFrame[] = [];
 
 
-
+    
+    private _shuffle : boolean;
+    @property(CCBoolean) public get shuffle() : boolean {
+        return this._shuffle;
+    }
+    public set shuffle(v : boolean) {
+        // Fisher-Yates: áp cùng 1 chuỗi hoán vị cho cả 2 mảng để fruits[i] và fruitsOutline[i] vẫn tương ứng nhau sau khi xáo trộn
+        const length = Math.min(this.fruits.length, this.fruitsOutline.length);
+        for (let i = length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            ;[this.fruits[i], this.fruits[j]] = [this.fruits[j], this.fruits[i]];
+            ;[this.fruitsOutline[i], this.fruitsOutline[j]] = [this.fruitsOutline[j], this.fruitsOutline[i]];
+        }
+    }
+    
     // private 
 
     private fruitsMap: Map<string, FruitAssetItem> = new Map();

@@ -2,7 +2,7 @@ import super_html_playable from "./super_html_playable";
 import { ETrackingEvent, TrackingManager } from "./TrackingManager";
 
 const APPLE_STORE = ""
-const GOOGLE_PLAY_STORE = ""
+const GOOGLE_PLAY_STORE = "https://play.google.com/store/apps/details?id=ig.com.fruit.match"
 
 
 export class PlayableAdsManager {

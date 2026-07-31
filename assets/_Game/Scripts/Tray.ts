@@ -129,7 +129,7 @@ export class Tray extends Component {
 
 
                 AudioManager.instance.playOneShot('Completed')
-                EventBus.emit(GameEvents.MATCHED)
+                EventBus.emit(GameEvents.MATCHED, vfxPos)
 
 
                 this.layoutFruits()
