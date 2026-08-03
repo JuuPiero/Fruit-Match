@@ -1,6 +1,7 @@
 import { _decorator, Canvas, Component, instantiate, Label, Node, NodePool, Prefab, tween, Tween, Vec3 } from 'cc';
 import { EventBus } from 'db://assets/_iKame/Scripts/EventBus';
 import { GameEvents } from '../GameEvents';
+import { AudioManager } from 'db://assets/_iKame/Scripts/AudioManager';
 const { ccclass, property } = _decorator;
 
 const COIN_MIN_COUNT = 3;
@@ -44,6 +45,7 @@ export class CoinManager extends Component {
     }
 
     onMatched = (fromWorldPos?: Vec3) => {
+        AudioManager.instance.playOneShot('Coin')
         this.spawnCoins(fromWorldPos ?? this.coinLabel.node.worldPosition)
     }
 
