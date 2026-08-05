@@ -11,19 +11,19 @@ export class FruitConfigSA extends bh.ScriptableAsset {
 
 
     
-    private _shuffle : boolean;
-    @property(CCBoolean) public get shuffle() : boolean {
-        return this._shuffle;
-    }
-    public set shuffle(v : boolean) {
-        // Fisher-Yates: áp cùng 1 chuỗi hoán vị cho cả 2 mảng để fruits[i] và fruitsOutline[i] vẫn tương ứng nhau sau khi xáo trộn
-        const length = Math.min(this.fruits.length, this.fruitsOutline.length);
-        for (let i = length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            ;[this.fruits[i], this.fruits[j]] = [this.fruits[j], this.fruits[i]];
-            ;[this.fruitsOutline[i], this.fruitsOutline[j]] = [this.fruitsOutline[j], this.fruitsOutline[i]];
-        }
-    }
+    // private _shuffle : boolean;
+    // @property(CCBoolean) public get shuffle() : boolean {
+    //     return this._shuffle;
+    // }
+    // public set shuffle(v : boolean) {
+    //     // Fisher-Yates: áp cùng 1 chuỗi hoán vị cho cả 2 mảng để fruits[i] và fruitsOutline[i] vẫn tương ứng nhau sau khi xáo trộn
+    //     const length = Math.min(this.fruits.length, this.fruitsOutline.length);
+    //     for (let i = length - 1; i > 0; i--) {
+    //         const j = Math.floor(Math.random() * (i + 1));
+    //         ;[this.fruits[i], this.fruits[j]] = [this.fruits[j], this.fruits[i]];
+    //         ;[this.fruitsOutline[i], this.fruitsOutline[j]] = [this.fruitsOutline[j], this.fruitsOutline[i]];
+    //     }
+    // }
     
     // private 
 
@@ -40,9 +40,9 @@ export class FruitConfigSA extends bh.ScriptableAsset {
     }
 
 
-    public getFruit(name: string): FruitAssetItem {
-        return this.fruitsMap.get(name);
-    }
+    // public getFruit(name: string): FruitAssetItem {
+    //     return this.fruitsMap.get(name);
+    // }
 }
 
 

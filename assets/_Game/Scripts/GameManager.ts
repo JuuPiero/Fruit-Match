@@ -114,7 +114,9 @@ export class GameManager extends Component {
 
 
         this,this.scheduleOnce(() => {
-            PlayableAdsManager.OpenStore()
+            // PlayableAdsManager.OpenStore()
+            PlayableAdsManager.EndGame()
+
         }, 3)
     }
     onLoseGame = () => {
@@ -122,7 +124,7 @@ export class GameManager extends Component {
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false })
         this.sad.active = true
          this,this.scheduleOnce(() => {
-            PlayableAdsManager.OpenStore()
+            PlayableAdsManager.EndGame()
         }, 3)
     }
 
