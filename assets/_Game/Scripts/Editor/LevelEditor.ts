@@ -116,6 +116,7 @@ export class LevelEditor extends Component {
                 fruitData.positionY = item.node.position.y / treeData.height;
 
                 const fruitSprite = item.getComponent(Sprite);
+                fruitData.fruitName = fruitSprite.spriteFrame?.name ?? '';
                 fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
                 if (fruitData.fruitType < 0) {
                     console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig.`);

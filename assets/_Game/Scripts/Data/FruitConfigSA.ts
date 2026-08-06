@@ -40,9 +40,9 @@ export class FruitConfigSA extends bh.ScriptableAsset {
     }
 
 
-    // public getFruit(name: string): FruitAssetItem {
-    //     return this.fruitsMap.get(name);
-    // }
+    public getFruit(name: string): FruitAssetItem {
+        return this.fruitsMap.get(name);
+    }
 }
 
 

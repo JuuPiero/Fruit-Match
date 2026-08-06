@@ -3,6 +3,11 @@ const { ccclass, property } = _decorator;
 
 @ccclass('FruitData')
 export class FruitData {
+    // Tên sprite icon thật (vd "red_apple"), khớp tên file .png trong FruitConfigSA — khoá tra
+    // cứu ổn định thay cho fruitType (Unity dùng enum thưa, không phải index liền mạch).
+    // Rỗng nếu JSON cũ chưa có field này (level tự author trong Cocos) — khi đó fallback sang
+    // fruitType như một index thẳng vào mảng sprite (xem Fruit.initialize).
+    @property fruitName: string = '';
     @property fruitType: number = 0;
     @property positionX: number = 0;
     @property positionY: number = 0;
@@ -55,6 +60,7 @@ export class LevelData {
 
         const parseFruit = (f: any): FruitData => {
             const fruit = new FruitData();
+            fruit.fruitName = f.fruitName ?? '';
             fruit.fruitType = f.fruitType ?? 0
             fruit.positionX = f.positionX ?? 0;
             fruit.positionY = f.positionY ?? 0;

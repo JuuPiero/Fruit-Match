@@ -155,10 +155,18 @@ export class Fruit extends Component {
         this.onPicked = undefined;
 
 
-        // const spriteData = ServiceLocator.get(FruitConfigSA).getFruit(data.fruitType.toString();)
-
-        this._spriteFrame = ServiceLocator.get(FruitConfigSA).fruits[data.fruitType]
-        this._outlineSpriteFrame = ServiceLocator.get(FruitConfigSA).fruitsOutline[data.fruitType]
+        // fruitName (tên sprite thật, vd "red_apple") là khoá ổn định giữa Unity (enum thưa) và
+        // Cocos (mảng sprite theo index) — ưu tiên tra theo tên. Level cũ author trong Cocos chưa
+        // có fruitName thì fallback về fruitType như 1 index thẳng vào mảng sprite (hành vi cũ).
+        const fruitConfig = ServiceLocator.get(FruitConfigSA)
+        const byName = data.fruitName ? fruitConfig.getFruit(data.fruitName) : undefined
+        if (byName) {
+            this._spriteFrame = byName.fruitSpriteFrame
+            this._outlineSpriteFrame = byName.fruitfruitSpriteFrameOutline
+        } else {
+            this._spriteFrame = fruitConfig.fruits[data.fruitType]
+            this._outlineSpriteFrame = fruitConfig.fruitsOutline[data.fruitType]
+        }
 
         this._sprite.spriteFrame = this._spriteFrame;
 

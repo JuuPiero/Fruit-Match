@@ -6,7 +6,12 @@ import { GameConfigSA } from './Data/GameConfigSA';
 import { Fruit } from './Fruit';
 import { FruitConfigSA } from './Data/FruitConfigSA';
 import { Tutorial } from './Tutorial';
+import { CoverPoint, isBlocked } from './CoverageRule';
 const { ccclass, property } = _decorator;
+
+interface CoverageItem extends CoverPoint {
+    fruit: Fruit
+}
 
 
 @ccclass('Tree')
@@ -20,6 +25,12 @@ export class Tree extends GameBehaviour {
 
 
     @property(TreeData) data: TreeData = null;
+
+    @property({ tooltip: 'Giống LevelDef.blockCountThreshold (C#): block count đạt ngưỡng này thì quả MỚI có thể bị chặn — rồi coverDistance quyết định. Áp dụng bất cứ khi nào flattenFruits tắt (kể cả khi randomizeFruitTypes bật).' })
+    blockCountThreshold: number = 2;
+
+    @property({ tooltip: 'Giống LevelDef.coverDistance (C#): quả bị block-count đánh dấu chỉ thực sự bị chặn nếu có quả tầng trên trong khoảng cách này (đơn vị pixel, theo scale của cây này — không copy thẳng số từ Unity, cần tự tune lại). 0 = block-count thuần.' })
+    coverDistance: number = 0;
 
     protected onLoad(): void {
         this._uiTransform = this.getComponent(UITransform)
@@ -79,9 +90,15 @@ export class Tree extends GameBehaviour {
         const totalFruits = levelData.fruits.length
         let spawnedCount = 0
 
+        // Trừ flattenFruits (mở hết ngay từ đầu), mọi trường hợp còn lại — kể cả khi
+        // randomizeFruitTypes bật — đều dùng đúng cơ chế khoá của C# (CoverageRule:
+        // block-count + cover-distance, xét cả stack khác), không còn khoá tuần tự theo stack.
+        const useCoverageRule = !flattenFruits
+
         let spawnIndex = 0; // index = 0 is on top of stack
         const topFruits: Fruit[] = []
         const fruitsBySpawnIndex: Fruit[] = new Array(totalFruits)
+        const coverageItems: CoverageItem[] = []
         slots.forEach((slot, index) => {
             const stackFruits: Fruit[] = new Array(slot.fruits.length)
 
@@ -109,7 +126,15 @@ export class Tree extends GameBehaviour {
             if (flattenFruits) {
                 stackFruits.forEach(fruit => fruit.setLocked(false, true))
             } else {
-                this.setupStackLocking(stackFruits)
+                stackFruits.forEach((fruit, layer) => {
+                    coverageItems.push({
+                        fruit,
+                        stackId: index,
+                        layer,
+                        x: slot.fruits[layer].positionX * width,
+                        y: slot.fruits[layer].positionY * height,
+                    })
+                })
             }
             topFruits.push(stackFruits[0])
         })
@@ -119,21 +144,39 @@ export class Tree extends GameBehaviour {
         if (!flattenFruits) {
             topFruits.forEach(fruit => fruit.node.setSiblingIndex(-1))
         }
+
+        // Cần đủ toàn bộ items (mọi stack) mới tính coverage được, nên setup sau khi spawn xong.
+        if (useCoverageRule) {
+            this.setupCoverageLocking(coverageItems)
+        }
     }
 
-    /** Chỉ quả trên cùng (index 0) của stack được phép tương tác, các quả dưới bị khoá (tối màu) cho tới khi lộ ra */
-    private setupStackLocking(stack: Fruit[]) {
-        if (stack.length === 0) return
+    /**
+     * Giống C# (CoverageRule + MatchSession.RefreshBlockTints): khoá/mở lại toàn bộ quả còn
+     * sống mỗi khi có 1 quả được nhấc, thay vì chỉ mở quả kế tiếp trong cùng stack — nên 1 quả
+     * có thể mở dù quả "trên" nó trong stack chưa được nhấc, miễn nó không thực sự bị che.
+     */
+    private setupCoverageLocking(items: CoverageItem[]) {
+        if (items.length === 0) return
 
-        stack.forEach((fruit, i) => {
-            fruit.setLocked(i !== 0, true)
-            fruit.onPicked = () => {
-                const next = stack[i + 1]
-                if (next) {
-                    next.setLocked(false)
-                }
+        const alive = items.slice()
+
+        const refresh = (immediate: boolean) => {
+            for (const item of alive) {
+                const blocked = isBlocked(item, alive, this.blockCountThreshold, this.coverDistance)
+                item.fruit.setLocked(blocked, immediate)
+            }
+        }
+
+        items.forEach(item => {
+            item.fruit.onPicked = () => {
+                const idx = alive.indexOf(item)
+                if (idx >= 0) alive.splice(idx, 1)
+                refresh(false)
             }
         })
+
+        refresh(true) // đặt ngay từ đầu, không tween — giống ItemPiece.Init(blocked, animate:false)
     }
 
     /** Vị trí (spawnIndex) của quả trên cùng (i = 0) mỗi stack, theo đúng thứ tự spawnIndex được gán trong initialize() */
