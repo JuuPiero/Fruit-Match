@@ -10,7 +10,15 @@
   },
   "trees": [
     {
-      "__uuid__": "8d45f442-c690-42f3-b7b2-b28682abe626@f9941",
+      "__uuid__": "7c663184-e0e2-4c23-b1af-1d220ea627f7@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "37db72ea-afd6-405c-b4b4-3db99e8af680@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "2d86851c-b4c8-4719-abc2-c55bdda67630@f9941",
       "__expectedType__": "cc.SpriteFrame"
     }
   ]
