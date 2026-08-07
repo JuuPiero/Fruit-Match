@@ -1,5 +1,6 @@
-import { _decorator, CCBoolean, SpriteFrame } from 'cc';
+import { _decorator, CCBoolean, JsonAsset, SpriteFrame } from 'cc';
 import { bh } from 'db://scriptable-asset/scriptable_runtime';
+import { LevelData } from './LevelData';
 
 const { ccclass, property } = _decorator;
 
@@ -10,7 +11,8 @@ export class FruitConfigSA extends bh.ScriptableAsset {
     @property(SpriteFrame) public fruitsOutline: SpriteFrame[] = [];
 
 
-    
+    @property(JsonAsset) levelJsonBake: JsonAsset = null;
+
     // private _shuffle : boolean;
     // @property(CCBoolean) public get shuffle() : boolean {
     //     return this._shuffle;
@@ -24,8 +26,50 @@ export class FruitConfigSA extends bh.ScriptableAsset {
     //         ;[this.fruitsOutline[i], this.fruitsOutline[j]] = [this.fruitsOutline[j], this.fruitsOutline[i]];
     //     }
     // }
-    
-    // private 
+
+    private _removeFruitsNotUse: boolean;
+    @property(CCBoolean) public get removeFruitsNotUse(): boolean {
+        return this._removeFruitsNotUse;
+    }
+    public set removeFruitsNotUse(v: boolean) {
+        if(!this.levelJsonBake ) {
+            console.log("Hehe");
+            
+            return
+        }
+        const levelData = LevelData.parseFromJson(this.levelJsonBake)
+        const fruitsUsing: Set<string> = new Set;
+        let fruitLevelCount = 0;
+
+        for (const slot of levelData.slots) {
+            for (const fruit of slot.fruits) {
+                fruitLevelCount += 1
+                fruitsUsing.add(fruit.fruitName);
+            }
+        }
+        const fruitSpriteFrameUsing : SpriteFrame[] = [];
+        const fruitSpriteOutlineFrameUsing : SpriteFrame[] = [];
+
+        this.fruits.forEach((f, index) => {
+            if(fruitsUsing.has(f.name)) {
+                // console.log(f);
+                fruitSpriteFrameUsing.push(f);
+                fruitSpriteOutlineFrameUsing.push(this.fruitsOutline[index])
+            }
+
+        });
+
+        this.fruits = fruitSpriteFrameUsing
+        this.fruitsOutline = fruitSpriteOutlineFrameUsing
+
+        console.log("Tổng số quả: " + fruitLevelCount);
+        
+
+    }
+
+
+
+
 
     private fruitsMap: Map<string, FruitAssetItem> = new Map();
 

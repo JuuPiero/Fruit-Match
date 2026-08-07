@@ -1,0 +1,277 @@
+{
+    "tree": {
+        "treeType": 50,
+        "positionX": 0.0,
+        "positionY": 0.0,
+        "width": 1431.0,
+        "height": 2048.0
+    },
+    "slots": [
+        {
+            "fruits": [
+                {
+                    "fruitName": "yellow_banana",
+                    "fruitType": 2200,
+                    "positionX": -0.24552734196186067,
+                    "positionY": 0.06177249923348427
+                }
+            ]
+        },
+        {
+            "fruits": [
+                
+                {
+                    "fruitName": "pink_lychee",
+                    "fruitType": 6200,
+                    "positionX": 0.2943827509880066,
+                    "positionY": 0.1162453442811966
+                }
+            ]
+        },
+        {
+            "fruits": [
+               
+                {
+                    "fruitName": "blue_blueberries",
+                    "fruitType": 4000,
+                    "positionX": -0.014469955116510392,
+                    "positionY": 0.24331600964069367
+                }
+            ]
+        },
+        {
+            "fruits": [
+                
+                {
+                    "fruitName": "blue_blueberries",
+                    "fruitType": 4000,
+                    "positionX": 0.012933995574712754,
+                    "positionY": -0.02349112741649151
+                },
+                {
+                    "fruitName": "pink_lychee",
+                    "fruitType": 6200,
+                    "positionX": -0.01975110173225403,
+                    "positionY": -0.012634608894586563
+                }
+            ]
+        },
+        {
+            "fruits": [
+               
+                {
+                    "fruitName": "orange_pineapple",
+                    "fruitType": 1100,
+                    "positionX": 0.07530467212200165,
+                    "positionY": 0.13879863917827607
+                },
+                {
+                    "fruitName": "pink_lychee",
+                    "fruitType": 6200,
+                    "positionX": 0.03311358764767647,
+                    "positionY": 0.11783015727996826
+                }
+            ]
+        },
+        {
+            "fruits": [
+              
+                {
+                    "fruitName": "blue_blueberries",
+                    "fruitType": 4000,
+                    "positionX": -0.12504269182682038,
+                    "positionY": 0.1763847917318344
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "green_watermelon",
+                    "fruitType": 3200,
+                    "positionX": 0.14822261035442353,
+                    "positionY": 0.21980728209018708
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "yellow_banana",
+                    "fruitType": 2200,
+                    "positionX": 0.18715420365333558,
+                    "positionY": 0.02098921686410904
+                },
+                {
+                    "fruitName": "green_watermelon",
+                    "fruitType": 3200,
+                    "positionX": 0.19924737513065339,
+                    "positionY": 0.030820908024907113
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "green_watermelon",
+                    "fruitType": 3200,
+                    "positionX": -0.0778084248304367,
+                    "positionY": 0.08044317364692688
+                },
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 5000,
+                    "positionX": -0.09239424020051956,
+                    "positionY": 0.05570872128009796
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "yellow_banana",
+                    "fruitType": 2200,
+                    "positionX": -0.16710175573825837,
+                    "positionY": -0.014992075972259045
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_eggplant",
+                    "fruitType": 5100,
+                    "positionX": 0.01627347804605961,
+                    "positionY": 0.04643457755446434
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 5000,
+                    "positionX": -0.2714381217956543,
+                    "positionY": 0.14545938372612
+                },
+                {
+                    "fruitName": "orange_orange",
+                    "fruitType": 1000,
+                    "positionX": -0.2811025083065033,
+                    "positionY": 0.12341343611478806
+                },
+                {
+                    "fruitName": "purple_eggplant",
+                    "fruitType": 5100,
+                    "positionX": -0.23647832870483399,
+                    "positionY": 0.15107165277004243
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 5000,
+                    "positionX": 0.10752954334020615,
+                    "positionY": -0.020480213686823846
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 5000,
+                    "positionX": 0.15594857931137086,
+                    "positionY": 0.14134502410888673
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_eggplant",
+                    "fruitType": 5100,
+                    "positionX": 0.0762464851140976,
+                    "positionY": 0.26936420798301699
+                },
+                {
+                    "fruitName": "orange_orange",
+                    "fruitType": 1000,
+                    "positionX": 0.06844918429851532,
+                    "positionY": 0.27990055084228518
+                },
+                {
+                    "fruitName": "orange_orange",
+                    "fruitType": 1000,
+                    "positionX": 0.06808292120695114,
+                    "positionY": 0.26067060232162478
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 5000,
+                    "positionX": -0.11366758495569229,
+                    "positionY": 0.22630690038204194
+                },
+                {
+                    "fruitName": "black_plum",
+                    "fruitType": 9000,
+                    "positionX": -0.12983067333698274,
+                    "positionY": 0.21480970084667207
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 5000,
+                    "positionX": 0.06645946204662323,
+                    "positionY": 0.18750226497650147
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "black_plum",
+                    "fruitType": 9000,
+                    "positionX": -0.018776603043079377,
+                    "positionY": 0.1211126297712326
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "orange_pineapple",
+                    "fruitType": 1100,
+                    "positionX": 0.12483536452054978,
+                    "positionY": 0.07509889453649521
+                },
+                {
+                    "fruitName": "black_plum",
+                    "fruitType": 9000,
+                    "positionX": 0.11021997779607773,
+                    "positionY": 0.06570666283369065
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "orange_pineapple",
+                    "fruitType": 1100,
+                    "positionX": -0.159431591629982,
+                    "positionY": 0.11744281649589539
+                }
+            ]
+        }
+       
+    ]
+}

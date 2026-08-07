@@ -1,1 +1,339 @@
-{"tree":{"treeType":3,"positionX":0,"positionY":0,"width":1080,"height":1920},"slots":[{"fruits":[{"fruitType":23,"positionX":-0.17164166666666666,"positionY":0.19743958333333333},{"fruitType":23,"positionX":-0.32915462962962966,"positionY":0.11885208333333333},{"fruitType":23,"positionX":-0.16570833333333335,"positionY":0.10398177083333333},{"fruitType":23,"positionX":-0.09746944444444444,"positionY":0.16406197916666668},{"fruitType":23,"positionX":0.01824074074074074,"positionY":0.16740000000000002},{"fruitType":23,"positionX":0.1695537037037037,"positionY":0.19410208333333331},{"fruitType":23,"positionX":0.11614907407407407,"positionY":0.17240624999999998},{"fruitType":23,"positionX":0.15175185185185186,"positionY":0.1206703125},{"fruitType":23,"positionX":-0.08560185185185186,"positionY":0.06362916666666667},{"fruitType":23,"positionX":-0.2994861111111111,"positionY":0.062109375},{"fruitType":23,"positionX":0.2822148148148148,"positionY":0.08729218749999999},{"fruitType":23,"positionX":0.34452037037037037,"positionY":0.04056302083333333},{"fruitType":23,"positionX":0.16658703703703703,"positionY":-0.029530729166666665},{"fruitType":23,"positionX":0.2288925925925926,"positionY":-0.0912796875},{"fruitType":23,"positionX":0.29408333333333336,"positionY":-0.08961041666666666},{"fruitType":23,"positionX":0.3723564814814815,"positionY":-0.031198958333333335},{"fruitType":23,"positionX":-0.20724444444444445,"positionY":-0.1029609375},{"fruitType":23,"positionX":-0.28578333333333333,"positionY":-0.08358229166666667},{"fruitType":23,"positionX":-0.3640555555555556,"positionY":0.040276041666666665},{"fruitType":23,"positionX":0.033075925925925925,"positionY":0.2575208333333333},{"fruitType":23,"positionX":-0.2049453703703704,"positionY":0.010135416666666668},{"fruitType":23,"positionX":0.3356203703703704,"positionY":0.13068489583333334},{"fruitType":23,"positionX":0.3741907407407407,"positionY":0.08228697916666668},{"fruitType":23,"positionX":-0.11408888888888888,"positionY":0.197884375},{"fruitType":23,"positionX":0.23482685185185184,"positionY":-0.14968958333333332},{"fruitType":23,"positionX":-0.14197222222222222,"positionY":0.23916302083333332},{"fruitType":23,"positionX":0.2644962962962963,"positionY":0.20077864583333332},{"fruitType":23,"positionX":-0.3369361111111111,"positionY":0.022057291666666666},{"fruitType":23,"positionX":-0.2846518518518518,"positionY":0.09715781250000001},{"fruitType":23,"positionX":0.26152870370370374,"positionY":0.022207291666666667},{"fruitType":23,"positionX":-0.13900648148148148,"positionY":0.14570520833333334},{"fruitType":23,"positionX":0.15471944444444446,"positionY":-0.06958229166666667},{"fruitType":23,"positionX":0.2637935185185185,"positionY":-0.13133125},{"fruitType":23,"positionX":0.34761111111111115,"positionY":-0.06290677083333333},{"fruitType":23,"positionX":-0.2250462962962963,"positionY":-0.07125104166666667},{"fruitType":23,"positionX":-0.2851537037037037,"positionY":-0.13488802083333334},{"fruitType":23,"positionX":-0.35894629629629626,"positionY":-0.024276562499999998},{"fruitType":23,"positionX":0.10428333333333334,"positionY":0.0689359375},{"fruitType":23,"positionX":0.31782037037037036,"positionY":0.0889625},{"fruitType":23,"positionX":0.1903240740740741,"positionY":0.22080520833333334},{"fruitType":23,"positionX":-0.28317314814814815,"positionY":0.0637796875},{"fruitType":23,"positionX":-0.3469555555555556,"positionY":0.07212395833333334},{"fruitType":23,"positionX":-0.2845824074074074,"positionY":0.17742760416666667},{"fruitType":23,"positionX":-0.13432037037037037,"positionY":0.203434375},{"fruitType":23,"positionX":0.17545092592592593,"positionY":0.17222604166666666},{"fruitType":23,"positionX":0.24480277777777779,"positionY":-0.07744010416666666},{"fruitType":23,"positionX":0.17054907407407408,"positionY":0.11240572916666666},{"fruitType":23,"positionX":-0.3506388888888889,"positionY":-0.01629947916666667},{"fruitType":23,"positionX":-0.13663055555555556,"positionY":-0.0852421875},{"fruitType":23,"positionX":0.2614222222222222,"positionY":0.09845},{"fruitType":23,"positionX":-0.05803148148148148,"positionY":0.16312395833333332},{"fruitType":23,"positionX":-0.3654472222222222,"positionY":0.017509895833333334},{"fruitType":23,"positionX":-0.34001851851851855,"positionY":-0.06831302083333333},{"fruitType":23,"positionX":0.017344444444444444,"positionY":0.18615572916666664},{"fruitType":23,"positionX":0.3015509259259259,"positionY":-0.10344635416666666},{"fruitType":23,"positionX":0.3662796296296296,"positionY":0.0057828125},{"fruitType":23,"positionX":0.17898703703703706,"positionY":-0.03972916666666667},{"fruitType":23,"positionX":0.3662796296296296,"positionY":0.03699114583333333},{"fruitType":23,"positionX":0.21937592592592592,"positionY":0.20213489583333333},{"fruitType":23,"positionX":0.006697222222222222,"positionY":0.26845312499999996},{"fruitType":23,"positionX":-0.18748796296296297,"positionY":0.2099375},{"fruitType":23,"positionX":-0.30071851851851855,"positionY":0.12023802083333333},{"fruitType":23,"positionX":0.1708287037037037,"positionY":0.20252760416666668}]}]}
+{
+    "tree": {
+        "treeType": 0,
+        "positionX": 0,
+        "positionY": 0,
+        "width": 1080,
+        "height": 2258
+    },
+    "slots": [
+        {
+            "fruits": [
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.16528425925925927,
+                    "positionY": 0.222814880425155
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.12760092592592592,
+                    "positionY": 0.1843635961027458
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.020380555555555555,
+                    "positionY": 0.19637953941541186
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.02815740740740741,
+                    "positionY": 0.30919751992914085
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.135137962962963,
+                    "positionY": 0.26877369353410097
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.17386666666666667,
+                    "positionY": 0.25830248007085915
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.1430898148148148,
+                    "positionY": 0.20830868024800708
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.13869537037037036,
+                    "positionY": 0.15792869796279893
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.26179444444444444,
+                    "positionY": 0.22877856510186004
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.33464907407407407,
+                    "positionY": 0.1735491585473871
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.3597712962962963,
+                    "positionY": 0.11947741364038972
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.2768675925925926,
+                    "positionY": 0.12428343666961914
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.28691666666666665,
+                    "positionY": 0.08342914083259523
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.3472101851851852,
+                    "positionY": 0.07021169176262179
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.3497222222222222,
+                    "positionY": 0.005325509300265722
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.38740555555555556,
+                    "positionY": 0.04978476527900797
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.41252777777777777,
+                    "positionY": 0.08463108945969885
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.17386574074074074,
+                    "positionY": 0.05218821966341895
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.22159814814814816,
+                    "positionY": 0.007728963684676706
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.27937962962962964,
+                    "positionY": -0.022310894596988484
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.19396388888888888,
+                    "positionY": -0.03312533215234721
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.07059814814814815,
+                    "positionY": 0.1288742249778565
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.009526851851851852,
+                    "positionY": 0.11827590788308237
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.2161537037037037,
+                    "positionY": 0.1794689991142604
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.2908972222222222,
+                    "positionY": 0.13029185119574846
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.3461666666666667,
+                    "positionY": 0.15552524357838796
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.388875,
+                    "positionY": 0.09063906111603189
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.2682879629629629,
+                    "positionY": 0.08703410097431355
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.19794537037037038,
+                    "positionY": 0.06540522586359611
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.24818981481481484,
+                    "positionY": 0.01854295837023915
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.38384999999999997,
+                    "positionY": 0.014937998228520814
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.30094629629629627,
+                    "positionY": -0.01029539415411869
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.21050555555555556,
+                    "positionY": -0.00428742249778565
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.11252870370370371,
+                    "positionY": 0.10265500442869796
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.01559537037037037,
+                    "positionY": 0.24358281665190434
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.25833425925925924,
+                    "positionY": 0.17139858281665188
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.142825,
+                    "positionY": 0.23452745792736934
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.2389990740740741,
+                    "positionY": 0.15415101860053143
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.3497222222222222,
+                    "positionY": 0.13269441984056687
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.3386287037037037,
+                    "positionY": 0.12187998228520815
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.2431638888888889,
+                    "positionY": 0.2107980513728964
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.39389814814814816,
+                    "positionY": 0.05819530558015943
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.258237962962963,
+                    "positionY": -0.04273914968999114
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.001990740740740741,
+                    "positionY": 0.15312134632418067
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.06372037037037037,
+                    "positionY": 0.2282617360496014
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.2263611111111111,
+                    "positionY": 0.07296014171833481
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.25676944444444444,
+                    "positionY": 0.0005186005314437556
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.32616296296296293,
+                    "positionY": 0.2035398582816652
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.11640092592592592,
+                    "positionY": 0.004938441098317095
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.10660370370370371,
+                    "positionY": 0.14294862710363154
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.328012962962963,
+                    "positionY": 0.20129185119574844
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.13619537037037038,
+                    "positionY": 0.016534100974313553
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": 0.06547685185185186,
+                    "positionY": 0.2338405668733392
+                },
+                {
+                    "fruitName": "PinkDragonfruit",
+                    "fruitType": 23,
+                    "positionX": -0.20799351851851852,
+                    "positionY": 0.026953941541186893
+                }
+            ]
+        }
+    ]
+}

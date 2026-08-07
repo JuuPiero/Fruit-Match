@@ -7,6 +7,7 @@ import { Fruit } from './Fruit';
 import { FruitConfigSA } from './Data/FruitConfigSA';
 import { Tutorial } from './Tutorial';
 import { CoverPoint, isBlocked } from './CoverageRule';
+import { PREVIEW } from 'cc/env';
 const { ccclass, property } = _decorator;
 
 interface CoverageItem extends CoverPoint {
@@ -31,6 +32,9 @@ export class Tree extends GameBehaviour {
 
     @property({ tooltip: 'Giống LevelDef.coverDistance (C#): quả bị block-count đánh dấu chỉ thực sự bị chặn nếu có quả tầng trên trong khoảng cách này (đơn vị pixel, theo scale của cây này — không copy thẳng số từ Unity, cần tự tune lại). 0 = block-count thuần.' })
     coverDistance: number = 0;
+
+
+    fruitSet: Set<string> = new Set()
 
     protected onLoad(): void {
         this._uiTransform = this.getComponent(UITransform)
@@ -109,8 +113,11 @@ export class Tree extends GameBehaviour {
                 node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
                 const fruit = node.getComponent(Fruit)
                 node.name = `Slot: ${index}, Index: ${spawnIndex}`
+                    this.fruitSet.add(fruitData.fruitName)
+
                 fruit.initialize(fruitData, spawnIndex * Tree.FRUIT_SPAWN_INTERVAL, () => {
                     spawnedCount++
+
                     if (spawnedCount === totalFruits) {
                         const tutorialGroup = tutorialSpawnIndices?.map(idx => fruitsBySpawnIndex[idx])
                         this.scheduleOnce(() => {
@@ -149,6 +156,14 @@ export class Tree extends GameBehaviour {
         if (useCoverageRule) {
             this.setupCoverageLocking(coverageItems)
         }
+
+
+        if(PREVIEW) {
+            this.fruitSet.forEach(f => console.log(f)
+            )
+
+        }
+
     }
 
     /**

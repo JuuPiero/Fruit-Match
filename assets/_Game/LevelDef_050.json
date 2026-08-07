@@ -10,51 +10,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.26206231117248537,
                     "positionY": 0.07092326134443283
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.24907711148262025,
                     "positionY": 0.06669507920742035
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": -0.24827945232391358,
                     "positionY": 0.07876797765493393
                 },
                 {
+                    "fruitName": "red_strawberry",
                     "fruitType": 200,
                     "positionX": -0.2399475872516632,
                     "positionY": 0.05453885719180107
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.24332258105278016,
                     "positionY": 0.07027559727430344
                 },
                 {
+                    "fruitName": "yellow_banana",
                     "fruitType": 2200,
                     "positionX": -0.24552734196186067,
                     "positionY": 0.06177249923348427
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": -0.23296989500522614,
                     "positionY": 0.061985064297914508
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.2523918151855469,
                     "positionY": 0.051062073558568957
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.25828492641448977,
                     "positionY": 0.05591966584324837
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": -0.23160132765769959,
                     "positionY": 0.06730469316244126
@@ -64,51 +74,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.27688756585121157,
                     "positionY": 0.11471240967512131
                 },
                 {
+                    "fruitName": "yellow_banana",
                     "fruitType": 2200,
                     "positionX": 0.2753240764141083,
                     "positionY": 0.12751126289367677
                 },
                 {
+                    "fruitName": "white_dragonfruit",
                     "fruitType": 8100,
                     "positionX": 0.2680799067020416,
                     "positionY": 0.11094219237565994
                 },
                 {
+                    "fruitName": "pink_lychee",
                     "fruitType": 6200,
                     "positionX": 0.2943827509880066,
                     "positionY": 0.1162453442811966
                 },
                 {
+                    "fruitName": "pink_dragonfruit",
                     "fruitType": 6000,
                     "positionX": 0.2614997923374176,
                     "positionY": 0.1263323724269867
                 },
                 {
+                    "fruitName": "pink_mangosteen",
                     "fruitType": 6100,
                     "positionX": 0.2828737497329712,
                     "positionY": 0.10175678133964539
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.2889479100704193,
                     "positionY": 0.1309843808412552
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.25042441487312319,
                     "positionY": 0.11145824193954468
                 },
                 {
+                    "fruitName": "red_strawberry",
                     "fruitType": 200,
                     "positionX": 0.2972690165042877,
                     "positionY": 0.10765475034713745
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": 0.2622138261795044,
                     "positionY": 0.13868439197540284
@@ -118,51 +138,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.031178012490272523,
                     "positionY": 0.24981243908405305
                 },
                 {
+                    "fruitName": "blue_blueberries",
                     "fruitType": 4000,
                     "positionX": -0.014469955116510392,
                     "positionY": 0.24331600964069367
                 },
                 {
+                    "fruitName": "pink_dragonfruit",
                     "fruitType": 6000,
                     "positionX": -0.023101430386304857,
                     "positionY": 0.2601158916950226
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.0340007059276104,
                     "positionY": 0.24165290594100953
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.003114451887086034,
                     "positionY": 0.251840740442276
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": -0.04223039001226425,
                     "positionY": 0.261661171913147
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.02409515529870987,
                     "positionY": 0.2311728596687317
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.011272643692791462,
                     "positionY": 0.26333725452423098
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": -0.05145106092095375,
                     "positionY": 0.24312524497509004
                 },
                 {
+                    "fruitName": "white_dragonfruit",
                     "fruitType": 8100,
                     "positionX": 0.0030564162880182268,
                     "positionY": 0.24124233424663545
@@ -172,51 +202,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.003421945031732321,
                     "positionY": -0.029047945514321328
                 },
                 {
+                    "fruitName": "blue_blueberries",
                     "fruitType": 4000,
                     "positionX": 0.012933995574712754,
                     "positionY": -0.02349112741649151
                 },
                 {
+                    "fruitName": "green_watermelon",
                     "fruitType": 3200,
                     "positionX": -0.0071561322547495369,
                     "positionY": -0.01715046539902687
                 },
                 {
+                    "fruitName": "white_strawberry",
                     "fruitType": 8000,
                     "positionX": 0.005069484002888203,
                     "positionY": -0.037838082760572436
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": 0.019058508798480035,
                     "positionY": -0.01331669557839632
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.020848900079727174,
                     "positionY": -0.029707549139857293
                 },
                 {
+                    "fruitName": "peach_bellfruit",
                     "fruitType": 7200,
                     "positionX": -0.004686129745095968,
                     "positionY": -0.00657489662989974
                 },
                 {
+                    "fruitName": "purple_eggplant",
                     "fruitType": 5100,
                     "positionX": 0.030071740970015527,
                     "positionY": -0.015650436282157899
                 },
                 {
+                    "fruitName": "pink_lychee",
                     "fruitType": 6200,
                     "positionX": -0.01975110173225403,
                     "positionY": -0.012634608894586563
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.013764648698270321,
                     "positionY": -0.030947908759117128
@@ -226,51 +266,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.052285730838775638,
                     "positionY": 0.12115494161844254
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": 0.06456996500492096,
                     "positionY": 0.11437273025512696
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": 0.05886731296777725,
                     "positionY": 0.13131912052631379
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": 0.04599342122673988,
                     "positionY": 0.11100571602582932
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": 0.08191509544849396,
                     "positionY": 0.12431133538484574
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.03926451876759529,
                     "positionY": 0.13247594237327577
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": 0.06775463372468949,
                     "positionY": 0.10467860102653504
                 },
                 {
+                    "fruitName": "orange_pineapple",
                     "fruitType": 1100,
                     "positionX": 0.07530467212200165,
                     "positionY": 0.13879863917827607
                 },
                 {
+                    "fruitName": "pink_lychee",
                     "fruitType": 6200,
                     "positionX": 0.03311358764767647,
                     "positionY": 0.11783015727996826
                 },
                 {
+                    "fruitName": "white_custardapple",
                     "fruitType": 8200,
                     "positionX": 0.08502386510372162,
                     "positionY": 0.11410228163003922
@@ -280,51 +330,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.1422015279531479,
                     "positionY": 0.1752585470676422
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": -0.15868674218654633,
                     "positionY": 0.18331705033779145
                 },
                 {
+                    "fruitName": "pink_dragonfruit",
                     "fruitType": 6000,
                     "positionX": -0.15602238476276399,
                     "positionY": 0.16295590996742249
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.1357206404209137,
                     "positionY": 0.18087995052337647
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.17222179472446443,
                     "positionY": 0.17485229671001435
                 },
                 {
+                    "fruitName": "yellow_banana",
                     "fruitType": 2200,
                     "positionX": -0.1366032212972641,
                     "positionY": 0.16469936072826386
                 },
                 {
+                    "fruitName": "white_dragonfruit",
                     "fruitType": 8100,
                     "positionX": -0.15295712649822236,
                     "positionY": 0.19008868932724
                 },
                 {
+                    "fruitName": "pink_mangosteen",
                     "fruitType": 6100,
                     "positionX": -0.16952671110630036,
                     "positionY": 0.16105100512504579
                 },
                 {
+                    "fruitName": "blue_blueberries",
                     "fruitType": 4000,
                     "positionX": -0.12504269182682038,
                     "positionY": 0.1763847917318344
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.12095369398593903,
                     "positionY": 0.17157557606697083
@@ -334,51 +394,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "yellow_banana",
                     "fruitType": 2200,
                     "positionX": 0.1593841165304184,
                     "positionY": 0.2174147516489029
                 },
                 {
+                    "fruitName": "green_watermelon",
                     "fruitType": 3200,
                     "positionX": 0.14822261035442353,
                     "positionY": 0.21980728209018708
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": 0.14477495849132539,
                     "positionY": 0.21131043136119843
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.138262540102005,
                     "positionY": 0.23275230824947358
                 },
                 {
+                    "fruitName": "pink_dragonfruit",
                     "fruitType": 6000,
                     "positionX": 0.16063816845417024,
                     "positionY": 0.20181667804718018
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.1525881290435791,
                     "positionY": 0.22419196367263795
                 },
                 {
+                    "fruitName": "pink_mangosteen",
                     "fruitType": 6100,
                     "positionX": 0.15347269177436829,
                     "positionY": 0.21373730897903443
                 },
                 {
+                    "fruitName": "orange_pineapple",
                     "fruitType": 1100,
                     "positionX": 0.14817234873771668,
                     "positionY": 0.20382320880889893
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.13372085988521577,
                     "positionY": 0.22121277451515199
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": 0.13373711705207826,
                     "positionY": 0.2158454954624176
@@ -388,51 +458,61 @@
         {
             "fruits": [
                 {
+                    "fruitName": "yellow_banana",
                     "fruitType": 2200,
                     "positionX": 0.18715420365333558,
                     "positionY": 0.02098921686410904
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.1845071166753769,
                     "positionY": 0.030284970998764039
                 },
                 {
+                    "fruitName": "orange_pineapple",
                     "fruitType": 1100,
                     "positionX": 0.20058177411556245,
                     "positionY": 0.01617835834622383
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.1647580862045288,
                     "positionY": 0.030583089217543603
                 },
                 {
+                    "fruitName": "green_watermelon",
                     "fruitType": 3200,
                     "positionX": 0.19924737513065339,
                     "positionY": 0.030820908024907113
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": 0.17865577340126038,
                     "positionY": 0.01682915911078453
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.17680367827415467,
                     "positionY": 0.024482933804392816
                 },
                 {
+                    "fruitName": "pink_dragonfruit",
                     "fruitType": 6000,
                     "positionX": 0.1844005137681961,
                     "positionY": 0.0374862477183342
                 },
                 {
+                    "fruitName": "red_apple",
                     "fruitType": 0,
                     "positionX": 0.20058155059814454,
                     "positionY": 0.023081323131918908
                 },
                 {
+                    "fruitName": "blue_blueberries",
                     "fruitType": 4000,
                     "positionX": 0.17432110011577607,
                     "positionY": 0.03502916172146797
@@ -442,46 +522,55 @@
         {
             "fruits": [
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.09598138183355332,
                     "positionY": 0.06978189200162888
                 },
                 {
+                    "fruitName": "green_watermelon",
                     "fruitType": 3200,
                     "positionX": -0.0778084248304367,
                     "positionY": 0.08044317364692688
                 },
                 {
+                    "fruitName": "pink_dragonfruit",
                     "fruitType": 6000,
                     "positionX": -0.10457852482795716,
                     "positionY": 0.08000481873750687
                 },
                 {
+                    "fruitName": "white_strawberry",
                     "fruitType": 8000,
                     "positionX": -0.0847489982843399,
                     "positionY": 0.06679686903953552
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.08406919240951538,
                     "positionY": 0.08864154666662216
                 },
                 {
+                    "fruitName": "white_custardapple",
                     "fruitType": 8200,
                     "positionX": -0.1106194257736206,
                     "positionY": 0.0653446614742279
                 },
                 {
+                    "fruitName": "pink_lychee",
                     "fruitType": 6200,
                     "positionX": -0.06570938229560852,
                     "positionY": 0.07516656816005707
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.1099882423877716,
                     "positionY": 0.09191183000802994
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": -0.09239424020051956,
                     "positionY": 0.05570872128009796
@@ -491,46 +580,55 @@
         {
             "fruits": [
                 {
+                    "fruitName": "yellow_banana",
                     "fruitType": 2200,
                     "positionX": -0.16710175573825837,
                     "positionY": -0.014992075972259045
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": -0.1556391566991806,
                     "positionY": -0.010192237794399262
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.14169776439666749,
                     "positionY": -0.023852001875638963
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.16814693808555604,
                     "positionY": -0.005581322591751814
                 },
                 {
+                    "fruitName": "red_apple",
                     "fruitType": 0,
                     "positionX": -0.13274039328098298,
                     "positionY": -0.009200635366141796
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": -0.179929718375206,
                     "positionY": -0.003780543338507414
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.1489301323890686,
                     "positionY": -0.007294503040611744
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": -0.15731996297836305,
                     "positionY": -0.022448621690273286
                 },
                 {
+                    "fruitName": "purple_eggplant",
                     "fruitType": 5100,
                     "positionX": -0.1535608470439911,
                     "positionY": -0.016752758994698526
@@ -540,46 +638,55 @@
         {
             "fruits": [
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.042032428085803989,
                     "positionY": 0.16374154388904572
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": -0.030024288222193719,
                     "positionY": 0.17747265100479127
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.051590755581855777,
                     "positionY": 0.17242975533008576
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.02900908887386322,
                     "positionY": 0.16011576354503632
                 },
                 {
+                    "fruitName": "green_watermelon",
                     "fruitType": 3200,
                     "positionX": -0.03672891482710838,
                     "positionY": 0.18666881322860719
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.05359961465001106,
                     "positionY": 0.15987429022789002
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.011940867640078068,
                     "positionY": 0.17307355999946595
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.05796816200017929,
                     "positionY": 0.1850118488073349
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": -0.03695148602128029,
                     "positionY": 0.15278922021389008
@@ -589,46 +696,55 @@
         {
             "fruits": [
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": 0.04393737018108368,
                     "positionY": 0.05059352144598961
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.029543256387114526,
                     "positionY": 0.055266495794057849
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": 0.05649512633681297,
                     "positionY": 0.057646673172712329
                 },
                 {
+                    "fruitName": "purple_eggplant",
                     "fruitType": 5100,
                     "positionX": 0.01627347804605961,
                     "positionY": 0.04643457755446434
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.034540679305791858,
                     "positionY": 0.06378781795501709
                 },
                 {
+                    "fruitName": "blue_blueberries",
                     "fruitType": 4000,
                     "positionX": 0.03985907509922981,
                     "positionY": 0.05842219665646553
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": 0.014387303031980992,
                     "positionY": 0.05413335561752319
                 },
                 {
+                    "fruitName": "red_apple",
                     "fruitType": 0,
                     "positionX": 0.04566826671361923,
                     "positionY": 0.04349429905414581
                 },
                 {
+                    "fruitName": "peach_bellfruit",
                     "fruitType": 7200,
                     "positionX": 0.030460117384791375,
                     "positionY": 0.04471629485487938
@@ -638,41 +754,49 @@
         {
             "fruits": [
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": -0.2714381217956543,
                     "positionY": 0.14545938372612
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.2633361518383026,
                     "positionY": 0.13531197607517243
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.2589278221130371,
                     "positionY": 0.15081000328063966
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.2855503559112549,
                     "positionY": 0.14166107773780824
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": -0.24818852543830872,
                     "positionY": 0.13573148846626283
                 },
                 {
+                    "fruitName": "green_watermelon",
                     "fruitType": 3200,
                     "positionX": -0.2713891863822937,
                     "positionY": 0.1567743420600891
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": -0.2811025083065033,
                     "positionY": 0.12341343611478806
                 },
                 {
+                    "fruitName": "purple_eggplant",
                     "fruitType": 5100,
                     "positionX": -0.23647832870483399,
                     "positionY": 0.15107165277004243
@@ -682,41 +806,49 @@
         {
             "fruits": [
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.10752954334020615,
                     "positionY": -0.020480213686823846
                 },
                 {
+                    "fruitName": "peach_bellfruit",
                     "fruitType": 7200,
                     "positionX": 0.0990779846906662,
                     "positionY": -0.008932174183428288
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.09426368772983551,
                     "positionY": -0.02607150189578533
                 },
                 {
+                    "fruitName": "red_strawberry",
                     "fruitType": 200,
                     "positionX": 0.12403856217861176,
                     "positionY": -0.00984097272157669
                 },
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.0874226987361908,
                     "positionY": -0.007904364727437497
                 },
                 {
+                    "fruitName": "orange_pineapple",
                     "fruitType": 1100,
                     "positionX": 0.11656644195318222,
                     "positionY": -0.03259711712598801
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.11402998119592667,
                     "positionY": 0.0008284122450277209
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.12256114184856415,
                     "positionY": -0.001078314962796867
@@ -726,41 +858,49 @@
         {
             "fruits": [
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.15594857931137086,
                     "positionY": 0.14134502410888673
                 },
                 {
+                    "fruitName": "peach_bellfruit",
                     "fruitType": 7200,
                     "positionX": 0.16018320620059968,
                     "positionY": 0.1266205906867981
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": 0.17320199310779572,
                     "positionY": 0.145917147397995
                 },
                 {
+                    "fruitName": "pink_lychee",
                     "fruitType": 6200,
                     "positionX": 0.13766105473041535,
                     "positionY": 0.13785545527935029
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.1721055805683136,
                     "positionY": 0.12513111531734467
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": 0.1598898321390152,
                     "positionY": 0.1525188833475113
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": 0.14075666666030885,
                     "positionY": 0.11948192119598389
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": 0.1617509126663208,
                     "positionY": 0.13388818502426148
@@ -770,41 +910,49 @@
         {
             "fruits": [
                 {
+                    "fruitName": "purple_eggplant",
                     "fruitType": 5100,
                     "positionX": 0.0762464851140976,
                     "positionY": 0.26936420798301699
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": 0.06844918429851532,
                     "positionY": 0.27990055084228518
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": 0.06808292120695114,
                     "positionY": 0.26067060232162478
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.053360506892204288,
                     "positionY": 0.27433010935783389
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": 0.08334356546401978,
                     "positionY": 0.2558327615261078
                 },
                 {
+                    "fruitName": "white_strawberry",
                     "fruitType": 8000,
                     "positionX": 0.051554322242736819,
                     "positionY": 0.2598884701728821
                 },
                 {
+                    "fruitName": "peach_bellfruit",
                     "fruitType": 7200,
                     "positionX": 0.05797312408685684,
                     "positionY": 0.26964089274406435
                 },
                 {
+                    "fruitName": "red_apple",
                     "fruitType": 0,
                     "positionX": 0.06670112162828446,
                     "positionY": 0.2744031846523285
@@ -814,36 +962,43 @@
         {
             "fruits": [
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": -0.11366758495569229,
                     "positionY": 0.22630690038204194
                 },
                 {
+                    "fruitName": "pink_lychee",
                     "fruitType": 6200,
                     "positionX": -0.11276791244745255,
                     "positionY": 0.24496406316757203
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": -0.13197870552539826,
                     "positionY": 0.22963853180408479
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.10199097543954849,
                     "positionY": 0.2271459549665451
                 },
                 {
+                    "fruitName": "peach_bellfruit",
                     "fruitType": 7200,
                     "positionX": -0.12572452425956727,
                     "positionY": 0.2506259083747864
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.12983067333698274,
                     "positionY": 0.21480970084667207
                 },
                 {
+                    "fruitName": "peach_peach",
                     "fruitType": 7000,
                     "positionX": -0.09499381482601166,
                     "positionY": 0.2424669712781906
@@ -853,36 +1008,43 @@
         {
             "fruits": [
                 {
+                    "fruitName": "purple_grapes",
                     "fruitType": 5000,
                     "positionX": 0.06645946204662323,
                     "positionY": 0.18750226497650147
                 },
                 {
+                    "fruitName": "pink_mangosteen",
                     "fruitType": 6100,
                     "positionX": 0.08484239876270294,
                     "positionY": 0.19119992852210999
                 },
                 {
+                    "fruitName": "green_apple",
                     "fruitType": 3000,
                     "positionX": 0.05689962953329086,
                     "positionY": 0.196458101272583
                 },
                 {
+                    "fruitName": "purple_eggplant",
                     "fruitType": 5100,
                     "positionX": 0.07596658170223236,
                     "positionY": 0.17758716642856599
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": 0.07943465560674668,
                     "positionY": 0.20383484661579133
                 },
                 {
+                    "fruitName": "red_apple",
                     "fruitType": 0,
                     "positionX": 0.04445163533091545,
                     "positionY": 0.18209721148014069
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.09850544482469559,
                     "positionY": 0.1850513070821762
@@ -892,36 +1054,43 @@
         {
             "fruits": [
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": -0.030904756858944894,
                     "positionY": 0.11601554602384567
                 },
                 {
+                    "fruitName": "pink_mangosteen",
                     "fruitType": 6100,
                     "positionX": -0.02227165177464485,
                     "positionY": 0.100538469851017
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": -0.018776603043079377,
                     "positionY": 0.1211126297712326
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": -0.04725826531648636,
                     "positionY": 0.10673917084932327
                 },
                 {
+                    "fruitName": "yellow_lemon",
                     "fruitType": 2000,
                     "positionX": -0.00546793919056654,
                     "positionY": 0.10334616899490357
                 },
                 {
+                    "fruitName": "blue_blueberries",
                     "fruitType": 4000,
                     "positionX": -0.03764680400490761,
                     "positionY": 0.1274411678314209
                 },
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": -0.0371091328561306,
                     "positionY": 0.09054361283779144
@@ -931,36 +1100,43 @@
         {
             "fruits": [
                 {
+                    "fruitName": "orange_pineapple",
                     "fruitType": 1100,
                     "positionX": 0.12483536452054978,
                     "positionY": 0.07509889453649521
                 },
                 {
+                    "fruitName": "red_apple",
                     "fruitType": 0,
                     "positionX": 0.11492857336997986,
                     "positionY": 0.08437933027744293
                 },
                 {
+                    "fruitName": "black_plum",
                     "fruitType": 9000,
                     "positionX": 0.11021997779607773,
                     "positionY": 0.06570666283369065
                 },
                 {
+                    "fruitName": "black_olive",
                     "fruitType": 9100,
                     "positionX": 0.09373359382152558,
                     "positionY": 0.07962106913328171
                 },
                 {
+                    "fruitName": "pink_mangosteen",
                     "fruitType": 6100,
                     "positionX": 0.12648282945156098,
                     "positionY": 0.09677755832672119
                 },
                 {
+                    "fruitName": "white_custardapple",
                     "fruitType": 8200,
                     "positionX": 0.11483729630708695,
                     "positionY": 0.07404424250125885
                 },
                 {
+                    "fruitName": "blue_pomegranate",
                     "fruitType": 4100,
                     "positionX": 0.1041799783706665,
                     "positionY": 0.08202296495437622
@@ -970,6 +1146,7 @@
         {
             "fruits": [
                 {
+                    "fruitName": "orange_pineapple",
                     "fruitType": 1100,
                     "positionX": -0.159431591629982,
                     "positionY": 0.11744281649589539
@@ -979,6 +1156,7 @@
         {
             "fruits": [
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": 0.20550963282585145,
                     "positionY": 0.07614289224147797
@@ -988,6 +1166,7 @@
         {
             "fruits": [
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": -0.1758095771074295,
                     "positionY": 0.05866772681474686
@@ -997,6 +1176,7 @@
         {
             "fruits": [
                 {
+                    "fruitName": "orange_orange",
                     "fruitType": 1000,
                     "positionX": -0.10299200564622879,
                     "positionY": 0.019669877365231515
