@@ -28,6 +28,9 @@ export class GameManager extends Component {
 
     @property(Node) sad: Node = null;
     @property(Node) win: Node = null;
+
+    @property(Node) headline: Node = null;
+
     protected onLoad(): void {
         ServiceLocator.register(GameConfigSA, this.gameConfig)
         ServiceLocator.register(FruitConfigSA, this.fruitConfig)
@@ -63,12 +66,13 @@ export class GameManager extends Component {
                 ServiceLocator.get(Tutorial).stop()
 
                 this.dowloadButton.node.active = false
+                this.headline.active = false
             }
             else {
                 AudioManager.instance.playMusic('BGM')
                 this.isPlayMusic = true;
                 this.dowloadButton.node.active = true
-
+                this.headline.active = true
             }
             this.levelManager.tray.moveToNewPosition()
 
