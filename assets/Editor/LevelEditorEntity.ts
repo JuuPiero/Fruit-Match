@@ -1,8 +1,20 @@
-import { _decorator, Canvas, CCBoolean, Component, Node, Sprite, UITransform } from 'cc';
+import { _decorator, Canvas, CCBoolean, Component, Node, Sprite, SpriteFrame, UITransform } from 'cc';
 import { FruitConfigSA } from '../_Game/Scripts/Data/FruitConfigSA';
 import { FruitData, LevelData, SlotsFruit, TreeData } from '../_Game/Scripts/Data/LevelData';
 import { GameConfigSA } from '../_Game/Scripts/Data/GameConfigSA';
 const { ccclass, property } = _decorator;
+
+@ccclass('DebugFruitCount')
+export class DebugFruitCount {
+    @property(SpriteFrame) fruit: SpriteFrame = null;
+    // @property fruitName: string = "";
+    @property count: number = 0;
+
+    constructor(spriteFrame: SpriteFrame = null, count: number = 0) {
+        this.fruit = spriteFrame;
+        this.count = count;
+    }
+}
 
 @ccclass('LevelEditorEntity')
 export class LevelEditorEntity extends Component {
@@ -11,20 +23,50 @@ export class LevelEditorEntity extends Component {
 
     @property(Canvas) canvas: Canvas = null;
 
+    @property(DebugFruitCount) fruitCountDebug: DebugFruitCount[] = []
+
+    private _countingFruits: boolean;
+    @property(CCBoolean) public get countingFruits(): boolean {
+        return this._countingFruits;
+    }
+    public set countingFruits(v: boolean) {
+        this.fruitCountDebug = [];
+
+        const treeSprite = this.canvas.getComponent(Sprite);
+        const allFruitSprites = this.canvas.getComponentsInChildren(Sprite)
+        const treeIndex = allFruitSprites.indexOf(treeSprite);
+        if (treeIndex > -1) {
+            allFruitSprites.splice(treeIndex, 1); // 1 means remove exactly one item
+        }
+
+        const countMap = new Map<SpriteFrame, number>();
+
+        for (const fruitSprite of allFruitSprites) {
+            // Lấy tên theo SpriteFrame (nếu có) hoặc tên Node
+            // const name = fruitSprite.spriteFrame ? fruitSprite.spriteFrame.name : fruitSprite.node.name;
+
+            const currentCount = countMap.get(fruitSprite.spriteFrame) || 0;
+            countMap.set(fruitSprite.spriteFrame, currentCount + 1);
+        }
+
+        // 4. Chuyển kết quả từ Map sang mảng DebugFruitCount
+        countMap.forEach((count, fruitName) => {
+            this.fruitCountDebug.push(new DebugFruitCount(fruitName, count));
+        });
+
+        console.log("Lậy bố");
+    }
+
+
+
 
     private _saveLevel = false;
-
     @property(CCBoolean)
     public get saveLevel(): boolean {
         return this._saveLevel;
     }
     public set saveLevel(v: boolean) {
-        // if (!this.tree || !this.gameConfig) {
-        //     console.warn('LevelEditor: tree or gameConfig is not assigned.');
-        //     return;
-        // }
         const level = new LevelData();
-
         const treeData = new TreeData();
         const uiTree: UITransform = this.canvas.getComponent(UITransform);
         const treeSprite = this.canvas.getComponent(Sprite);
@@ -46,7 +88,7 @@ export class LevelEditorEntity extends Component {
         for (const fruitSprite of allFruitSprites) {
             const fruit = new FruitData()
             fruit.fruitName = fruitSprite.spriteFrame.name;
-            fruit.fruitType =  this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
+            fruit.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
             fruit.positionX = fruitSprite.node.position.x;
             fruit.positionY = fruitSprite.node.position.y;
             level.slots[0].fruits.push(fruit)
