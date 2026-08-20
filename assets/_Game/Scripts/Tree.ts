@@ -99,14 +99,17 @@ export class Tree extends GameBehaviour {
         // block-count + cover-distance, xét cả stack khác), không còn khoá tuần tự theo stack.
         const useCoverageRule = !flattenFruits
 
-        let spawnIndex = 0; // index = 0 is on top of stack
+        // Spawn theo đúng thứ tự trong JSON: slot.fruits[0] là quả trên cùng.
+        // Render order được chỉnh riêng bên dưới, không dùng thứ tự spawn để đảo layer nữa.
+        let spawnIndex = 0;
         const topFruits: Fruit[] = []
         const fruitsBySpawnIndex: Fruit[] = new Array(totalFruits)
         const coverageItems: CoverageItem[] = []
+        const fruitsByRenderOrder: { fruit: Fruit, renderOrder: number }[] = []
         slots.forEach((slot, index) => {
             const stackFruits: Fruit[] = new Array(slot.fruits.length)
 
-            for (let i = slot.fruits.length - 1; i >= 0; i--) {
+            for (let i = 0; i < slot.fruits.length; i++) {
                 const fruitData = slot.fruits[i]
                 const node = instantiate(fruitPrefab)
                 node.setParent(this.node)
@@ -127,8 +130,17 @@ export class Tree extends GameBehaviour {
                 })
                 stackFruits[i] = fruit
                 fruitsBySpawnIndex[spawnIndex] = fruit
+                if (fruitData.renderOrder >= 0) {
+                    fruitsByRenderOrder.push({ fruit, renderOrder: fruitData.renderOrder })
+                }
                 spawnIndex++
             }
+
+            // Cocos render sibling phía sau lên trên. Dù spawn theo JSON (top -> bottom),
+            // vẫn cần đưa đáy lên trước và top lên sau để hình hiển thị đúng lớp.
+            stackFruits.slice().reverse().forEach(fruit => {
+                fruit.node.setSiblingIndex(this.node.children.length - 1)
+            })
 
             if (flattenFruits) {
                 stackFruits.forEach(fruit => fruit.setLocked(false, true))
@@ -149,7 +161,17 @@ export class Tree extends GameBehaviour {
         // Chỉ cần dồn quả top lên trước khi đang dùng stack. Với flattenFruits,
         // thao tác này sẽ phá thứ tự spawn/render cuối dùng để chọn target tutorial.
         if (!flattenFruits) {
-            topFruits.forEach(fruit => fruit.node.setSiblingIndex(-1))
+            topFruits.forEach(fruit => {
+                fruit.node.setSiblingIndex(this.node.children.length - 1)
+            })
+        }
+
+        // JSON mới lưu sibling index từ editor. Khôi phục sau cùng để tuyệt đối giữ layer
+        // mà level designer đã nhìn thấy, bất kể thứ tự spawn/slot/stack.
+        if (fruitsByRenderOrder.length === totalFruits) {
+            fruitsByRenderOrder
+                .sort((a, b) => a.renderOrder - b.renderOrder)
+                .forEach(({ fruit }, siblingIndex) => fruit.node.setSiblingIndex(siblingIndex))
         }
 
         // Cần đủ toàn bộ items (mọi stack) mới tính coverage được, nên setup sau khi spawn xong.
@@ -158,11 +180,11 @@ export class Tree extends GameBehaviour {
         }
 
 
-        if(PREVIEW) {
-            this.fruitSet.forEach(f => console.log(f)
-            )
+        // if(PREVIEW) {
+        //     this.fruitSet.forEach(f => console.log(f)
+        //     )
 
-        }
+        // }
 
     }
 
@@ -194,22 +216,22 @@ export class Tree extends GameBehaviour {
         refresh(true) // đặt ngay từ đầu, không tween — giống ItemPiece.Init(blocked, animate:false)
     }
 
-    /** Vị trí (spawnIndex) của quả trên cùng (i = 0) mỗi stack, theo đúng thứ tự spawnIndex được gán trong initialize() */
+    /** Vị trí (spawnIndex) của quả trên cùng (i = 0) mỗi stack, theo đúng thứ tự JSON/spawn. */
     private getTopSpawnIndices(slots: SlotsFruit[]): number[] {
         const topIndices: number[] = []
         let cumulative = 0
         for (const slot of slots) {
+            if (slot.fruits.length > 0) topIndices.push(cumulative)
             cumulative += slot.fruits.length
-            if (slot.fruits.length > 0) topIndices.push(cumulative - 1)
         }
         return topIndices
     }
 
-    /** FruitData theo đúng thứ tự spawn (giống thứ tự gán spawnIndex trong initialize()) */
+    /** FruitData theo đúng thứ tự JSON/spawn (top -> bottom trong mỗi stack). */
     private getFruitDatasInSpawnOrder(slots: SlotsFruit[]) {
         const fruitDatas: { fruitType: number }[] = []
         for (const slot of slots) {
-            for (let i = slot.fruits.length - 1; i >= 0; i--) {
+            for (let i = 0; i < slot.fruits.length; i++) {
                 fruitDatas.push(slot.fruits[i])
             }
         }

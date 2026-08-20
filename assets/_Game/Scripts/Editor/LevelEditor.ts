@@ -114,12 +114,15 @@ export class LevelEditor extends Component {
                 const fruitData = new FruitData();
                 fruitData.positionX = item.node.position.x / treeData.width;
                 fruitData.positionY = item.node.position.y / treeData.height;
+                // Ghi trực tiếp sibling index để runtime giữ nguyên layer như lúc author trong editor.
+                fruitData.renderOrder = item.node.getSiblingIndex();
 
                 const fruitSprite = item.getComponent(Sprite);
                 fruitData.fruitName = fruitSprite.spriteFrame?.name ?? '';
                 fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
                 if (fruitData.fruitType < 0) {
-                    console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig.`);
+
+                    console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig. ${fruitSprite.spriteFrame}`);
                 }
 
                 return fruitData;

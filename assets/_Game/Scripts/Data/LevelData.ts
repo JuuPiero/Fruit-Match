@@ -11,6 +11,8 @@ export class FruitData {
     @property fruitType: number = 0;
     @property positionX: number = 0;
     @property positionY: number = 0;
+    /** Thứ tự render trong Tree: số lớn hơn sẽ được vẽ nằm trên số nhỏ hơn. -1 = JSON cũ. */
+    @property renderOrder: number = -1;
 }
 
 
@@ -64,6 +66,7 @@ export class LevelData {
             fruit.fruitType = f.fruitType ?? 0
             fruit.positionX = f.positionX ?? 0;
             fruit.positionY = f.positionY ?? 0;
+            fruit.renderOrder = f.renderOrder ?? -1;
             return fruit;
         };
 

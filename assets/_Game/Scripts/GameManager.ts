@@ -55,7 +55,7 @@ export class GameManager extends Component {
         input.on(Input.EventType.KEY_DOWN, this.toggleMusic, this);
 
     }
-
+    defautlEnableMusic = false
     isPlayMusic = true;
     toggleMusic(event: EventKeyboard) {
         if (event.keyCode === KeyCode.F12) {
@@ -69,13 +69,14 @@ export class GameManager extends Component {
                 this.headline.active = false
             }
             else {
-                AudioManager.instance.playMusic('BGM')
-                this.isPlayMusic = true;
+                if(this.defautlEnableMusic) {
+                    AudioManager.instance.playMusic('BGM')
+                    this.isPlayMusic = true;
+                }
                 this.dowloadButton.node.active = true
                 this.headline.active = true
             }
             this.levelManager.tray.moveToNewPosition()
-
         }
     }
 
@@ -95,7 +96,7 @@ export class GameManager extends Component {
         TrackingManager.TrackEvent(ETrackingEvent.DISPLAYED)
         TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_STARTED)
 
-        AudioManager.instance.playMusic('BGM')
+        // AudioManager.instance.playMusic('BGM')
 
         this.total = this.levelManager.levelData.fruits.length / 3
 

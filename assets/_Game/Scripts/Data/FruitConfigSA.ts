@@ -32,6 +32,7 @@ export class FruitConfigSA extends bh.ScriptableAsset {
         return this._removeFruitsNotUse;
     }
     public set removeFruitsNotUse(v: boolean) {
+        return
         if(!this.levelJsonBake ) {
             console.log("Hehe");
             

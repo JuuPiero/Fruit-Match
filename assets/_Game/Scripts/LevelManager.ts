@@ -28,6 +28,10 @@ export class LevelManager extends Component {
 
     @property(LevelData) levelData: LevelData = null;
 
+
+
+    
+
     public initialize() {
 
         this.levelData = LevelData.parseFromJson(this.levelJson)

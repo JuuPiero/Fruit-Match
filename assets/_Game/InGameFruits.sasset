@@ -1,0 +1,124 @@
+{
+  "__type__": "d9352GNyQRMYIlRG9Mv0Zf7",
+  "_name": "InGameFruits",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "fruits": [
+    {
+      "__uuid__": "443f1274-bfc2-4fad-9948-f79f5ede676f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "a4aff66d-6877-4a71-acd8-35e190287683@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "cdccecde-a48c-4acd-9de9-6243cf9e474f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "4289a859-e093-462d-90f9-cbd9d521ca00@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "249f69e8-7039-4560-a98a-06ed0f11c99e@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "161d1090-1538-453a-9713-0f3d04d5f401@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f690c7cf-7a7a-4424-9749-b6c89f436452@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "b85d3187-b54a-4b9f-b262-00595b57430e@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "8fe405c7-7484-4d18-8f6b-83aaac68e564@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "3ffca88b-9a6d-4d4c-95d5-0986040c19b5@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "be4ab0c1-e82f-4f0c-9b70-ae2d8df7e288@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "98d1b4ad-9b1b-40cc-8248-ea1fb9a4c70d@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "fc1cdd2c-4105-4fcd-bb23-7b9294667356@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "95ed1d58-5cbe-49a4-a869-040f286c3ea2@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "fruitsOutline": [
+    {
+      "__uuid__": "8ef204de-0f69-4632-93fe-2bf7b864753d@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "9f41ea1f-fe1e-49cc-9b52-9846861b6286@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "84589e0d-c20a-48ea-afbf-c31005522dd1@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "474920e1-fd3b-4b3e-9617-f25db32a923f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "4f477e16-f6dc-436c-b697-463cb85cf97f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "722b7e62-efbf-4f65-b566-e2e97215142e@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "fb5f43a7-9109-402a-b563-3883ea449513@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "36e0de7e-9641-46a7-aec2-0515c9dfb537@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "5420b5ff-c1f7-4cdd-a5a0-c063ea145fb6@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "19261956-8fbf-4d29-8376-daad48fd5ddc@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "93eeabaa-6e48-4cef-bf2c-82db25614544@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "be11e51d-944f-426d-a3c9-cb558f1ca87a@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "c41a022d-66b8-4717-aa53-25efc6fc43a7@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "3f8e22f8-9e91-4348-8858-2216bffc4383@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "levelJsonBake": null
+}
