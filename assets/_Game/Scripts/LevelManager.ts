@@ -1,4 +1,4 @@
-import { _decorator, Component, JsonAsset, Node } from 'cc';
+import { _decorator, Component, JsonAsset, log, Node } from 'cc';
 import { Tree } from './Tree';
 import { Tray } from './Tray';
 import { LevelData } from './Data/LevelData';
@@ -30,15 +30,30 @@ export class LevelManager extends Component {
 
 
 
-    
+    debugFruits: Map<string, number> = new Map()
 
     public initialize() {
 
-        this.levelData = LevelData.parseFromJson(this.levelJson)
+        this.levelData = LevelData.parseFromJson(this.levelJson);
 
         // Tên asset level được đưa vào seed để mỗi level có bố cục random riêng,
         // nhưng vẫn giữ nguyên khi khởi tạo/chơi lại level đó.
-        const fruitRandomSeed = `${this.levelJson?.name ?? 'level'}:${this.fruitRandomSeed}`
+        const fruitRandomSeed = `${this.levelJson?.name ?? 'level'}:${this.fruitRandomSeed}`;
+        this.levelData.slots.forEach(slot => {
+            slot.fruits.forEach(fruit => {
+                this.debugFruits.set(fruit.fruitName, 0)
+            })
+        })
+
+        this.levelData.slots.forEach(slot => {
+            slot.fruits.forEach(fruit => {
+                this.debugFruits.set(fruit.fruitName, this.debugFruits.get(fruit.fruitName) + 1)
+            })
+        })
+        this.debugFruits.forEach((value, key) =>{
+            console.log(`${key} => ${value}`);
+        })
+
         this.tree.initialize(
             this.levelData,
             this.randomizeFruitTypes,
