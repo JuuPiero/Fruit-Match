@@ -51,22 +51,19 @@ export class Tutorial extends Component {
     }
 
     private selectTargetGroup(treeChildren: Node[]): Fruit[] | null {
-        type Candidate = { fruit: Fruit, indexRank: number, xRank: number }
+        type Candidate = { fruit: Fruit, depth: number }
         const candidates: Candidate[] = []
 
         for (let i = 0; i < treeChildren.length; i++) {
             const fruit = treeChildren[i].getComponent(Fruit)
             if (!fruit || fruit.picked || fruit.locked) continue
             // indexRank càng nhỏ càng là child cuối (lộ nhất)
-            candidates.push({ fruit, indexRank: treeChildren.length - 1 - i, xRank: 0 })
+            candidates.push({ fruit, depth: i })
         }
 
         // xRank càng nhỏ càng nằm bên phải
-        const byX = [...candidates].sort((a, b) => b.fruit.node.position.x - a.fruit.node.position.x)
-        byX.forEach((c, rank) => c.xRank = rank)
-
         // Ưu tiên quả vừa lộ nhất vừa nằm bên phải: tổng rank càng nhỏ càng ưu tiên
-        candidates.sort((a, b) => (a.indexRank + a.xRank) - (b.indexRank + b.xRank))
+        candidates.sort((a, b) => a.depth - b.depth)
 
         const groups = new Map<number, Fruit[]>()
         for (const { fruit } of candidates) {

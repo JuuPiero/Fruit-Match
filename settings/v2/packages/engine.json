@@ -122,10 +122,10 @@
             "_value": true
           },
           "video": {
-            "_value": true
+            "_value": false
           },
           "webview": {
-            "_value": true
+            "_value": false
           },
           "tween": {
             "_value": true
@@ -210,9 +210,7 @@
           "profiler",
           "rich-text",
           "tween",
-          "ui",
-          "video",
-          "webview"
+          "ui"
         ],
         "noDeprecatedFeatures": {
           "value": false,
