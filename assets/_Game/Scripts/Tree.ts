@@ -74,18 +74,44 @@ export class Tree extends GameBehaviour {
         const fruitTypes = randomizeFruitTypes
             ? this.generateFruitIds(levelData.fruits.length, fruitTypeCount, fruitRandomSeed)
             : fruitDatas.map(data => data.fruitType)
+        // Với level không random, fruitName quyết định sprite hiển thị. Giữ một bản
+        // song song để khi đổi loại hai quả, sprite của chúng cũng đổi theo.
+        const fruitNames = fruitDatas.map(data => data.fruitName)
 
-        // Chỉ khi vừa random loại quả vừa flatten toàn bộ cây:
-        // ép đúng 3 quả spawn cuối thành cùng loại và đưa chúng cho tutorial theo
-        // thứ tự quả cuối cùng -> lùi dần.
-        const targetIndices = randomizeFruitTypes && flattenFruits
-            ? [fruitTypes.length - 1, fruitTypes.length - 2, fruitTypes.length - 3].filter(idx => idx >= 0)
-            : null
+        // Ưu tiên 3 quả được level designer đánh dấu isTut. Chỉ số này theo thứ tự
+        // spawn/JSON: từng slot từ trên xuống, và trong mỗi slot là top -> bottom.
+        // Nếu không đánh dấu, giữ nguyên hành vi cũ: khi random + flatten thì dùng 3 quả cuối.
+        const markedTutorialIndices = fruitDatas
+            .map((fruit, index) => fruit.isTut ? index : -1)
+            .filter(index => index >= 0)
+        const hasExplicitTutorialGroup = markedTutorialIndices.length === 3
+        if (markedTutorialIndices.length > 0 && !hasExplicitTutorialGroup) {
+            console.warn(`Tree: isTut phải được đánh dấu trên đúng 3 quả; hiện có ${markedTutorialIndices.length}. Bỏ qua cấu hình tutorial này.`)
+        }
+
+        const targetIndices = hasExplicitTutorialGroup
+            ? markedTutorialIndices
+            : randomizeFruitTypes && flattenFruits
+                ? [fruitTypes.length - 1, fruitTypes.length - 2, fruitTypes.length - 3].filter(idx => idx >= 0)
+                : null
+        // Nhóm isTut luôn phải là một bộ có thể match. Nếu ba quả chưa cùng loại,
+        // forceFruitsMatch hoán đổi data với quả khác, nên không làm thay đổi tổng
+        // số lượng của mỗi loại trong level. Khi random, vẫn áp dụng quy tắc này
+        // cho nhóm fallback cũ.
         const tutorialSpawnIndices = targetIndices
-            ? this.forceFruitsMatch(fruitTypes, targetIndices)
+            ? this.forceFruitsMatch(fruitTypes, targetIndices, fruitNames)
             : null
 
-        fruitDatas.forEach((data, idx) => data.fruitType = fruitTypes[idx])
+        fruitDatas.forEach((data, idx) => {
+            data.fruitType = fruitTypes[idx]
+
+            // Khi random, Fruit.initialize ưu tiên fruitName để hiển thị sprite.
+            // Xóa tên gốc để sprite cũng dùng fruitType vừa được random, đồng bộ
+            // với fruitId dùng cho logic match. Không random thì dùng fruitName
+            // đã hoán đổi cùng fruitType (nếu nhóm tutorial cần được ép cùng loại).
+            if (randomizeFruitTypes) data.fruitName = ''
+            else data.fruitName = fruitNames[idx]
+        })
 
 
         const height = this._uiTransform.contentSize.height;
@@ -239,7 +265,7 @@ export class Tree extends GameBehaviour {
     }
 
     /** Đổi chỗ (không đổi tổng số lượng mỗi loại) để các quả tại targetIndices đều cùng 1 loại, dùng cho tutorial luôn tìm được nhóm để chỉ */
-    private forceFruitsMatch(fruitTypes: number[], targetIndices: number[]): number[] {
+    private forceFruitsMatch(fruitTypes: number[], targetIndices: number[], fruitNames?: string[]): number[] {
         if (targetIndices.length < 3) return null
 
         const totalCountByType = new Map<number, number>()
@@ -285,6 +311,15 @@ export class Tree extends GameBehaviour {
             const tmp = fruitTypes[idx]
             fruitTypes[idx] = fruitTypes[donorIdx]
             fruitTypes[donorIdx] = tmp
+
+            // fruitName không có ở level cũ; lúc đó Fruit.initialize tự fallback
+            // sang fruitType. Level mới có fruitName thì phải đổi kèm để hình và
+            // fruitId luôn là cùng một loại.
+            if (fruitNames) {
+                const tmpName = fruitNames[idx]
+                fruitNames[idx] = fruitNames[donorIdx]
+                fruitNames[donorIdx] = tmpName
+            }
         })
 
         return targetIndices

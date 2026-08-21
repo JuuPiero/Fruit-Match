@@ -1,4 +1,4 @@
-import { _decorator, CCBoolean, Color, Component, Sprite, UITransform } from 'cc';
+import { _decorator, CCBoolean, Color, Component, Node, Sprite, UITransform } from 'cc';
 import { Tree } from '../Tree';
 import { FruitData, LevelData, SlotsFruit, TreeData } from '../Data/LevelData';
 import { GameConfigSA } from '../Data/GameConfigSA';
@@ -18,6 +18,10 @@ export class LevelEditor extends Component {
 
     @property(GameConfigSA) gameConfig: GameConfigSA = null;
     @property(FruitConfigSA) fruitConfig: FruitConfigSA = null;
+
+    /** Kéo đúng 3 node Fruit cần tutorial chỉ vào đây. Tutorial sẽ trỏ theo thứ tự spawn trong level. */
+    @property({ type: [Node], tooltip: 'Kéo đúng 3 node Fruit tutorial vào đây. Tutorial trỏ theo thứ tự spawn trong level.' })
+    tutorialFruits: Node[] = [];
 
     private _saveLevel = false;
 
@@ -95,6 +99,7 @@ export class LevelEditor extends Component {
             return;
         }
 
+        const tutorialFruitNodes = this.getTutorialFruitNodes();
         const level = new LevelData();
 
         const treeData = new TreeData();
@@ -120,6 +125,7 @@ export class LevelEditor extends Component {
                 const fruitSprite = item.getComponent(Sprite);
                 fruitData.fruitName = fruitSprite.spriteFrame?.name ?? '';
                 fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
+                fruitData.isTut = item.data.isTut;
                 if (fruitData.fruitType < 0) {
 
                     console.warn(`LevelEditor: không tìm thấy fruitType cho node "${item.node.name}" trong fruitConfig. ${fruitSprite.spriteFrame}`);
@@ -138,6 +144,15 @@ export class LevelEditor extends Component {
         const blob = new Blob([json], { type: 'application/json' });
         this.saveBlobToFile(blob, 'data.json');
 
+    }
+
+    private getTutorialFruitNodes(): Set<Node> {
+        const nodes = this.tutorialFruits.filter(node => node?.isValid);
+        const uniqueNodes = new Set(nodes);
+        if (uniqueNodes.size > 0 && uniqueNodes.size !== 3) {
+            console.warn(`LevelEditor: Tutorial Fruits cần đúng 3 node; hiện có ${uniqueNodes.size}. Level xuất ra sẽ không có tutorial cố định.`);
+        }
+        return uniqueNodes;
     }
 
     saveBlobToFile(blob: Blob, fileName: string): void {

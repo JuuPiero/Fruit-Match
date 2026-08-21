@@ -11,10 +11,11 @@ import { NavigationContainer } from '../../_iKame/Scripts/Navigation/NavigationC
 import { AudioManager } from '../../_iKame/Scripts/AudioManager';
 import { Tutorial } from './Tutorial';
 import { PREVIEW } from 'cc/env';
+import { GameBehaviour } from '../../_iKame/Scripts/Commons/GameBehaviour';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
-export class GameManager extends Component {
+export class GameManager extends GameBehaviour {
 
 
     @property(GameConfigSA) gameConfig: GameConfigSA = null;
@@ -30,6 +31,15 @@ export class GameManager extends Component {
     @property(Node) win: Node = null;
 
     @property(Node) headline: Node = null;
+
+    private ambientSoundIndex = 0;
+    private readonly ambientSounds = ['Chim', 'Gio'];
+    private readonly playAmbientSound = () => {
+        if (!this.isPlayMusic) return
+
+        AudioManager.instance.playOneShot(this.ambientSounds[this.ambientSoundIndex]);
+        this.ambientSoundIndex = (this.ambientSoundIndex + 1) % this.ambientSounds.length;
+    }
 
     protected onLoad(): void {
         ServiceLocator.register(GameConfigSA, this.gameConfig)
@@ -54,6 +64,9 @@ export class GameManager extends Component {
 
         input.on(Input.EventType.KEY_DOWN, this.toggleMusic, this);
 
+
+        this.invokeRepeating(this.playAmbientSound, 5, 5)
+
     }
     defautlEnableMusic = false
     isPlayMusic = true;
@@ -62,6 +75,7 @@ export class GameManager extends Component {
             console.log('Move Forward');
             if (this.isPlayMusic) {
                 AudioManager.instance.stopMusic()
+                AudioManager.instance.stopAll()
                 this.isPlayMusic = false;
                 ServiceLocator.get(Tutorial).stop()
 
@@ -71,8 +85,8 @@ export class GameManager extends Component {
             else {
                 if(this.defautlEnableMusic) {
                     AudioManager.instance.playMusic('BGM')
-                    this.isPlayMusic = true;
                 }
+                this.isPlayMusic = true;
                 this.dowloadButton.node.active = true
                 this.headline.active = true
             }
@@ -87,6 +101,7 @@ export class GameManager extends Component {
         EventBus.off(GameEvents.MATCHED, this.onProgress)
 
         input.off(Input.EventType.KEY_DOWN, this.toggleMusic, this);
+        this.cancelInvoke(this.playAmbientSound)
     }
 
     onNewGame = () => {

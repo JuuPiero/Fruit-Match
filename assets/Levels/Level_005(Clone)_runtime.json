@@ -1,0 +1,263 @@
+{
+    "tree": {
+        "treeType": 5,
+        "positionX": 0.0,
+        "positionY": 0.0,
+        "width": 1431.0,
+        "height": 2048.0
+    },
+    "slots": [
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": 0.08437079936265946,
+                    "positionY": 0.14430350065231324
+                },
+                {
+                    "fruitName": "avocado_01",
+                    "fruitType": 3300,
+                    "positionX": 0.06549994647502899,
+                    "positionY": 0.15669380128383637
+                },
+                {
+                    "fruitName": "passionfruit_01",
+                    "fruitType": 5300,
+                    "positionX": 0.07093328982591629,
+                    "positionY": 0.16669605672359467
+                },
+                {
+                    "fruitName": "blueberry_01",
+                    "fruitType": 4000,
+                    "positionX": 0.08537281304597855,
+                    "positionY": 0.15324610471725465
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "dragonfruit_01",
+                    "fruitType": 6000,
+                    "positionX": -0.2452029585838318,
+                    "positionY": 0.16583631932735444
+                },
+                {
+                    "fruitName": "passionfruit_01",
+                    "fruitType": 5300,
+                    "positionX": -0.2581670880317688,
+                    "positionY": 0.1695622354745865
+                },
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": -0.25270703434944155,
+                    "positionY": 0.17551976442337037
+                },
+                {
+                    "fruitName": "blueberry_01",
+                    "fruitType": 4000,
+                    "positionX": -0.2454230934381485,
+                    "positionY": 0.17863203585147859
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "dragonfruit_01",
+                    "fruitType": 6000,
+                    "positionX": -0.022947974503040315,
+                    "positionY": 0.2868475317955017
+                },
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": -0.03009779378771782,
+                    "positionY": 0.27641022205352785
+                },
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": -0.03359672799706459,
+                    "positionY": 0.29828116297721865
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "passionfruit_01",
+                    "fruitType": 5300,
+                    "positionX": -0.13173775374889375,
+                    "positionY": 0.05946461111307144
+                },
+                {
+                    "fruitName": "grape_02",
+                    "fruitType": 4300,
+                    "positionX": -0.09976045787334442,
+                    "positionY": 0.047100748866796496
+                },
+                {
+                    "fruitName": "blueberry_01",
+                    "fruitType": 4000,
+                    "positionX": -0.12532716989517213,
+                    "positionY": 0.07548681646585465
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "lemon_02",
+                    "fruitType": 3100,
+                    "positionX": 0.24595263600349427,
+                    "positionY": 0.12243417650461197
+                },
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": 0.22071708738803864,
+                    "positionY": 0.0975976437330246
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": 0.08862493932247162,
+                    "positionY": 0.049551475793123248
+                },
+                {
+                    "fruitName": "dragonfruit_01",
+                    "fruitType": 6000,
+                    "positionX": 0.053566399961709979,
+                    "positionY": 0.05885370448231697
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": -0.055052001029253009,
+                    "positionY": 0.15928606688976289
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": -0.14689409732818604,
+                    "positionY": 0.23733139038085938
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "lemon_02",
+                    "fruitType": 3100,
+                    "positionX": 0.08317531645298004,
+                    "positionY": 0.25291556119918826
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "passionfruit_01",
+                    "fruitType": 5300,
+                    "positionX": -0.22725863754749299,
+                    "positionY": 0.0915759801864624
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "avocado_01",
+                    "fruitType": 3300,
+                    "positionX": 0.19836099445819856,
+                    "positionY": 0.19150111079216004
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "passionfruit_01",
+                    "fruitType": 5300,
+                    "positionX": -0.018985463306307794,
+                    "positionY": 0.07934284210205078
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "grape_02",
+                    "fruitType": 4300,
+                    "positionX": -0.16488981246948243,
+                    "positionY": 0.14995063841342927
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "lemon_02",
+                    "fruitType": 3100,
+                    "positionX": -0.017079755663871766,
+                    "positionY": 0.2239421308040619
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": 0.18032684922218324,
+                    "positionY": 0.0604843907058239
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "avocado_01",
+                    "fruitType": 3300,
+                    "positionX": 0.15301133692264558,
+                    "positionY": 0.13742117583751679
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "passionfruit_01",
+                    "fruitType": 5300,
+                    "positionX": 0.1245754212141037,
+                    "positionY": 0.20696693658828736
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "grape_02",
+                    "fruitType": 4300,
+                    "positionX": -0.08283830434083939,
+                    "positionY": 0.26061806082725527
+                }
+            ]
+        }
+    ]
+}

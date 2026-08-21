@@ -1,0 +1,76 @@
+{
+  "__type__": "d9352GNyQRMYIlRG9Mv0Zf7",
+  "_name": "InGamesFruits",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "fruits": [
+    {
+      "__uuid__": "676f9c0d-7f06-470b-9eef-a6bfbac06cbe@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "754c5225-afb5-4805-999e-92bd85c00105@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "508a4389-278c-418f-9ce1-a3cd1b13c426@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "c3a5d1ec-eed7-44df-bbaf-773536d0ff22@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "e063663f-a267-4e81-ae4c-d0eeea5521f2@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "a70d3c91-1656-4bdb-a3b7-4cc2a7696c33@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "e6f06122-1833-4f9d-91cb-a5b9b8d69f24@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "41b5acb5-6c75-49ee-9929-6db8c05b5754@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "fruitsOutline": [
+    {
+      "__uuid__": "77f6e34f-94ff-49ce-8834-55cdacb599ae@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "0c6eca33-1608-4c4f-aefb-d537443dfbce@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "8b0ea48d-e636-45ef-b702-f0e9ff329660@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "48c7b1dd-4255-4d4b-945d-57e6dd9458ce@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "671c6bf1-c5ee-4a66-839b-0cd2f8c7ced7@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "d221529f-30de-4199-abf1-08c2b435ffb8@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "e65aa385-96d7-4936-bc55-f1298ae28502@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "355bb1ae-e732-4ff6-98aa-bd97e6b65614@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "levelJsonBake": null
+}

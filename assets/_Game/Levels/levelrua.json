@@ -1,6 +1,6 @@
 {
     "tree": {
-        "treeType": 1,
+        "treeType": 5,
         "positionX": 0,
         "positionY": 0,
         "width": 1080,
@@ -248,7 +248,7 @@
                     "renderOrder": 33
                 },
                 {
-                    "fruitName": "vai",
+                    "fruitName": "red_tomato",
                     "fruitType": 10,
                     "positionX": 0.3897083333333333,
                     "positionY": 0.12665208333333333,
@@ -283,7 +283,7 @@
                     "renderOrder": 38
                 },
                 {
-                    "fruitName": "vai",
+                    "fruitName": "red_tomato",
                     "fruitType": 10,
                     "positionX": 0.1847287037037037,
                     "positionY": 0.2723447916666667,
@@ -318,7 +318,7 @@
                     "renderOrder": 43
                 },
                 {
-                    "fruitName": "vai",
+                    "fruitName": "red_tomato",
                     "fruitType": 10,
                     "positionX": 0.04438425925925926,
                     "positionY": 0.22182083333333333,

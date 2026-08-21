@@ -13,6 +13,10 @@ export class FruitData {
     @property positionY: number = 0;
     /** Thứ tự render trong Tree: số lớn hơn sẽ được vẽ nằm trên số nhỏ hơn. -1 = JSON cũ. */
     @property renderOrder: number = -1;
+
+
+    /** Đánh dấu quả thuộc nhóm 3 quả tutorial. Mỗi level nên đánh dấu đúng 3 quả. */
+    @property isTut: boolean = false;
 }
 
 
@@ -67,6 +71,7 @@ export class LevelData {
             fruit.positionX = f.positionX ?? 0;
             fruit.positionY = f.positionY ?? 0;
             fruit.renderOrder = f.renderOrder ?? -1;
+            fruit.isTut = f.isTut ?? false;
             return fruit;
         };
 

@@ -23,6 +23,10 @@ export class LevelEditorEntity extends Component {
 
     @property(Canvas) canvas: Canvas = null;
 
+    /** Kéo đúng 3 node fruit cần tutorial chỉ vào đây. Tutorial sẽ trỏ theo thứ tự spawn trong level. */
+    @property({ type: [Node], tooltip: 'Kéo đúng 3 node Fruit tutorial vào đây. Tutorial trỏ theo thứ tự spawn trong level.' })
+    tutorialFruits: Node[] = [];
+
     @property(DebugFruitCount) fruitCountDebug: DebugFruitCount[] = []
 
     private _countingFruits: boolean;
@@ -66,6 +70,7 @@ export class LevelEditorEntity extends Component {
         return this._saveLevel;
     }
     public set saveLevel(v: boolean) {
+        const tutorialFruitNodes = this.getTutorialFruitNodes();
         const level = new LevelData();
         const treeData = new TreeData();
         const uiTree: UITransform = this.canvas.getComponent(UITransform);
@@ -91,6 +96,7 @@ export class LevelEditorEntity extends Component {
             fruit.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
             fruit.positionX = fruitSprite.node.position.x;
             fruit.positionY = fruitSprite.node.position.y;
+            fruit.isTut = tutorialFruitNodes.has(fruitSprite.node);
             level.slots[0].fruits.push(fruit)
         }
 
@@ -101,6 +107,15 @@ export class LevelEditorEntity extends Component {
         const blob = new Blob([json], { type: 'application/json' });
         this.saveBlobToFile(blob, 'data.json');
 
+    }
+
+    private getTutorialFruitNodes(): Set<Node> {
+        const nodes = this.tutorialFruits.filter(node => node?.isValid);
+        const uniqueNodes = new Set(nodes);
+        if (uniqueNodes.size > 0 && uniqueNodes.size !== 3) {
+            console.warn(`LevelEditorEntity: Tutorial Fruits cần đúng 3 node; hiện có ${uniqueNodes.size}. Level xuất ra sẽ không có tutorial cố định.`);
+        }
+        return uniqueNodes;
     }
 
 
