@@ -19225,10 +19225,10 @@
     },
     "tray": null,
     "levelJson": {
-      "__uuid__": "281af4b0-8623-442d-86b6-cf164d263135",
+      "__uuid__": "e7443bc2-54bc-40e3-994f-66f175ba6f6d",
       "__expectedType__": "cc.JsonAsset"
     },
-    "randomizeFruitTypes": false,
+    "randomizeFruitTypes": true,
     "fruitRandomSeed": 0,
     "randomFruitTypeCount": 0,
     "flattenFruits": true,
@@ -19312,7 +19312,7 @@
       "__expectedType__": "d77adls6LVADKf5cBeiD2sG"
     },
     "fruitConfig": {
-      "__uuid__": "a7ab50d1-ca8e-40e8-9e06-785da3511079",
+      "__uuid__": "01987064-0da9-47f2-820f-fe30205b1aa9",
       "__expectedType__": "d9352GNyQRMYIlRG9Mv0Zf7"
     },
     "levelManager": {
