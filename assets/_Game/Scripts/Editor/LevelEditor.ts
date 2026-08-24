@@ -123,7 +123,11 @@ export class LevelEditor extends Component {
                 fruitData.renderOrder = item.node.getSiblingIndex();
 
                 const fruitSprite = item.getComponent(Sprite);
-                fruitData.fruitName = fruitSprite.spriteFrame?.name ?? '';
+
+                const spriteName =   fruitSprite.name.replace("_stroke", "");
+
+
+                fruitData.fruitName = spriteName ?? '';
                 fruitData.fruitType = this.fruitConfig.fruits.indexOf(fruitSprite.spriteFrame);
                 fruitData.isTut = item.data.isTut;
                 if (fruitData.fruitType < 0) {

@@ -7,11 +7,49 @@
         "height": 1920
     },
     "slots": [
+        
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
-                    "fruitType": -1,
+                    "fruitName": "Slot: 1, Index: 1<Sprite>",
+                    "fruitType": 0,
+                    "positionX": 0.2399990740740741,
+                    "positionY": 0.2307515625,
+                    "renderOrder": 73,
+                    "isTut": true
+                }
+            ]
+        },
+        
+        {
+            "fruits": [
+                {
+                    "fruitName": "Slot: 2, Index: 2<Sprite>",
+                    "fruitType": 0,
+                    "positionX": -0.16811203703703703,
+                    "positionY": 0.2929203125,
+                    "renderOrder": 72,
+                    "isTut": true
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "Slot: 0, Index: 0<Sprite>",
+                    "fruitType": 0,
+                    "positionX": 0.11385277777777777,
+                    "positionY": 0.14882552083333334,
+                    "renderOrder": 74,
+                    "isTut": true
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "Slot: 3, Index: 3<Sprite>",
+                    "fruitType": 6,
                     "positionX": 0.4082314814814815,
                     "positionY": 0.18715260416666668,
                     "renderOrder": 71,
@@ -22,8 +60,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
-                    "fruitType": 10,
+                    "fruitName": "Slot: 4, Index: 4<Sprite>",
+                    "fruitType": 2,
                     "positionX": -0.19470555555555558,
                     "positionY": 0.21254375,
                     "renderOrder": 70,
@@ -34,7 +72,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
+                    "fruitName": "Slot: 5, Index: 5<Sprite>",
                     "fruitType": 10,
                     "positionX": -0.05283796296296296,
                     "positionY": 0.2542578125,
@@ -46,8 +84,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_lemon",
-                    "fruitType": 9,
+                    "fruitName": "Slot: 6, Index: 6<Sprite>",
+                    "fruitType": 4,
                     "positionX": 0.24379444444444445,
                     "positionY": 0.23068020833333333,
                     "renderOrder": 68,
@@ -58,8 +96,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
-                    "fruitType": 7,
+                    "fruitName": "Slot: 7, Index: 7<Sprite>",
+                    "fruitType": 6,
                     "positionX": 0.3018314814814815,
                     "positionY": -0.08126718749999999,
                     "renderOrder": 67,
@@ -70,19 +108,20 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_strawberry",
-                    "fruitType": 12,
+                    "fruitName": "Slot: 8, Index: 8<Sprite>",
+                    "fruitType": 2,
                     "positionX": 0.4082324074074074,
                     "positionY": 0.03843333333333333,
-                    "renderOrder": 66
+                    "renderOrder": 66,
+                    "isTut": false
                 }
             ]
         },
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
-                    "fruitType": 10,
+                    "fruitName": "Slot: 9, Index: 9<Sprite>",
+                    "fruitType": 9,
                     "positionX": 0.3727657407407407,
                     "positionY": 0.15269322916666667,
                     "renderOrder": 65,
@@ -93,8 +132,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "Slot: 10, Index: 10<Sprite>",
+                    "fruitType": 11,
                     "positionX": -0.3655898148148148,
                     "positionY": 0.18171145833333335,
                     "renderOrder": 64,
@@ -105,8 +144,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_pear",
-                    "fruitType": 1,
+                    "fruitName": "Slot: 11, Index: 11<Sprite>",
+                    "fruitType": 7,
                     "positionX": -0.4010564814814815,
                     "positionY": 0.20347500000000002,
                     "renderOrder": 63,
@@ -117,8 +156,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_strawberry",
-                    "fruitType": 12,
+                    "fruitName": "Slot: 12, Index: 12<Sprite>",
+                    "fruitType": 2,
                     "positionX": 0.16963796296296296,
                     "positionY": 0.2651390625,
                     "renderOrder": 62,
@@ -129,8 +168,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_strawberry",
-                    "fruitType": 12,
+                    "fruitName": "Slot: 13, Index: 13<Sprite>",
+                    "fruitType": 10,
                     "positionX": 0.34374814814814814,
                     "positionY": -0.12660885416666667,
                     "renderOrder": 61,
@@ -141,7 +180,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
+                    "fruitName": "Slot: 14, Index: 14<Sprite>",
                     "fruitType": 10,
                     "positionX": 0.2534685185185185,
                     "positionY": -0.16106822916666666,
@@ -153,8 +192,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "Slot: 15, Index: 15<Sprite>",
+                    "fruitType": 13,
                     "positionX": 0.3018324074074074,
                     "positionY": -0.13386354166666664,
                     "renderOrder": 59,
@@ -165,7 +204,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "pink_dragonfruit",
+                    "fruitName": "Slot: 16, Index: 16<Sprite>",
                     "fruitType": 3,
                     "positionX": 0.334075,
                     "positionY": -0.1048453125,
@@ -177,8 +216,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "Slot: 17, Index: 17<Sprite>",
+                    "fruitType": 10,
                     "positionX": 0.35664444444444443,
                     "positionY": -0.05224947916666667,
                     "renderOrder": 57,
@@ -189,8 +228,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_pear",
-                    "fruitType": 1,
+                    "fruitName": "Slot: 18, Index: 18<Sprite>",
+                    "fruitType": 7,
                     "positionX": 0.39856018518518516,
                     "positionY": -0.07582708333333334,
                     "renderOrder": 56,
@@ -201,7 +240,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "blue_honeyberries",
+                    "fruitName": "Slot: 19, Index: 19<Sprite>",
                     "fruitType": 11,
                     "positionX": 0.34052314814814816,
                     "positionY": -0.07401354166666667,
@@ -213,7 +252,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "pink_dragonfruit",
+                    "fruitName": "Slot: 20, Index: 20<Sprite>",
                     "fruitType": 3,
                     "positionX": 0.3824388888888889,
                     "positionY": -0.0449953125,
@@ -225,8 +264,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_lemon",
-                    "fruitType": 9,
+                    "fruitName": "Slot: 21, Index: 21<Sprite>",
+                    "fruitType": 6,
                     "positionX": 0.32440185185185183,
                     "positionY": -0.03592708333333334,
                     "renderOrder": 53,
@@ -237,7 +276,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_pear",
+                    "fruitName": "Slot: 22, Index: 22<Sprite>",
                     "fruitType": 1,
                     "positionX": 0.3501962962962963,
                     "positionY": -0.017790625,
@@ -249,8 +288,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "pink_dragonfruit",
-                    "fruitType": 3,
+                    "fruitName": "Slot: 23, Index: 23<Sprite>",
+                    "fruitType": 6,
                     "positionX": 0.29538425925925926,
                     "positionY": -0.00328125,
                     "renderOrder": 51,
@@ -261,8 +300,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "blue_honeyberries",
-                    "fruitType": 11,
+                    "fruitName": "Slot: 24, Index: 24<Sprite>",
+                    "fruitType": 1,
                     "positionX": 0.2695898148148148,
                     "positionY": -0.0105359375,
                     "renderOrder": 50,
@@ -273,8 +312,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "pink_dragonfruit",
-                    "fruitType": 3,
+                    "fruitName": "Slot: 25, Index: 25<Sprite>",
+                    "fruitType": 13,
                     "positionX": 0.22767407407407408,
                     "positionY": 0.009414062499999999,
                     "renderOrder": 49,
@@ -285,8 +324,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "peach_peach",
-                    "fruitType": 8,
+                    "fruitName": "Slot: 26, Index: 26<Sprite>",
+                    "fruitType": 6,
                     "positionX": 0.17931018518518518,
                     "positionY": -0.0014677083333333332,
                     "renderOrder": 48,
@@ -297,8 +336,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "peach_peach",
-                    "fruitType": 8,
+                    "fruitName": "Slot: 27, Index: 27<Sprite>",
+                    "fruitType": 5,
                     "positionX": 0.3147287037037037,
                     "positionY": 0.20166041666666665,
                     "renderOrder": 47,
@@ -309,8 +348,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_pear",
-                    "fruitType": 1,
+                    "fruitName": "Slot: 28, Index: 28<Sprite>",
+                    "fruitType": 3,
                     "positionX": 0.3519203703703704,
                     "positionY": 0.21707552083333334,
                     "renderOrder": 46,
@@ -321,8 +360,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_lemon",
-                    "fruitType": 13,
+                    "fruitName": "Slot: 29, Index: 29<Sprite>",
+                    "fruitType": 8,
                     "positionX": -0.21182222222222222,
                     "positionY": 0.30075625,
                     "renderOrder": 45,
@@ -333,7 +372,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "blue_honeyberries",
+                    "fruitName": "Slot: 30, Index: 30<Sprite>",
                     "fruitType": 11,
                     "positionX": -0.046110185185185185,
                     "positionY": 0.32101979166666667,
@@ -345,8 +384,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "peach_peach",
-                    "fruitType": 8,
+                    "fruitName": "Slot: 31, Index: 31<Sprite>",
+                    "fruitType": 4,
                     "positionX": 0.303325,
                     "positionY": 0.16904270833333335,
                     "renderOrder": 43,
@@ -357,8 +396,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "Slot: 32, Index: 32<Sprite>",
+                    "fruitType": 2,
                     "positionX": 0.0853787037037037,
                     "positionY": 0.25921614583333336,
                     "renderOrder": 42,
@@ -369,8 +408,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_orange",
-                    "fruitType": 5,
+                    "fruitName": "Slot: 33, Index: 33<Sprite>",
+                    "fruitType": 8,
                     "positionX": -0.2640564814814815,
                     "positionY": 0.18930677083333333,
                     "renderOrder": 41,
@@ -381,8 +420,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_starfruit",
-                    "fruitType": 2,
+                    "fruitName": "Slot: 34, Index: 34<Sprite>",
+                    "fruitType": 10,
                     "positionX": -0.1379712962962963,
                     "positionY": 0.29366458333333334,
                     "renderOrder": 40,
@@ -393,8 +432,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_lemon",
-                    "fruitType": 13,
+                    "fruitName": "Slot: 35, Index: 35<Sprite>",
+                    "fruitType": 7,
                     "positionX": 0.20606018518518518,
                     "positionY": 0.28150624999999996,
                     "renderOrder": 39,
@@ -405,8 +444,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_orange",
-                    "fruitType": 5,
+                    "fruitName": "Slot: 36, Index: 36<Sprite>",
+                    "fruitType": 13,
                     "positionX": -0.10735092592592592,
                     "positionY": 0.2734010416666666,
                     "renderOrder": 38,
@@ -417,8 +456,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_lemon",
-                    "fruitType": 13,
+                    "fruitName": "Slot: 37, Index: 37<Sprite>",
+                    "fruitType": 4,
                     "positionX": 0.30512685185185184,
                     "positionY": 0.1994385416666667,
                     "renderOrder": 37,
@@ -429,19 +468,20 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_lemon",
-                    "fruitType": 9,
+                    "fruitName": "Slot: 38, Index: 38<Sprite>",
+                    "fruitType": 2,
                     "positionX": 0.3159342592592593,
                     "positionY": 0.063671875,
-                    "renderOrder": 36
+                    "renderOrder": 36,
+                    "isTut": false
                 }
             ]
         },
         {
             "fruits": [
                 {
-                    "fruitName": "orange_starfruit",
-                    "fruitType": 2,
+                    "fruitName": "Slot: 39, Index: 39<Sprite>",
+                    "fruitType": 0,
                     "positionX": -0.32529722222222224,
                     "positionY": 0.0150390625,
                     "renderOrder": 35,
@@ -452,7 +492,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
+                    "fruitName": "Slot: 40, Index: 40<Sprite>",
                     "fruitType": 7,
                     "positionX": -0.38293611111111114,
                     "positionY": 0.09508020833333333,
@@ -464,8 +504,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "pink_dragonfruit",
-                    "fruitType": 3,
+                    "fruitName": "Slot: 41, Index: 41<Sprite>",
+                    "fruitType": 4,
                     "positionX": 0.3627657407407407,
                     "positionY": 0.0525265625,
                     "renderOrder": 33,
@@ -476,8 +516,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "Slot: 42, Index: 42<Sprite>",
+                    "fruitType": 12,
                     "positionX": -0.30368333333333336,
                     "positionY": 0.20956979166666667,
                     "renderOrder": 32,
@@ -488,8 +528,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "Slot: 43, Index: 43<Sprite>",
+                    "fruitType": 3,
                     "positionX": -0.29287592592592593,
                     "positionY": 0.2622552083333333,
                     "renderOrder": 31,
@@ -500,8 +540,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_lemon",
-                    "fruitType": 13,
+                    "fruitName": "Slot: 44, Index: 44<Sprite>",
+                    "fruitType": 0,
                     "positionX": -0.36312314814814817,
                     "positionY": 0.21868854166666668,
                     "renderOrder": 30,
@@ -512,8 +552,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "blue_honeyberries",
-                    "fruitType": 11,
+                    "fruitName": "Slot: 45, Index: 45<Sprite>",
+                    "fruitType": 9,
                     "positionX": -0.32889999999999997,
                     "positionY": 0.239965625,
                     "renderOrder": 29,
@@ -524,7 +564,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
+                    "fruitName": "Slot: 46, Index: 46<Sprite>",
                     "fruitType": 7,
                     "positionX": -0.26045370370370374,
                     "positionY": 0.24503177083333333,
@@ -536,8 +576,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_strawberry",
-                    "fruitType": 12,
+                    "fruitName": "Slot: 47, Index: 47<Sprite>",
+                    "fruitType": 8,
                     "positionX": -0.217225,
                     "positionY": 0.23895260416666667,
                     "renderOrder": 27,
@@ -548,8 +588,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "Slot: 48, Index: 48<Sprite>",
+                    "fruitType": 5,
                     "positionX": -0.14697777777777776,
                     "positionY": 0.32203333333333334,
                     "renderOrder": 26,
@@ -560,8 +600,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "pink_dragonfruit",
-                    "fruitType": 3,
+                    "fruitName": "Slot: 49, Index: 49<Sprite>",
+                    "fruitType": 0,
                     "positionX": -0.08213425925925925,
                     "positionY": 0.32203333333333334,
                     "renderOrder": 25,
@@ -572,8 +612,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_starfruit",
-                    "fruitType": 2,
+                    "fruitName": "Slot: 50, Index: 50<Sprite>",
+                    "fruitType": 1,
                     "positionX": 0.002523148148148148,
                     "positionY": 0.29265104166666667,
                     "renderOrder": 24,
@@ -584,8 +624,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_cherry",
-                    "fruitType": 10,
+                    "fruitName": "Slot: 51, Index: 51<Sprite>",
+                    "fruitType": 12,
                     "positionX": 0.05475833333333334,
                     "positionY": 0.29366406250000004,
                     "renderOrder": 23,
@@ -596,8 +636,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "purple_grapes",
-                    "fruitType": 6,
+                    "fruitName": "Slot: 52, Index: 52<Sprite>",
+                    "fruitType": 11,
                     "positionX": 0.153825,
                     "positionY": 0.29366406250000004,
                     "renderOrder": 22,
@@ -608,8 +648,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "Slot: 53, Index: 53<Sprite>",
+                    "fruitType": 8,
                     "positionX": 0.12140277777777779,
                     "positionY": 0.31595416666666665,
                     "renderOrder": 21,
@@ -620,8 +660,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_pear",
-                    "fruitType": 1,
+                    "fruitName": "Slot: 54, Index: 54<Sprite>",
+                    "fruitType": 8,
                     "positionX": 0.09978796296296297,
                     "positionY": 0.3270989583333333,
                     "renderOrder": 20,
@@ -632,7 +672,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_orange",
+                    "fruitName": "Slot: 55, Index: 55<Sprite>",
                     "fruitType": 5,
                     "positionX": 0.33214444444444446,
                     "positionY": 0.0849484375,
@@ -644,19 +684,20 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_lemon",
-                    "fruitType": 13,
+                    "fruitName": "Slot: 56, Index: 56<Sprite>",
+                    "fruitType": 6,
                     "positionX": 0.2384814814814815,
                     "positionY": 0.09609322916666667,
-                    "renderOrder": 18
+                    "renderOrder": 18,
+                    "isTut": false
                 }
             ]
         },
         {
             "fruits": [
                 {
-                    "fruitName": "blue_honeyberries",
-                    "fruitType": 11,
+                    "fruitName": "Slot: 57, Index: 57<Sprite>",
+                    "fruitType": 3,
                     "positionX": 0.2889157407407407,
                     "positionY": 0.1041984375,
                     "renderOrder": 17,
@@ -667,8 +708,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "purple_grapes",
-                    "fruitType": 6,
+                    "fruitName": "Slot: 58, Index: 58<Sprite>",
+                    "fruitType": 11,
                     "positionX": 0.21506574074074072,
                     "positionY": 0.0950796875,
                     "renderOrder": 16,
@@ -679,8 +720,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "purple_grapes",
-                    "fruitType": 6,
+                    "fruitName": "Slot: 59, Index: 59<Sprite>",
+                    "fruitType": 11,
                     "positionX": 0.3753740740740741,
                     "positionY": 0.1812,
                     "renderOrder": 15,
@@ -691,8 +732,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_starfruit",
-                    "fruitType": 2,
+                    "fruitName": "Slot: 60, Index: 60<Sprite>",
+                    "fruitType": 8,
                     "positionX": 0.3501574074074074,
                     "positionY": 0.19842395833333332,
                     "renderOrder": 14,
@@ -703,8 +744,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_strawberry",
-                    "fruitType": 12,
+                    "fruitName": "Slot: 61, Index: 61<Sprite>",
+                    "fruitType": 13,
                     "positionX": 0.2961212962962963,
                     "positionY": 0.22274010416666667,
                     "renderOrder": 13,
@@ -715,8 +756,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "Slot: 62, Index: 62<Sprite>",
+                    "fruitType": 7,
                     "positionX": 0.26730185185185185,
                     "positionY": 0.195384375,
                     "renderOrder": 12,
@@ -727,8 +768,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_lemon",
-                    "fruitType": 13,
+                    "fruitName": "Slot: 63, Index: 63<Sprite>",
+                    "fruitType": 4,
                     "positionX": 0.2114638888888889,
                     "positionY": 0.22375364583333335,
                     "renderOrder": 11,
@@ -739,8 +780,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "Slot: 64, Index: 64<Sprite>",
+                    "fruitType": 12,
                     "positionX": 0.18804814814814816,
                     "positionY": 0.20855572916666668,
                     "renderOrder": 10,
@@ -751,8 +792,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "peach_peach",
-                    "fruitType": 8,
+                    "fruitName": "Slot: 65, Index: 65<Sprite>",
+                    "fruitType": 4,
                     "positionX": 0.18804814814814816,
                     "positionY": 0.20855572916666668,
                     "renderOrder": 9,
@@ -763,8 +804,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "peach_peach",
-                    "fruitType": 8,
+                    "fruitName": "Slot: 66, Index: 66<Sprite>",
+                    "fruitType": 10,
                     "positionX": 0.16675185185185187,
                     "positionY": 0.2106390625,
                     "renderOrder": 8,
@@ -775,7 +816,7 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_starfruit",
+                    "fruitName": "Slot: 67, Index: 67<Sprite>",
                     "fruitType": 2,
                     "positionX": 0.11767777777777777,
                     "positionY": 0.14865989583333333,
@@ -787,8 +828,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_strawberry",
-                    "fruitType": 12,
+                    "fruitName": "Slot: 68, Index: 68<Sprite>",
+                    "fruitType": 9,
                     "positionX": 0.07985185185185184,
                     "positionY": 0.13751510416666665,
                     "renderOrder": 6,
@@ -799,8 +840,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "blue_honeyberries",
-                    "fruitType": 11,
+                    "fruitName": "Slot: 69, Index: 69<Sprite>",
+                    "fruitType": 13,
                     "positionX": -0.34144444444444444,
                     "positionY": 0.011994270833333332,
                     "renderOrder": 5,
@@ -811,8 +852,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_pear",
-                    "fruitType": 1,
+                    "fruitName": "Slot: 70, Index: 70<Sprite>",
+                    "fruitType": 3,
                     "positionX": -0.30902222222222225,
                     "positionY": 0.10520729166666666,
                     "renderOrder": 4,
@@ -823,8 +864,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "orange_starfruit",
-                    "fruitType": 2,
+                    "fruitName": "Slot: 71, Index: 71<Sprite>",
+                    "fruitType": 13,
                     "positionX": -0.3702638888888889,
                     "positionY": 0.07278541666666666,
                     "renderOrder": 3,
@@ -835,8 +876,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "Slot: 72, Index: 72<Sprite>",
+                    "fruitType": 12,
                     "positionX": -0.3468481481481481,
                     "positionY": 0.10723385416666667,
                     "renderOrder": 2,
@@ -847,8 +888,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "Slot: 73, Index: 73<Sprite>",
+                    "fruitType": 12,
                     "positionX": -0.3810712962962963,
                     "positionY": 0.10318125,
                     "renderOrder": 1,
@@ -859,8 +900,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "peach_peach",
-                    "fruitType": 8,
+                    "fruitName": "Slot: 74, Index: 74<Sprite>",
+                    "fruitType": 12,
                     "positionX": -0.42610185185185184,
                     "positionY": 0.10318125,
                     "renderOrder": 0,

@@ -1,17 +1,54 @@
 {
     "tree": {
-        "treeType": 5,
+        "treeType": 0,
         "positionX": 0,
         "positionY": 0,
         "width": 1080,
         "height": 1920
     },
     "slots": [
+       
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_lemon",
-                    "fruitType": 9,
+                    "fruitName": "red_apple",
+                    "fruitType": 4,
+                    "positionX": 0.04277314814814815,
+                    "positionY": 0.22153541666666668,
+                    "renderOrder": 58,
+                    "isTut": true
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "red_apple",
+                    "fruitType": 4,
+                    "positionX": 0.20697592592592592,
+                    "positionY": 0.11259322916666667,
+                    "renderOrder": 57,
+                    "isTut": true
+                }
+            ]
+        },
+         {
+            "fruits": [
+                {
+                    "fruitName": "red_apple",
+                    "fruitType": 4,
+                    "positionX": -0.1953777777777778,
+                    "positionY": 0.08266822916666668,
+                    "renderOrder": 59,
+                    "isTut": true
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "green_apple",
+                    "fruitType": 0,
                     "positionX": 0.04297962962962963,
                     "positionY": 0.08603854166666666,
                     "renderOrder": 56,
@@ -82,8 +119,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_lemon",
-                    "fruitType": 9,
+                    "fruitName": "purple_grapes",
+                    "fruitType": 6,
                     "positionX": 0.20999074074074073,
                     "positionY": 0.24392552083333333,
                     "renderOrder": 50,
@@ -118,8 +155,8 @@
         {
             "fruits": [
                 {
-                    "fruitName": "yellow_lemon",
-                    "fruitType": 9,
+                    "fruitName": "red_apple",
+                    "fruitType": 4,
                     "positionX": 0.2268314814814815,
                     "positionY": 0.2573453125,
                     "renderOrder": 47,
@@ -130,12 +167,11 @@
         {
             "fruits": [
                 {
-                    "fruitName": "green_apple",
-                    "fruitType": 0,
+                    "fruitName": "yellow_lemon",
+                    "fruitType": 9,
                     "positionX": 0.3334925925925926,
                     "positionY": 0.08445885416666667,
-                    "renderOrder": 46,
-                    "isTut": true
+                    "renderOrder": 46
                 }
             ]
         },
@@ -262,12 +298,11 @@
         {
             "fruits": [
                 {
-                    "fruitName": "purple_grapes",
-                    "fruitType": 6,
+                    "fruitName": "yellow_lemon",
+                    "fruitType": 9,
                     "positionX": 0.3068277777777778,
                     "positionY": 0.14287708333333335,
-                    "renderOrder": 35,
-                    "isTut": true
+                    "renderOrder": 35
                 }
             ]
         },
@@ -370,12 +405,11 @@
         {
             "fruits": [
                 {
-                    "fruitName": "red_apple",
-                    "fruitType": 4,
+                    "fruitName": "yellow_lemon",
+                    "fruitType": 9,
                     "positionX": 0.17069444444444443,
                     "positionY": 0.12077291666666666,
-                    "renderOrder": 26,
-                    "isTut": true
+                    "renderOrder": 26
                 }
             ]
         },
@@ -647,7 +681,7 @@
             "fruits": [
                 {
                     "fruitName": "orange_orange",
-                    "fruitType": -1,
+                    "fruitType": 5,
                     "positionX": -0.2054287037037037,
                     "positionY": 0.09945729166666667,
                     "renderOrder": 3,

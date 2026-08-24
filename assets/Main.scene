@@ -15299,7 +15299,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": true
+    "value": false
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -15549,7 +15549,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": false
+    "value": true
   },
   {
     "__type__": "cc.TargetInfo",
@@ -18586,7 +18586,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Only IQ 180+ can pass this level",
+    "_string": "Nobody can pass this level!",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 60,
@@ -18665,9 +18665,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 76,
-      "g": 133,
-      "b": 14,
+      "r": 226,
+      "g": 137,
+      "b": 3,
       "a": 255
     },
     "_spriteFrame": {
@@ -19225,7 +19225,7 @@
     },
     "tray": null,
     "levelJson": {
-      "__uuid__": "8a6fed0b-86c0-43f4-9aa7-72d10215e7fc",
+      "__uuid__": "281af4b0-8623-442d-86b6-cf164d263135",
       "__expectedType__": "cc.JsonAsset"
     },
     "randomizeFruitTypes": false,
@@ -26540,7 +26540,7 @@
       "tray"
     ],
     "target": {
-      "__id__": 1163
+      "__id__": 1176
     },
     "targetInfo": {
       "__id__": 1817
