@@ -18589,8 +18589,8 @@
     "_string": "Nobody can pass this level!",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 60,
-    "_fontSize": 60,
+    "_actualFontSize": 55,
+    "_fontSize": 55,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
@@ -18665,9 +18665,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 226,
-      "g": 137,
-      "b": 3,
+      "r": 216,
+      "g": 126,
+      "b": 27,
       "a": 255
     },
     "_spriteFrame": {
@@ -18878,7 +18878,7 @@
         "__expectedType__": "cc.AudioClip"
       }
     ],
-    "poolSize": 3,
+    "poolSize": 10,
     "masterVolume": 1,
     "musicVolume": 1,
     "sfxVolume": 1,
@@ -19225,10 +19225,10 @@
     },
     "tray": null,
     "levelJson": {
-      "__uuid__": "e7443bc2-54bc-40e3-994f-66f175ba6f6d",
+      "__uuid__": "281af4b0-8623-442d-86b6-cf164d263135",
       "__expectedType__": "cc.JsonAsset"
     },
-    "randomizeFruitTypes": true,
+    "randomizeFruitTypes": false,
     "fruitRandomSeed": 0,
     "randomFruitTypeCount": 0,
     "flattenFruits": true,
@@ -19312,7 +19312,7 @@
       "__expectedType__": "d77adls6LVADKf5cBeiD2sG"
     },
     "fruitConfig": {
-      "__uuid__": "01987064-0da9-47f2-820f-fe30205b1aa9",
+      "__uuid__": "a7ab50d1-ca8e-40e8-9e06-785da3511079",
       "__expectedType__": "d9352GNyQRMYIlRG9Mv0Zf7"
     },
     "levelManager": {

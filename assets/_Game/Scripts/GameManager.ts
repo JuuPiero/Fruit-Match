@@ -32,13 +32,10 @@ export class GameManager extends GameBehaviour {
 
     @property(Node) headline: Node = null;
 
-    private ambientSoundIndex = 0;
-    private readonly ambientSounds = ['Chim', 'Gio'];
-    private readonly playAmbientSound = () => {
-        if (!this.isPlayMusic) return
-
-        AudioManager.instance.playOneShot(this.ambientSounds[this.ambientSoundIndex]);
-        this.ambientSoundIndex = (this.ambientSoundIndex + 1) % this.ambientSounds.length;
+    private playBackgroundMusic(): void {
+        AudioManager.instance.stopMusic()
+        AudioManager.instance.playMusic('Chim')
+        AudioManager.instance.playMusic('Gio')
     }
 
     protected onLoad(): void {
@@ -65,10 +62,7 @@ export class GameManager extends GameBehaviour {
         input.on(Input.EventType.KEY_DOWN, this.toggleMusic, this);
 
 
-        this.invokeRepeating(this.playAmbientSound, 5, 5)
-
     }
-    defautlEnableMusic = false
     isPlayMusic = true;
     toggleMusic(event: EventKeyboard) {
         if (event.keyCode === KeyCode.F12) {
@@ -83,9 +77,7 @@ export class GameManager extends GameBehaviour {
                 this.headline.active = false
             }
             else {
-                if(this.defautlEnableMusic) {
-                    AudioManager.instance.playMusic('BGM')
-                }
+                this.playBackgroundMusic()
                 this.isPlayMusic = true;
                 this.dowloadButton.node.active = true
                 this.headline.active = true
@@ -101,7 +93,7 @@ export class GameManager extends GameBehaviour {
         EventBus.off(GameEvents.MATCHED, this.onProgress)
 
         input.off(Input.EventType.KEY_DOWN, this.toggleMusic, this);
-        this.cancelInvoke(this.playAmbientSound)
+        AudioManager.instance.stopMusic()
     }
 
     onNewGame = () => {
@@ -111,7 +103,8 @@ export class GameManager extends GameBehaviour {
         TrackingManager.TrackEvent(ETrackingEvent.DISPLAYED)
         TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_STARTED)
 
-        // AudioManager.instance.playMusic('BGM')
+        this.playBackgroundMusic()
+
 
         this.total = this.levelManager.levelData.fruits.length / 3
 

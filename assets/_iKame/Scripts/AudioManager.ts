@@ -19,6 +19,8 @@ export class AudioManager extends Component {
     poolSize = 10;
 
     private pool: AudioSource[] = [];
+    private musicSources: Map<string, AudioSource> = new Map();
+    private musicSourceSet: Set<AudioSource> = new Set();
 
     @property public masterVolume = 1;
     @property public musicVolume = 1;
@@ -79,12 +81,23 @@ export class AudioManager extends Component {
     getAvailable(): AudioSource {
 
         for (let s of this.pool) {
-            if (!s.playing) {
+            if (!this.musicSourceSet.has(s) && !s.playing) {
                 return s;
             }
         }
 
         return this.createAudioSource();
+    }
+
+    private getMusicSource(name: string): AudioSource {
+        let source = this.musicSources.get(name);
+        if (!source) {
+            source = this.createAudioSource();
+            this.musicSources.set(name, source);
+            this.musicSourceSet.add(source);
+        }
+
+        return source;
     }
 
     playOneShot(name: string, volume = 1, pitch = 1) {
@@ -107,13 +120,15 @@ export class AudioManager extends Component {
         const clip = this.audioDict.get(name);
         if (!clip) return;
 
-        const source = this.getAvailable();
+        const source = this.getMusicSource(name);
 
         source.clip = clip;
         source.loop = loop;
         source.volume = this.masterVolume * this.musicVolume;
 
-        source.play();
+        if (!source.playing) {
+            source.play();
+        }
     }
 
     playMusicFade(name: string, duration = 1) {
@@ -121,7 +136,7 @@ export class AudioManager extends Component {
         const clip = this.audioDict.get(name);
         if (!clip) return;
 
-        const source = this.getAvailable();
+        const source = this.getMusicSource(name);
 
         source.clip = clip;
         source.loop = true;
@@ -136,8 +151,8 @@ export class AudioManager extends Component {
 
     stopMusic() {
 
-        for (let s of this.pool) {
-            if (s.loop && s.playing) {
+        for (let s of this.musicSources.values()) {
+            if (s.playing) {
                 s.stop();
             }
         }
@@ -145,9 +160,9 @@ export class AudioManager extends Component {
 
     stopMusicFade(duration = 1) {
 
-        for (let s of this.pool) {
+        for (let s of this.musicSources.values()) {
 
-            if (s.loop && s.playing) {
+            if (s.playing) {
 
                 tween(s)
                 .to(duration, { volume: 0 })
