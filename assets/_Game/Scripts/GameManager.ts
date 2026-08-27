@@ -34,8 +34,8 @@ export class GameManager extends GameBehaviour {
 
     private playBackgroundMusic(): void {
         AudioManager.instance.stopMusic()
-        AudioManager.instance.playMusic('Chim')
-        AudioManager.instance.playMusic('Gio')
+        AudioManager.instance.playMusic('BGM')
+        // AudioManager.instance.playMusic('Gio')
     }
 
     protected onLoad(): void {
@@ -49,6 +49,8 @@ export class GameManager extends GameBehaviour {
 
     protected start(): void {
         EventBus.emit(GameEvents.NEW_LEVEL)
+
+        this.hasHeadline = this.headline.active
 
     }
 
@@ -64,6 +66,7 @@ export class GameManager extends GameBehaviour {
 
     }
     isPlayMusic = true;
+    hasHeadline = false
     toggleMusic(event: EventKeyboard) {
         if (event.keyCode === KeyCode.F12) {
             console.log('Move Forward');
@@ -74,13 +77,18 @@ export class GameManager extends GameBehaviour {
                 ServiceLocator.get(Tutorial).stop()
 
                 this.dowloadButton.node.active = false
-                this.headline.active = false
+                if(this.headline.active == true){
+                    this.headline.active = false
+                }
             }
             else {
                 this.playBackgroundMusic()
                 this.isPlayMusic = true;
                 this.dowloadButton.node.active = true
+                if(this.hasHeadline) {
                 this.headline.active = true
+
+                }
             }
             this.levelManager.tray.moveToNewPosition()
         }

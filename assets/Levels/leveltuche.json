@@ -1,0 +1,279 @@
+{
+    "tree": {
+        "treeType": 32,
+        "positionX": 21,
+        "positionY": 0,
+        "width": 1668,
+        "height": 2388
+    },
+    "slots": [
+        {
+            "fruits": [
+                {
+                    "fruitName": "purple_eggplant",
+                    "fruitType": 37,
+                    "positionX": 31.57,
+                    "positionY": 770.753,
+                    "renderOrder": -1,
+                    "isTut": true
+                },
+                {
+                    "fruitName": "purple_eggplant",
+                    "fruitType": 37,
+                    "positionX": -54.658,
+                    "positionY": 835.864,
+                    "renderOrder": -1,
+                    "isTut": true
+                },
+                {
+                    "fruitName": "purple_eggplant",
+                    "fruitType": 37,
+                    "positionX": -133.846,
+                    "positionY": 783.071,
+                    "renderOrder": -1,
+                    "isTut": true
+                },
+                {
+                    "fruitName": "peach_bellfruit",
+                    "fruitType": 26,
+                    "positionX": 162.69900000000007,
+                    "positionY": 612.951,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "green_lemon",
+                    "fruitType": 18,
+                    "positionX": 102.86799999999994,
+                    "positionY": 604.153,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "green_lemon",
+                    "fruitType": 18,
+                    "positionX": -74.86700000000002,
+                    "positionY": 625.27,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "yellow_bellpepper",
+                    "fruitType": 55,
+                    "positionX": -178.692,
+                    "positionY": 635.828,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "peach_bellfruit",
+                    "fruitType": 26,
+                    "positionX": -268.439,
+                    "positionY": 628.789,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "black_cherries",
+                    "fruitType": 1,
+                    "positionX": 278.898,
+                    "positionY": 447.701,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 39,
+                    "positionX": 356.327,
+                    "positionY": 359.713,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "black_cherries",
+                    "fruitType": 1,
+                    "positionX": 306.99800000000005,
+                    "positionY": 317.3140000000001,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "green_lemon",
+                    "fruitType": 18,
+                    "positionX": 263.06,
+                    "positionY": 393.149,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "peach_bellfruit",
+                    "fruitType": 26,
+                    "positionX": 201.469,
+                    "positionY": 396.669,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "green_lemon",
+                    "fruitType": 18,
+                    "positionX": 83.50999999999999,
+                    "positionY": 398.26199999999994,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "white_dragonfruit",
+                    "fruitType": 50,
+                    "positionX": 366.8299999999999,
+                    "positionY": 211.72900000000004,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "black_cherries",
+                    "fruitType": 1,
+                    "positionX": 266.52417692372603,
+                    "positionY": 181.8131514084555,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "yellow_lemon",
+                    "fruitType": 57,
+                    "positionX": 368.5899999999999,
+                    "positionY": 60.39099999999996,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "black_cherries",
+                    "fruitType": 1,
+                    "positionX": 416.10276890486534,
+                    "positionY": 127.26095903886358,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "green_lemon",
+                    "fruitType": 18,
+                    "positionX": 340.43399999999997,
+                    "positionY": 151.89699999999993,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "yellow_bellpepper",
+                    "fruitType": 55,
+                    "positionX": 241.88800000000003,
+                    "positionY": 143.09899999999993,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "white_dragonfruit",
+                    "fruitType": 50,
+                    "positionX": 259.48518435990786,
+                    "positionY": -24.07738108323008,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "peach_bellfruit",
+                    "fruitType": 26,
+                    "positionX": 58.874000000000024,
+                    "positionY": 192.37200000000007,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "yellow_lemon",
+                    "fruitType": 57,
+                    "positionX": 9.600948344357676,
+                    "positionY": 185.33264769036464,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "white_dragonfruit",
+                    "fruitType": 50,
+                    "positionX": -173.70500000000004,
+                    "positionY": 446.203,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "green_lemon",
+                    "fruitType": 18,
+                    "positionX": -406.623,
+                    "positionY": 502.57,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "black_cherries",
+                    "fruitType": 1,
+                    "positionX": -455.2646432142741,
+                    "positionY": 368.7736648801397,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "yellow_lemon",
+                    "fruitType": 57,
+                    "positionX": -427.74,
+                    "positionY": 442.739,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "black_cherries",
+                    "fruitType": 1,
+                    "positionX": -341.512,
+                    "positionY": 451.538,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "peach_bellfruit",
+                    "fruitType": 26,
+                    "positionX": -250.968,
+                    "positionY": 298.605,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 39,
+                    "positionX": -396.716,
+                    "positionY": 158.666,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "purple_grapes",
+                    "fruitType": 39,
+                    "positionX": -337.994,
+                    "positionY": 97.686,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "peach_bellfruit",
+                    "fruitType": 26,
+                    "positionX": -398.974,
+                    "positionY": -40.491,
+                    "renderOrder": -1,
+                    "isTut": false
+                },
+                {
+                    "fruitName": "yellow_bellpepper",
+                    "fruitType": 55,
+                    "positionX": -480.28,
+                    "positionY": 137.256,
+                    "renderOrder": -1,
+                    "isTut": false
+                }
+            ]
+        }
+    ]
+}

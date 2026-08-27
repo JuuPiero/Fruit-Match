@@ -1,0 +1,79 @@
+{
+  "__type__": "d9352GNyQRMYIlRG9Mv0Zf7",
+  "_name": "LevelTuChe",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "fruits": [
+    {
+      "__uuid__": "a832023f-e6de-423b-af94-7f307064c00d@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "95ed1d58-5cbe-49a4-a869-040f286c3ea2@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "a3c716ca-f83e-420d-b280-8a833a8fe1a3@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "92fb72cd-12a6-4d80-be4a-38c79ccfac87@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f690c7cf-7a7a-4424-9749-b6c89f436452@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "423d3245-13e6-4a24-97be-8bd668b65fac@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "875ad8b8-097c-4eb9-9685-40b72892d64a@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "3ffca88b-9a6d-4d4c-95d5-0986040c19b5@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "fruitsOutline": [
+    {
+      "__uuid__": "b720a495-eb9b-4c1e-ab76-ca4f9d78d403@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "3f8e22f8-9e91-4348-8858-2216bffc4383@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "98753d84-215f-4fe4-8809-03105cdd41eb@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "4a4194aa-0783-4bcb-989c-a344a7249537@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "fb5f43a7-9109-402a-b563-3883ea449513@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "ab9e48cd-0056-4de3-96a9-3b0f5e106209@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "d840082f-b7f2-4ba8-9908-a91826e3642a@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "19261956-8fbf-4d29-8376-daad48fd5ddc@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "levelJsonBake": {
+    "__uuid__": "23ecb8d4-1847-4ccf-878f-574328905863",
+    "__expectedType__": "cc.JsonAsset"
+  }
+}

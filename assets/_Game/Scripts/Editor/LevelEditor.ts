@@ -117,8 +117,8 @@ export class LevelEditor extends Component {
             const slot = new SlotsFruit();
             slot.fruits = stack.map(item => {
                 const fruitData = new FruitData();
-                fruitData.positionX = item.node.position.x / treeData.width;
-                fruitData.positionY = item.node.position.y / treeData.height;
+                fruitData.positionX = item.node.position.x 
+                fruitData.positionY = item.node.position.y 
                 // Ghi trực tiếp sibling index để runtime giữ nguyên layer như lúc author trong editor.
                 fruitData.renderOrder = item.node.getSiblingIndex();
 

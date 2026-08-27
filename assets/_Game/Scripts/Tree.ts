@@ -139,10 +139,14 @@ export class Tree extends GameBehaviour {
                 const fruitData = slot.fruits[i]
                 const node = instantiate(fruitPrefab)
                 node.setParent(this.node)
-                node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
+                // node.setPosition(new Vec3(fruitData.positionX * width, fruitData.positionY * height, 0))
+                node.setPosition(new Vec3(fruitData.positionX, fruitData.positionY, 0))
+
                 const fruit = node.getComponent(Fruit)
-                node.name = `Slot: ${index}, Index: ${spawnIndex}`
-                    this.fruitSet.add(fruitData.fruitName)
+                // node.name = `Slot: ${index}, Index: ${spawnIndex}`
+                node.name = fruitData.fruitName;
+
+                this.fruitSet.add(fruitData.fruitName)
 
                 fruit.initialize(fruitData, spawnIndex * Tree.FRUIT_SPAWN_INTERVAL, () => {
                     spawnedCount++
@@ -164,9 +168,9 @@ export class Tree extends GameBehaviour {
 
             // Cocos render sibling phía sau lên trên. Dù spawn theo JSON (top -> bottom),
             // vẫn cần đưa đáy lên trước và top lên sau để hình hiển thị đúng lớp.
-            stackFruits.slice().reverse().forEach(fruit => {
-                fruit.node.setSiblingIndex(this.node.children.length - 1)
-            })
+            // stackFruits.slice().reverse().forEach(fruit => {
+            //     fruit.node.setSiblingIndex(this.node.children.length - 1)
+            // })
 
             if (flattenFruits) {
                 stackFruits.forEach(fruit => fruit.setLocked(false, true))
