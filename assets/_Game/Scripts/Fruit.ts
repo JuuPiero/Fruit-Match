@@ -94,7 +94,7 @@ export class Fruit extends Component {
         this._button.node.off(Button.EventType.CLICK, this.onClick, this);
 
         this._button.node.off(Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-        this._button.node.off(Node.EventType.MOUSE_LEAVE, this.onMouseEnter, this);
+        this._button.node.off(Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
     }
 
 
@@ -103,7 +103,10 @@ export class Fruit extends Component {
         if (this.picked || this.locked) return
         // console.log('Mouse hovered over the node!');
         tween(this.node)
-            .to(HOVER_SCALE_DURATION, { worldScale: this.originScale.clone().add3f(0.1, 0.1, 0.1) }, { easing: 'quadOut' })
+            // originScale is the fruit's local (prefab) scale. Using worldScale here
+            // made the result depend on Tree's scale, then MOUSE_LEAVE wrote a
+            // different local scale back to the fruit.
+            .to(HOVER_SCALE_DURATION, { scale: this.originScale.clone().multiplyScalar(1.1) }, { easing: 'quadOut' })
             .start()
         this._sprite.spriteFrame = this._outlineSpriteFrame
 
@@ -113,7 +116,7 @@ export class Fruit extends Component {
         if (this.picked || this.locked) return
         // console.log('Mouse left the node!');
         tween(this.node)
-            .to(HOVER_SCALE_DURATION, { worldScale: this.originScale }, { easing: 'quadOut' })
+            .to(HOVER_SCALE_DURATION, { scale: this.originScale.clone() }, { easing: 'quadOut' })
             .start()
         this._sprite.spriteFrame = this._spriteFrame
 

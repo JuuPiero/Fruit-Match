@@ -34,8 +34,8 @@ export class GameManager extends GameBehaviour {
 
     private playBackgroundMusic(): void {
         AudioManager.instance.stopMusic()
-        AudioManager.instance.playMusic('Chim')
-        AudioManager.instance.playMusic('Gio')
+        AudioManager.instance.playMusic('BMG_AlwaysWithMe')
+        // AudioManager.instance.playMusic('Gio')
     }
 
     protected onLoad(): void {
