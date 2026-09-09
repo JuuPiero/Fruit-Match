@@ -15,9 +15,17 @@ export class StackNavigator extends Navigator {
             if (this.screenStack.length > 0)
             {
                 const lastScreen: ScreenBase  = this.screenStack[this.screenStack.length - 1];
-                lastScreen.exit();
+                // Navigating to the current screen must not start its exit tween.
+                // Otherwise that tween completes after enter() and deactivates the
+                // screen that was just shown again.
+                if (lastScreen !== screen) {
+                    lastScreen.exit();
+                    this.screenStack.push(screen);
+                }
             }
-            this.screenStack.push(screen);
+            else {
+                this.screenStack.push(screen);
+            }
             screen.enter(param);
             this.currentScreen = screen;
         }

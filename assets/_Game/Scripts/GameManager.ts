@@ -30,11 +30,14 @@ export class GameManager extends GameBehaviour {
     @property(Node) sad: Node = null;
     @property(Node) win: Node = null;
 
+
     @property(Node) headline: Node = null;
+    isHeadlineActive = true;
 
     private playBackgroundMusic(): void {
         AudioManager.instance.stopMusic()
-        AudioManager.instance.playMusic('BMG_AlwaysWithMe')
+        // AudioManager.instance.playMusic('BMG_AlwaysWithMe')
+        AudioManager.instance.playMusic('BGM')
         // AudioManager.instance.playMusic('Gio')
     }
 
@@ -45,6 +48,9 @@ export class GameManager extends GameBehaviour {
         ServiceLocator.register(LevelManager, this.levelManager)
 
         PlayableAdsManager.SetupLinkStore()
+
+
+        this.isHeadlineActive = this.headline.active
     }
 
     protected start(): void {
@@ -80,7 +86,9 @@ export class GameManager extends GameBehaviour {
                 this.playBackgroundMusic()
                 this.isPlayMusic = true;
                 this.dowloadButton.node.active = true
-                this.headline.active = true
+                if (this.isHeadlineActive) {
+                    this.headline.active = true
+                }
             }
             this.levelManager.tray.moveToNewPosition()
         }
@@ -97,6 +105,7 @@ export class GameManager extends GameBehaviour {
     }
 
     onNewGame = () => {
+
         TrackingManager.TrackEvent(ETrackingEvent.LOADING)
         this.levelManager.initialize()
         TrackingManager.TrackEvent(ETrackingEvent.LOADED)
@@ -107,6 +116,10 @@ export class GameManager extends GameBehaviour {
 
 
         this.total = this.levelManager.levelData.fruits.length / 3
+        this.sad.active = false;
+        this.dowloadButton.node.active = true
+
+        // this.win.active = false;
 
 
 
@@ -126,17 +139,29 @@ export class GameManager extends GameBehaviour {
         this.win.active = true
 
 
-        this,this.scheduleOnce(() => {
+        this, this.scheduleOnce(() => {
             // PlayableAdsManager.OpenStore()
             PlayableAdsManager.EndGame()
 
         }, 3)
     }
+
+    isFirstLose = true;
     onLoseGame = () => {
+        if (this.levelManager.tray.slots.length <= 3 && this.isFirstLose) {
+            this.isFirstLose = false;
+            this.dowloadButton.node.active = false
+
+            ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false, firstLose: true })
+            this.sad.active = true
+            return;
+        }
+
+
         this.dowloadButton.node.active = false
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false })
         this.sad.active = true
-         this,this.scheduleOnce(() => {
+        this, this.scheduleOnce(() => {
             PlayableAdsManager.EndGame()
         }, 3)
     }
