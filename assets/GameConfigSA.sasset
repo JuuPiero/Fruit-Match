@@ -10,11 +10,7 @@
   },
   "trees": [
     {
-      "__uuid__": "44e7f693-6337-4fd0-bc31-210a228aeebb@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
-    {
-      "__uuid__": "bb986598-b12c-4b48-935a-e7a4c79cb812@f9941",
+      "__uuid__": "5c95eaae-e594-4939-a78e-5d6a8efe78a5@f9941",
       "__expectedType__": "cc.SpriteFrame"
     }
   ]

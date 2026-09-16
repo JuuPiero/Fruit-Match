@@ -1,0 +1,869 @@
+{
+    "tree": {
+        "treeType": 15,
+        "positionX": 0.0,
+        "positionY": 0.0,
+        "width": 1431.0,
+        "height": 2048.0
+    },
+    "slots": [
+        {
+            "fruits": [
+                {
+                    "fruitName": "banana_01",
+                    "fruitType": 2200,
+                    "positionX": 0.16739945113658906,
+                    "positionY": 0.02782096341252327,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pineapple_01",
+                    "fruitType": 1100,
+                    "positionX": 0.20048321783542634,
+                    "positionY": 0.02813950926065445,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pomegranate_01",
+                    "fruitType": 300,
+                    "positionX": 0.14481429755687715,
+                    "positionY": -0.006545946933329105,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "custardapple_01",
+                    "fruitType": 8200,
+                    "positionX": 0.1776491105556488,
+                    "positionY": 0.005481022410094738,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "kiwi_01",
+                    "fruitType": 2400,
+                    "positionX": 0.14492236077785493,
+                    "positionY": 0.012865066528320313,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pomelo_01",
+                    "fruitType": 6400,
+                    "positionX": -0.24302291870117188,
+                    "positionY": 0.18665017187595368,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": -0.22625525295734406,
+                    "positionY": 0.19852758944034577,
+                    "iceMatches": 2,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "apple_01",
+                    "fruitType": 0,
+                    "positionX": -0.23745906352996827,
+                    "positionY": 0.19621361792087556,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": -0.20298895239830018,
+                    "positionY": 0.20134501159191132,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": -0.21822790801525117,
+                    "positionY": 0.18474239110946656,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellpepper_01",
+                    "fruitType": 1200,
+                    "positionX": -0.221549853682518,
+                    "positionY": -0.07489457726478577,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 1
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "apple_01",
+                    "fruitType": 0,
+                    "positionX": -0.22317610681056977,
+                    "positionY": -0.08352441340684891,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "banana_01",
+                    "fruitType": 2200,
+                    "positionX": -0.2524673640727997,
+                    "positionY": -0.06820770353078842,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "custardapple_01",
+                    "fruitType": 8200,
+                    "positionX": -0.20082704722881318,
+                    "positionY": -0.07188980281352997,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": -0.23418119549751283,
+                    "positionY": -0.07322031259536743,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.15081541240215302,
+                    "positionY": 0.2676369547843933,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "longan_01",
+                    "fruitType": 10100,
+                    "positionX": 0.12961161136627198,
+                    "positionY": 0.27589374780654909,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pineapple_01",
+                    "fruitType": 1100,
+                    "positionX": 0.11307234317064285,
+                    "positionY": 0.2721932828426361,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pomegranate_01",
+                    "fruitType": 300,
+                    "positionX": 0.14604288339614869,
+                    "positionY": 0.25434190034866335,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.14249125123023988,
+                    "positionY": 0.27356433868408205,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "apple_01",
+                    "fruitType": 0,
+                    "positionX": -0.06323671340942383,
+                    "positionY": 0.27933576703071597,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "chestnut_01",
+                    "fruitType": 10000,
+                    "positionX": -0.060530614107847217,
+                    "positionY": 0.27040204405784609,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": -0.03823859617114067,
+                    "positionY": 0.2920874357223511,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "banana_01",
+                    "fruitType": 2200,
+                    "positionX": -0.07109975069761276,
+                    "positionY": 0.26690730452537539,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "orange_01",
+                    "fruitType": 1000,
+                    "positionX": -0.17654098570346833,
+                    "positionY": 0.03496287763118744,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 1
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "tomato_01",
+                    "fruitType": 100,
+                    "positionX": -0.2391548752784729,
+                    "positionY": 0.06366142630577088,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "custardapple_01",
+                    "fruitType": 8200,
+                    "positionX": -0.1808786690235138,
+                    "positionY": 0.06773892045021057,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "kiwi_01",
+                    "fruitType": 2400,
+                    "positionX": -0.20224840939044953,
+                    "positionY": 0.047797124832868579,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "tomato_01",
+                    "fruitType": 100,
+                    "positionX": 0.21088586747646333,
+                    "positionY": 0.15519902110099793,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 1
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "orange_01",
+                    "fruitType": 1000,
+                    "positionX": 0.19638535380363465,
+                    "positionY": 0.16490884125232697,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_02",
+                    "fruitType": 8300,
+                    "positionX": 0.2007448822259903,
+                    "positionY": 0.14020051062107087,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.2249615490436554,
+                    "positionY": 0.16145996749401093,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "orange_01",
+                    "fruitType": 1000,
+                    "positionX": 0.20250840485095979,
+                    "positionY": -0.05308600142598152,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "longan_01",
+                    "fruitType": 10100,
+                    "positionX": 0.2001967877149582,
+                    "positionY": -0.027768904343247415,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "apple_01",
+                    "fruitType": 0,
+                    "positionX": 0.19365662336349488,
+                    "positionY": -0.06427554786205292,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pomelo_01",
+                    "fruitType": 6400,
+                    "positionX": 0.22092999517917634,
+                    "positionY": -0.046420592814683917,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "custardapple_01",
+                    "fruitType": 8200,
+                    "positionX": -0.1517339050769806,
+                    "positionY": 0.18478602170944215,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "tomato_01",
+                    "fruitType": 100,
+                    "positionX": -0.13302788138389588,
+                    "positionY": 0.22552785277366639,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": -0.11547967046499253,
+                    "positionY": 0.19918355345726014,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "banana_01",
+                    "fruitType": 2200,
+                    "positionX": 0.047262415289878848,
+                    "positionY": 0.26027417182922366,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "banana_01",
+                    "fruitType": 2200,
+                    "positionX": 0.04952594265341759,
+                    "positionY": 0.2484273761510849,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.060453448444604877,
+                    "positionY": 0.26317116618156435,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "chestnut_01",
+                    "fruitType": 10000,
+                    "positionX": 0.23380376398563386,
+                    "positionY": 0.06273530423641205,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "banana_01",
+                    "fruitType": 2200,
+                    "positionX": 0.23872153460979463,
+                    "positionY": 0.07297181338071823,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.2064225822687149,
+                    "positionY": 0.07233694195747376,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "lemon_01",
+                    "fruitType": 2000,
+                    "positionX": -0.2256399691104889,
+                    "positionY": -0.000057961962738772854,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pomelo_01",
+                    "fruitType": 6400,
+                    "positionX": -0.26560547947883608,
+                    "positionY": -0.0017902380786836148,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": -0.23636029660701753,
+                    "positionY": -0.011426924727857113,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "apple_01",
+                    "fruitType": 0,
+                    "positionX": -0.18553756177425385,
+                    "positionY": 0.11711060255765915,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": -0.23795993626117707,
+                    "positionY": 0.11645533889532089,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "custardapple_01",
+                    "fruitType": 8200,
+                    "positionX": 0.16806845366954804,
+                    "positionY": 0.20930764079093934,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.13812650740146638,
+                    "positionY": 0.17423374950885774,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "lemon_01",
+                    "fruitType": 2000,
+                    "positionX": 0.1778644323348999,
+                    "positionY": 0.10064934194087982,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellpepper_01",
+                    "fruitType": 1200,
+                    "positionX": 0.148025780916214,
+                    "positionY": 0.1241343542933464,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pineapple_01",
+                    "fruitType": 1100,
+                    "positionX": 0.05816846713423729,
+                    "positionY": 0.2930913269519806,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "kiwi_01",
+                    "fruitType": 2400,
+                    "positionX": 0.032362714409828189,
+                    "positionY": 0.29252952337265017,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "chestnut_01",
+                    "fruitType": 10000,
+                    "positionX": -0.1827627271413803,
+                    "positionY": -0.024440975859761239,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "lemon_01",
+                    "fruitType": 2000,
+                    "positionX": -0.05701608583331108,
+                    "positionY": 0.22757895290851594,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "mangosteen_01",
+                    "fruitType": 6100,
+                    "positionX": 0.23292650282382966,
+                    "positionY": -0.0017205654876306654,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "pomegranate_01",
+                    "fruitType": 300,
+                    "positionX": -0.13696177303791047,
+                    "positionY": 0.2573266923427582,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 1
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "custardapple_01",
+                    "fruitType": 8200,
+                    "positionX": 0.1942996084690094,
+                    "positionY": 0.22376197576522828,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellpepper_01",
+                    "fruitType": 1200,
+                    "positionX": 0.14763401448726655,
+                    "positionY": -0.03804609924554825,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "longan_01",
+                    "fruitType": 10100,
+                    "positionX": -0.2667735815048218,
+                    "positionY": 0.08147387951612473,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": -0.16980701684951783,
+                    "positionY": 0.15960672497749329,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 1
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "apple_01",
+                    "fruitType": 0,
+                    "positionX": -0.0008206918719224632,
+                    "positionY": 0.2708856165409088,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        },
+        {
+            "fruits": [
+                {
+                    "fruitName": "bellfruit_01",
+                    "fruitType": 7200,
+                    "positionX": 0.1543305516242981,
+                    "positionY": 0.06295274198055268,
+                    "iceMatches": 0,
+                    "basketId": 0,
+                    "bagKind": 0
+                }
+            ]
+        }
+    ]
+}
