@@ -15296,7 +15296,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": false
+    "value": true
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -15546,7 +15546,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": true
+    "value": false
   },
   {
     "__type__": "cc.TargetInfo",
@@ -19455,7 +19455,7 @@
     },
     "tray": null,
     "levelJson": {
-      "__uuid__": "a72d0868-88ec-444f-bde5-9826fecb6807",
+      "__uuid__": "65233841-01dd-406c-aad7-cf91a86d4153",
       "__expectedType__": "cc.JsonAsset"
     },
     "randomizeFruitTypes": false,
@@ -19542,7 +19542,7 @@
       "__expectedType__": "d77adls6LVADKf5cBeiD2sG"
     },
     "fruitConfig": {
-      "__uuid__": "2680c692-2808-4679-9355-65bc9aa5c6b5",
+      "__uuid__": "57d8fa8d-bbb8-43cd-9af8-5781ff76e6b6",
       "__expectedType__": "d9352GNyQRMYIlRG9Mv0Zf7"
     },
     "levelManager": {
@@ -26770,7 +26770,7 @@
       "tray"
     ],
     "target": {
-      "__id__": 1176
+      "__id__": 1163
     },
     "targetInfo": {
       "__id__": 1823
