@@ -15071,7 +15071,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1668,
+      "width": 1688,
       "height": 2388
     },
     "_anchorPoint": {
@@ -15102,7 +15102,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "5c95eaae-e594-4939-a78e-5d6a8efe78a5@f9941",
+      "__uuid__": "ef95b9a2-72ec-47a7-9311-6a4adb192375@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -15296,7 +15296,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": true
+    "value": false
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -15546,7 +15546,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": false
+    "value": true
   },
   {
     "__type__": "cc.TargetInfo",
@@ -17244,11 +17244,11 @@
       "b": 255,
       "a": 255
     },
-    "_string": "ONLY GENIUS CAN PASS THIS LEVEL",
+    "_string": "Harder than it look!",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 46,
-    "_fontSize": 46,
+    "_actualFontSize": 60,
+    "_fontSize": 60,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
@@ -17261,7 +17261,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": true,
+    "_enableOutline": false,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -17323,9 +17323,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 156,
-      "b": 44,
+      "r": 215,
+      "g": 149,
+      "b": 6,
       "a": 255
     },
     "_spriteFrame": {
@@ -19455,7 +19455,7 @@
     },
     "tray": null,
     "levelJson": {
-      "__uuid__": "5ce7b3df-69ba-4065-88a4-e925464612b5",
+      "__uuid__": "a72d0868-88ec-444f-bde5-9826fecb6807",
       "__expectedType__": "cc.JsonAsset"
     },
     "randomizeFruitTypes": false,
@@ -19542,7 +19542,7 @@
       "__expectedType__": "d77adls6LVADKf5cBeiD2sG"
     },
     "fruitConfig": {
-      "__uuid__": "feed926e-7618-4417-b9c7-06de3afa0fa7",
+      "__uuid__": "2680c692-2808-4679-9355-65bc9aa5c6b5",
       "__expectedType__": "d9352GNyQRMYIlRG9Mv0Zf7"
     },
     "levelManager": {
@@ -26770,7 +26770,7 @@
       "tray"
     ],
     "target": {
-      "__id__": 1163
+      "__id__": 1176
     },
     "targetInfo": {
       "__id__": 1823
