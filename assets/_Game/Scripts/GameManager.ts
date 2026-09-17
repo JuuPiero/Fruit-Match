@@ -146,24 +146,14 @@ export class GameManager extends GameBehaviour {
         }, 3)
     }
 
-    isFirstLose = true;
+    // isFirstLose = true;
     onLoseGame = () => {
-        if (this.levelManager.tray.slots.length <= 3 && this.isFirstLose) {
-            this.isFirstLose = false;
-            this.dowloadButton.node.active = false
-
-            ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false, firstLose: true })
-            this.sad.active = true
-            return;
-        }
-
-
+        // if (this.levelManager.tray.slots.length <= 3 && this.isFirstLose)
+        // this.isFirstLose = false;
         this.dowloadButton.node.active = false
-        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false })
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false, firstLose: true })
         this.sad.active = true
-        this, this.scheduleOnce(() => {
-            PlayableAdsManager.EndGame()
-        }, 3)
+        
     }
 
 

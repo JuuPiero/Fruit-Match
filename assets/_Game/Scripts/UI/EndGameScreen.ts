@@ -1,53 +1,61 @@
-import { _decorator, Button, Component, Node } from 'cc';
+import { _decorator, Button, Node } from 'cc';
+
 import { ScreenBase } from 'db://assets/_iKame/Scripts/Navigation/ScreenBase';
-import { TweenScale } from '../TweenScale';
 import { PlayableAdsManager } from 'db://assets/_iKame/Scripts/PlayableAdsManager';
 import { ETrackingEvent, TrackingManager } from 'db://assets/_iKame/Scripts/TrackingManager';
 import { EventBus } from 'db://assets/_iKame/Scripts/EventBus';
 import { GameEvents } from '../GameEvents';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('EndGameScreen')
 export class EndGameScreen extends ScreenBase {
-    @property(Button) downloadBtn: Button = null;
-    @property(Button) retryBtn: Button = null;
 
-    @property(Node) logo: Node = null;
+    @property(Button)
+    downloadBtn: Button = null;
 
+    @property(Button)
+    retryBtn: Button = null;
 
-    public async enter(param?: {isWin, firstLose}): Promise<void> {
-        // const {isWin, isFirstLose} = param;
-        super.enter(param)
-        if(param.firstLose) {
-            this.downloadBtn.node.active = false;
-            this.retryBtn.node.active = true;
-            // console.log("here 123");
-        }
-        else {
-            this.downloadBtn.node.active = true;
-            this.retryBtn.node.active = false;
-        }
-       
+    @property(Node)
+    logo: Node = null;
+
+    private endGameCallback = () => {
+        PlayableAdsManager.EndGame();
+    };
+
+    public async enter(param?: { isWin, firstLose }): Promise<void> {
+        super.enter(param);
+
+        this.downloadBtn.node.active = false;
+        this.retryBtn.node.active = true;
+
+        // tránh trường hợp enter nhiều lần tạo nhiều timer
+        this.unschedule(this.endGameCallback);
+
+        // Sau 3s không có tương tác thì EndGame
+        this.scheduleOnce(this.endGameCallback, 3);
     }
-
-
 
     protected start(): void {
-        TrackingManager.TrackEvent(ETrackingEvent.ENDCARD_SHOWN)
-        // this.downloadBtn.getComponent(TweenScale).playDefaultAsync()
-        // this.logo.getComponent(TweenScale).playDefaultAsync()
+        TrackingManager.TrackEvent(ETrackingEvent.ENDCARD_SHOWN);
+
         this.downloadBtn.node.on(Button.EventType.CLICK, () => {
-            TrackingManager.TrackEvent(ETrackingEvent.CTA_CLICKED)
-            PlayableAdsManager.OpenStore()
-        })
+            // Có tương tác => hủy EndGame sau 3s
+            this.unschedule(this.endGameCallback);
+
+            TrackingManager.TrackEvent(ETrackingEvent.CTA_CLICKED);
+            PlayableAdsManager.OpenStore();
+        });
 
         this.retryBtn.node.on(Button.EventType.CLICK, () => {
+            // Có tương tác => hủy EndGame sau 3s
+            this.unschedule(this.endGameCallback);
+
             TrackingManager.TrackEvent(ETrackingEvent.CHALLENGE_RETRY);
             EventBus.emit(GameEvents.NEW_LEVEL);
+
             this.exit();
-        })
+        });
     }
-
 }
-
-
