@@ -26,9 +26,14 @@ export class EndGameScreen extends ScreenBase {
 
     public async enter(param?: { isWin, firstLose }): Promise<void> {
         super.enter(param);
-
-        this.downloadBtn.node.active = false;
-        this.retryBtn.node.active = true;
+        if(!param.isWin) {
+            this.downloadBtn.node.active = false;
+            this.retryBtn.node.active = true;
+        }
+        else {
+            this.downloadBtn.node.active = true;
+            this.retryBtn.node.active = false;
+        }
 
         // tránh trường hợp enter nhiều lần tạo nhiều timer
         this.unschedule(this.endGameCallback);
