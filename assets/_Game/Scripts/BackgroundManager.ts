@@ -17,6 +17,10 @@ export class BackgroundManager extends Component {
     @property([Node])
     backgrounds: Node[] = [];
 
+
+    @property([Node])
+    effects: Node[] = [];
+
     @property({
         min: 0.05,
         tooltip: 'Thời gian fade khi đổi background, tính bằng giây',
@@ -47,6 +51,9 @@ export class BackgroundManager extends Component {
 
             return opacity;
         });
+
+        // Effect dùng cùng index với background tương ứng trong Inspector.
+        this.setActiveEffect(this.currentIndex);
     }
 
     protected onEnable(): void {
@@ -69,6 +76,8 @@ export class BackgroundManager extends Component {
             opacity.opacity = isCurrent ? 255 : 0;
             opacity.node.active = isCurrent;
         });
+
+        this.setActiveEffect(this.currentIndex);
     }
 
     onMatched = (): void => {
@@ -89,6 +98,8 @@ export class BackgroundManager extends Component {
 
         this.currentIndex =
             (this.currentIndex + 1) % this.opacities.length;
+
+        this.setActiveEffect(this.currentIndex);
 
         const nextOpacity = this.opacities[this.currentIndex];
         const duration = Math.max(0.05, this.fadeDuration);
@@ -117,5 +128,14 @@ export class BackgroundManager extends Component {
                 this.fadeToNext();
             })
             .start();
+    }
+
+    /** Chỉ giữ effect có index trùng với background hiện tại đang bật. */
+    private setActiveEffect(backgroundIndex: number): void {
+        this.effects.forEach((effect, effectIndex) => {
+            if (!effect || !effect.isValid) return;
+
+            effect.active = effectIndex === backgroundIndex;
+        });
     }
 }
