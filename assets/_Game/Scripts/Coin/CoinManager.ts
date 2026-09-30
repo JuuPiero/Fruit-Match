@@ -2,6 +2,7 @@ import { _decorator, Canvas, Component, instantiate, Label, Node, NodePool, Pref
 import { EventBus } from 'db://assets/_iKame/Scripts/EventBus';
 import { GameEvents } from '../GameEvents';
 import { AudioManager } from 'db://assets/_iKame/Scripts/AudioManager';
+import { VFXManager } from 'db://assets/Scripts/VFXManager';
 const { ccclass, property } = _decorator;
 
 const COIN_MIN_COUNT = 3;
@@ -25,8 +26,13 @@ export class CoinManager extends Component {
 
     @property(Label) coinLabel: Label = null;
     @property(Canvas) gameplayCanvas: Canvas = null;
+    @property(Prefab) coinEffect: Prefab = null;
+
+    @property(Node) ui: Node = null;
 
     private _coinPool: NodePool = new NodePool();
+
+
 
     protected onEnable(): void {
         EventBus.on(GameEvents.NEW_LEVEL, this.onNewGame)
@@ -47,6 +53,11 @@ export class CoinManager extends Component {
     onMatched = (fromWorldPos?: Vec3) => {
         AudioManager.instance.playOneShot('Coin')
         this.spawnCoins(fromWorldPos ?? this.coinLabel.node.worldPosition)
+
+      
+
+        // VFXManager.Instance.playAt("GoldCoinBlast_IKAME", this.effectPos.worldPosition, 1)
+        
     }
 
     updateUI = () => {
@@ -131,6 +142,12 @@ export class CoinManager extends Component {
                 this.currentCoin += reward
                 this.updateUI()
                 this.punchLabel()
+                  const effect = instantiate(this.coinEffect);
+        effect.setParent(this.ui)
+
+        this.scheduleOnce(() => {
+            effect.destroy()
+        }, 1)
             })
             .start()
     }

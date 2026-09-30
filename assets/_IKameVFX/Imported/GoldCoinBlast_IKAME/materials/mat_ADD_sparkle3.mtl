@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.Material",
+  "_name": "mat_ADD_sparkle3",
+  "_effectAsset": {
+    "__uuid__": "7c101904-2970-4182-95b0-c1b0ab9f1812"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {}
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "b358d3a4-6cd5-4f5e-ab8c-dbad30c174a6@6c48a"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      }
+    }
+  ]
+}
