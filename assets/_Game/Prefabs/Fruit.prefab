@@ -157,8 +157,8 @@
     "outlineMaterial": null,
     "originScale": {
       "__type__": "cc.Vec3",
-      "x": 0.83,
-      "y": 0.83,
+      "x": 0.6,
+      "y": 0.6,
       "z": 1
     },
     "_id": ""
