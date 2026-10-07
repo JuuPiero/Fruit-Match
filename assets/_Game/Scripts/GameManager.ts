@@ -147,14 +147,15 @@ export class GameManager extends GameBehaviour {
         }, 3)
     }
 
-    // isFirstLose = true;
+    isFirstLose = true;
     onLoseGame = () => {
         // if (this.levelManager.tray.slots.length <= 3 && this.isFirstLose)
-        // this.isFirstLose = false;
+       
         AudioManager.instance.stopMusic()
 
         this.dowloadButton.node.active = false
-        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false, firstLose: true })
+        ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: false, firstLose: this.isFirstLose })
+         this.isFirstLose = false;
         this.sad.active = true
         
     }
