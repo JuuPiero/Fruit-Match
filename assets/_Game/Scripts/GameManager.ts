@@ -37,7 +37,7 @@ export class GameManager extends GameBehaviour {
     private playBackgroundMusic(): void {
         AudioManager.instance.stopMusic()
         // AudioManager.instance.playMusic('BMG_AlwaysWithMe')
-        AudioManager.instance.playMusic('BGM')
+        AudioManager.instance.playMusic('BGMChristmas')
         // AudioManager.instance.playMusic('Gio')
     }
 
@@ -134,7 +134,7 @@ export class GameManager extends GameBehaviour {
     onWinGame = () => {
         this.confettiNode.active = true;
         this.dowloadButton.node.active = false
-
+        AudioManager.instance.stopMusic()
         ServiceLocator.get(NavigationContainer).stack.navigate('EndGameScreen', { isWin: true })
         this.win.active = true
 
@@ -148,6 +148,8 @@ export class GameManager extends GameBehaviour {
 
     // isFirstLose = true;
     onLoseGame = () => {
+        AudioManager.instance.stopMusic()
+
         // if (this.levelManager.tray.slots.length <= 3 && this.isFirstLose)
         // this.isFirstLose = false;
         this.dowloadButton.node.active = false
