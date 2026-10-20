@@ -1,0 +1,140 @@
+{
+  "__type__": "d9352GNyQRMYIlRG9Mv0Zf7",
+  "_name": "Noel",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "fruits": [
+    {
+      "__uuid__": "e3a55950-3b1c-4de6-b2c1-df63d697dff3@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "bb279439-419f-45fa-aa73-2c178cd3661c@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "6ef33ac6-3f4e-41ee-bf6e-efea3a408886@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "2105341f-54b6-414f-b9ea-a8bdd91574e6@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "47c9ca0f-a43b-4a39-8ce9-a8ab3627c766@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "fcef3c7a-9b64-4539-98c4-29ab305872de@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "5c1634a7-8fd4-488e-a214-ef2dda1d4265@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "39632f5b-d35d-42d8-b9a6-56b75e59f087@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "950e15b5-0d38-4e7a-ac16-69c660b3641c@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "6b57a341-0249-4311-baf5-3d5b68c7a7e6@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "97473c12-2e22-4769-88a4-9e2980dea2e7@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f980fb64-e1e7-484c-b5dd-ae25b1c0876d@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f08d8613-d275-49dd-aaa5-04bd464b66ba@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "942527bd-c90d-4ab3-b56c-e14c2e18b65f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "2e016f0d-5301-4fc8-ad60-a64d30e0cd22@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f4469ab6-eb10-4505-8b68-0ffc6dfd8f2f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "fruitsOutline": [
+    {
+      "__uuid__": "e3a55950-3b1c-4de6-b2c1-df63d697dff3@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "bb279439-419f-45fa-aa73-2c178cd3661c@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "6ef33ac6-3f4e-41ee-bf6e-efea3a408886@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "2105341f-54b6-414f-b9ea-a8bdd91574e6@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "47c9ca0f-a43b-4a39-8ce9-a8ab3627c766@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "fcef3c7a-9b64-4539-98c4-29ab305872de@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "5c1634a7-8fd4-488e-a214-ef2dda1d4265@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "39632f5b-d35d-42d8-b9a6-56b75e59f087@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "950e15b5-0d38-4e7a-ac16-69c660b3641c@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "6b57a341-0249-4311-baf5-3d5b68c7a7e6@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "97473c12-2e22-4769-88a4-9e2980dea2e7@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f980fb64-e1e7-484c-b5dd-ae25b1c0876d@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f08d8613-d275-49dd-aaa5-04bd464b66ba@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "942527bd-c90d-4ab3-b56c-e14c2e18b65f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "2e016f0d-5301-4fc8-ad60-a64d30e0cd22@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    {
+      "__uuid__": "f4469ab6-eb10-4505-8b68-0ffc6dfd8f2f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    }
+  ],
+  "levelJsonBake": null
+}
