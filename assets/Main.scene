@@ -308,8 +308,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.9,
+      "y": 0.9,
       "z": 1
     },
     "_mobility": 0,
@@ -579,8 +579,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.94,
-      "y": 0.94,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_mobility": 0,
@@ -15077,8 +15077,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1701,
-      "height": 2388
+      "width": 1080,
+      "height": 1920
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -15113,7 +15113,7 @@
     },
     "_type": 0,
     "_fillType": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -16069,7 +16069,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -341.764,
+      "x": -284.299,
       "y": 0,
       "z": 0
     },
@@ -16287,7 +16287,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 353.588,
+      "x": 299.954,
       "y": 0,
       "z": 0
     },
@@ -16457,7 +16457,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -341.207,
+      "x": -285.473,
       "y": 66.229,
       "z": 0
     },
@@ -16669,7 +16669,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 358.629,
+      "x": 302.895,
       "y": 66.229,
       "z": 0
     },
@@ -17469,7 +17469,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -335.908,
+      "x": -278.443,
       "y": 13.104,
       "z": 0
     },
@@ -17687,7 +17687,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 358.724,
+      "x": 305.09,
       "y": 13.104,
       "z": 0
     },
@@ -18087,8 +18087,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 383.394,
-      "y": 860.4999999999999,
+      "x": 251.866,
+      "y": 860.5,
       "z": 0
     },
     "_lrot": {
@@ -18787,7 +18787,7 @@
     "node": {
       "__id__": 1277
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": null,
     "_alignFlags": 33,
     "_target": null,
